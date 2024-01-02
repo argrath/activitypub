@@ -1,0 +1,7 @@
+local
+omegat/omegat/*.bak
+omegat/omegat/*.txt
+omegat/omegat/last_entry.properties
+omegat/source
+omegat/target
+omegat/tm

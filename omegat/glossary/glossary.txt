@@ -1,0 +1,4 @@
+# Glossary in tab-separated format -*- coding: utf-8 -*-
+addressing	アドレス指定
+addressing	アドレス指定
+dereference	参照先を取得する	(URLから実体を)
