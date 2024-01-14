@@ -1,0 +1,1394 @@
+<!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8"><meta name="generator" content="ReSpec 19.0.1"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><style>/* --- EXAMPLES --- */
+div.example-title {
+    min-width: 7.5em;
+    color: #b9ab2d;
+}
+div.example-title span {
+    text-transform: uppercase;
+}
+aside.example, div.example, div.illegal-example {
+    padding: 0.5em;
+    margin: 1em 0;
+    position: relative;
+    clear: both;
+}
+div.illegal-example { color: red }
+div.illegal-example p { color: black }
+aside.example, div.example {
+    padding: .5em;
+    border-left-width: .5em;
+    border-left-style: solid;
+    border-color: #e0cb52;
+    background: #fcfaee;
+}
+
+aside.example div.example {
+    border-left-width: .1em;
+    border-color: #999;
+    background: #fff;
+}
+aside.example div.example div.example-title {
+    color: #999;
+}
+</style><style>/* --- ISSUES/NOTES --- */
+div.issue-title, div.note-title , div.ednote-title, div.warning-title {
+    padding-right:  1em;
+    min-width: 7.5em;
+    color: #b9ab2d;
+}
+div.issue-title { color: #e05252; }
+div.note-title, div.ednote-title { color: #2b2; }
+div.warning-title { color: #f22; }
+div.issue-title span, div.note-title span, div.ednote-title span, div.warning-title span {
+    text-transform: uppercase;
+}
+div.note, div.issue, div.ednote, div.warning {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.note > p:first-child, .ednote > p:first-child, .issue > p:first-child, .warning > p:first-child { margin-top: 0 }
+.issue, .note, .ednote, .warning {
+    padding: .5em;
+    border-left-width: .5em;
+    border-left-style: solid;
+}
+div.issue, div.note , div.ednote,  div.warning {
+    padding: 1em 1.2em 0.5em;
+    margin: 1em 0;
+    position: relative;
+    clear: both;
+}
+span.note, span.ednote, span.issue, span.warning { padding: .1em .5em .15em; }
+
+.issue {
+    border-color: #e05252;
+    background: #fbe9e9;
+}
+.note, .ednote {
+    border-color: #52e052;
+    background: #e9fbe9;
+}
+
+.warning {
+    border-color: #f11;
+    border-width: .2em;
+    border-style: solid;
+    background: #fbe9e9;
+}
+
+.warning-title:before{
+    content: "⚠"; /*U+26A0 WARNING SIGN*/
+    font-size: 3em;
+    float: left;
+    height: 100%;
+    padding-right: .3em;
+    vertical-align: top;
+    margin-top: -0.5em;
+}
+
+li.task-list-item {
+    list-style: none;
+}
+
+input.task-list-item-checkbox {
+    margin: 0 0.35em 0.25em -1.6em;
+    vertical-align: middle;
+}
+</style>
+    <title>ActivityPub</title>
+    
+    
+    
+    <style type="text/css">
+      img {
+          max-width: 100%;
+      }
+    </style>
+  <style id="respec-mainstyle">/*****************************************************************
+ * ReSpec 3 CSS
+ * Robin Berjon - http://berjon.com/
+ *****************************************************************/
+
+/* Override code highlighter background */
+.hljs {
+  background: transparent !important;
+}
+
+/* --- INLINES --- */
+h1 abbr,
+h2 abbr,
+h3 abbr,
+h4 abbr,
+h5 abbr,
+h6 abbr,
+a abbr {
+  border: none;
+}
+
+dfn {
+  font-weight: bold;
+}
+
+a.internalDFN {
+  color: inherit;
+  border-bottom: 1px solid #99c;
+  text-decoration: none;
+}
+
+a.externalDFN {
+  color: inherit;
+  border-bottom: 1px dotted #ccc;
+  text-decoration: none;
+}
+
+a.bibref {
+  text-decoration: none;
+}
+
+cite .bibref {
+  font-style: normal;
+}
+
+code {
+  color: #c83500;
+}
+
+th code {
+  color: inherit;
+}
+
+/* --- TOC --- */
+
+.toc a,
+.tof a {
+  text-decoration: none;
+}
+
+a .secno,
+a .figno {
+  color: #000;
+}
+
+ul.tof,
+ol.tof {
+  list-style: none outside none;
+}
+
+.caption {
+  margin-top: 0.5em;
+  font-style: italic;
+}
+
+/* --- TABLE --- */
+
+table.simple {
+  border-spacing: 0;
+  border-collapse: collapse;
+  border-bottom: 3px solid #005a9c;
+}
+
+.simple th {
+  background: #005a9c;
+  color: #fff;
+  padding: 3px 5px;
+  text-align: left;
+}
+
+.simple th[scope="row"] {
+  background: inherit;
+  color: inherit;
+  border-top: 1px solid #ddd;
+}
+
+.simple td {
+  padding: 3px 10px;
+  border-top: 1px solid #ddd;
+}
+
+.simple tr:nth-child(even) {
+  background: #f0f6ff;
+}
+
+/* --- DL --- */
+
+.section dd > p:first-child {
+  margin-top: 0;
+}
+
+.section dd > p:last-child {
+  margin-bottom: 0;
+}
+
+.section dd {
+  margin-bottom: 1em;
+}
+
+.section dl.attrs dd,
+.section dl.eldef dd {
+  margin-bottom: 0;
+}
+
+#issue-summary > ul,
+.respec-dfn-list {
+  column-count: 2;
+}
+
+#issue-summary li,
+.respec-dfn-list li {
+  list-style: none;
+}
+
+details.respec-tests-details {
+  margin-left: 1em;
+  display: inline-block;
+  vertical-align: top;
+}
+
+details.respec-tests-details > * {
+  padding-right: 2em;
+}
+
+details.respec-tests-details[open] {
+  z-index: 999999;
+  position: absolute;
+  border: thin solid #cad3e2;
+  border-radius: .3em;
+  background-color: white;
+  padding-bottom: .5em;
+}
+
+details.respec-tests-details[open] > summary {
+  border-bottom: thin solid #cad3e2;
+  padding-left: 1em;
+  margin-bottom: 1em;
+  line-height: 2em;
+}
+
+details.respec-tests-details > ul {
+  width: 100%;
+  margin-top: -0.3em;
+}
+
+details.respec-tests-details > li {
+  padding-left: 1em;
+}
+
+@media print {
+  .removeOnSave {
+    display: none;
+  }
+}
+</style><style>/*
+
+github.com style (c) Vasily Polovnyov <vast@whiteants.net>
+
+*/
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  color: #333;
+  background: #f8f8f8;
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: #998;
+  font-style: italic;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-subst {
+  color: #333;
+  font-weight: bold;
+}
+
+.hljs-number,
+.hljs-literal,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag .hljs-attr {
+  color: #008080;
+}
+
+.hljs-string,
+.hljs-doctag {
+  color: #d14;
+}
+
+.hljs-title,
+.hljs-section,
+.hljs-selector-id {
+  color: #900;
+  font-weight: bold;
+}
+
+.hljs-subst {
+  font-weight: normal;
+}
+
+.hljs-type,
+.hljs-class .hljs-title {
+  color: #458;
+  font-weight: bold;
+}
+
+.hljs-tag,
+.hljs-name,
+.hljs-attribute {
+  color: #000080;
+  font-weight: normal;
+}
+
+.hljs-regexp,
+.hljs-link {
+  color: #009926;
+}
+
+.hljs-symbol,
+.hljs-bullet {
+  color: #990073;
+}
+
+.hljs-built_in,
+.hljs-builtin-name {
+  color: #0086b3;
+}
+
+.hljs-meta {
+  color: #999;
+  font-weight: bold;
+}
+
+.hljs-deletion {
+  background: #fdd;
+}
+
+.hljs-addition {
+  background: #dfd;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
+</style><link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/W3C-REC"><link rel="canonical" href="https://argrath.github.io/activitypub/"><script id="initialUserConfig" type="application/json">{
+  "specStatus": "REC",
+  "publishDate": "2018-01-23",
+  "previousPublishDate": "2017-12-05",
+  "previousMaturity": "PR",
+  "license": "w3c-software-doc",
+  "shortName": "activitypub",
+  "wg": "Social Web Working Group",
+  "wgURI": "https://www.w3.org/Social/WG",
+  "wgPublicList": "public-socialweb",
+  "wgPatentURI": "https://www.w3.org/2004/01/pp-impl/72531/status",
+  "edDraftURI": "https://w3c.github.io/activitypub/",
+  "testSuiteURI": "https://test.activitypub.rocks/",
+  "errata": "https://www.w3.org/wiki/ActivityPub_errata",
+  "implementationReportURI": "https://activitypub.rocks/implementation-report",
+  "otherLinks": [
+    {
+      "key": "Repository",
+      "data": [
+        {
+          "value": "Git repository",
+          "href": "https://github.com/w3c/activitypub"
+        },
+        {
+          "value": "Issues",
+          "href": "https://github.com/w3c/activitypub/issues"
+        },
+        {
+          "value": "Commits",
+          "href": "https://github.com/w3c/activitypub/commits/gh-pages"
+        }
+      ]
+    }
+  ],
+  "editors": [
+    {
+      "name": "Christine Lemmer-Webber",
+      "url": "https://dustycloud.org/",
+      "w3cid": "57007"
+    },
+    {
+      "name": "Jessica Tallon",
+      "url": "https://tsyesika.se",
+      "w3cid": "72695"
+    }
+  ],
+  "authors": [
+    {
+      "name": "Christine Lemmer-Webber",
+      "url": "https://dustycloud.org/"
+    },
+    {
+      "name": "Jessica Tallon",
+      "url": "https://tsyesika.se"
+    },
+    {
+      "name": "Erin Shepherd",
+      "url": "http://erinshepherd.net/"
+    },
+    {
+      "name": "Amy Guy",
+      "url": "https://rhiaro.co.uk/"
+    },
+    {
+      "name": "Evan Prodromou",
+      "url": "https://en.wikipedia.org/wiki/Evan_Prodromou"
+    }
+  ],
+  "localBiblio": {
+    "ActivityStreams": {
+      "title": "Activity Streams 2.0",
+      "href": "https://www.w3.org/TR/activitystreams-core/",
+      "authors": [
+        "J. Snell"
+      ],
+      "status": "Editors Draft",
+      "publisher": "ActivityStreams Working Group"
+    },
+    "Activity-Vocabulary": {
+      "title": "Activity Vocabulary",
+      "href": "https://www.w3.org/TR/activitystreams-vocabulary/",
+      "authors": [
+        "J. Snell"
+      ],
+      "status": "Editors Draft",
+      "publisher": "ActivityStreams Working Group"
+    },
+    "OAuth-Server-Metadata": {
+      "title": "OAuth 2.0 Authorization Server Metadata",
+      "href": "https://tools.ietf.org/html/draft-ietf-oauth-discovery-06",
+      "authors": [
+        "M. Jones",
+        "N. Sakimura",
+        "J. Bradley"
+      ],
+      "status": "Internet-Draft",
+      "publisher": "OAuth Working Group"
+    }
+  },
+  "publishISODate": "2018-01-23T00:00:00.000Z",
+  "generatedSubtitle": "Recommendation 23 January 2018"
+}</script><meta name="description" content="ActivityPub プロトコルは、[ActivityStreams] 2.0 データ形式を基とした 非中央集権型ソーシャルネットワークプロトコルである。これはコンテンツの作成、更新、削除のためのクライアント-サーバ間 API および、 通知とコンテンツを配送するための連合サーバ間 API を提供する。"></head>
+  <!-- STYLISTIC NOTE: This document wraps on column 79 and at the end of every
+       sentence. -->
+  <body aria-busy="false" class="h-entry"><div class="head">
+<aside>これは<a href="https://www.w3.org/TR/2018/REC-activitypub-20180123/">ActivityPub</a>の参考日本語訳です。正式な文書は英語版です。この文書には翻訳による誤りが含まれることがあります。この文書に関する連絡は<a href = "https://github.com/argrath/activitypub">GitHubリポジトリ</a>にお願いします。</aside>
+<hr>
+    <p><a class="logo" href="https://www.w3.org/"><img src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" alt="W3C" width="72" height="48"></a></p>
+  <p><!--_hyper: 682859076;--></p>
+  <h1 class="title p-name" id="title">ActivityPub</h1>
+  <h2 id="w3c-recommendation-23-january-2018"><abbr title="World Wide Web Consortium">W3C</abbr> Recommendation<time class="dt-published" datetime="2018-01-23">23January 2018</time></h2>
+  <dl>
+      <dt>This version:</dt>
+      <dd><a class="u-url" href="https://www.w3.org/TR/2018/REC-activitypub-20180123/">https://www.w3.org/TR/2018/REC-activitypub-20180123/</a></dd>
+      <dt>Latest published version:</dt>
+      <dd><a href="https://www.w3.org/TR/activitypub/">https://www.w3.org/TR/activitypub/</a></dd>
+      <dt>Latest editor's draft:</dt>
+      <dd><a href="https://w3c.github.io/activitypub/">https://w3c.github.io/activitypub/</a></dd>
+      <dt>Test suite:</dt>
+      <dd><a href="https://test.activitypub.rocks/">https://test.activitypub.rocks/</a></dd>
+      <dt>Implementation report:</dt>
+      <dd><a href="https://activitypub.rocks/implementation-report">https://activitypub.rocks/implementation-report</a></dd>
+      <dt>Previous version:</dt>
+      <dd><a href="https://www.w3.org/TR/2017/PR-activitypub-20171205/">https://www.w3.org/TR/2017/PR-activitypub-20171205/</a></dd>
+    <dt>Editors:</dt>
+    <dd class="p-author h-card vcard" data-editor-id="57007"><a class="u-url url p-name fn" href="https://dustycloud.org/">Christine Lemmer-Webber</a></dd>
+<dd class="p-author h-card vcard" data-editor-id="72695"><a class="u-url url p-name fn" href="https://tsyesika.se">Jessica Tallon</a></dd>
+
+      <dt>Authors:</dt>
+      <dd class="p-author h-card vcard"><a class="u-url url p-name fn" href="https://dustycloud.org/">Christine Lemmer-Webber</a></dd>
+<dd class="p-author h-card vcard"><a class="u-url url p-name fn" href="https://tsyesika.se">Jessica Tallon</a></dd>
+<dd class="p-author h-card vcard"><a class="u-url url p-name fn" href="http://erinshepherd.net/">Erin Shepherd</a></dd>
+<dd class="p-author h-card vcard"><a class="u-url url p-name fn" href="https://rhiaro.co.uk/">Amy Guy</a></dd>
+<dd class="p-author h-card vcard"><a class="u-url url p-name fn" href="https://en.wikipedia.org/wiki/Evan_Prodromou">Evan Prodromou</a></dd>
+
+          <dt>Repository:</dt>
+                  <dd><a href="https://github.com/w3c/activitypub"> Git repository </a></dd>
+                  <dd><a href="https://github.com/w3c/activitypub/issues"> Issues </a></dd>
+                  <dd><a href="https://github.com/w3c/activitypub/commits/gh-pages"> Commits </a></dd>
+  </dl>
+    <p>Please check the <a href="https://www.w3.org/wiki/ActivityPub_errata"><strong>errata</strong></a> for any errors or issues reported since publication.</p>
+    <p>See also <a href="http://www.w3.org/2003/03/Translations/byTechnology?technology=activitypub"> <strong>translations</strong></a>.</p>
+      <p class="copyright"><a href="https://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> © 2018 <a href="https://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a><sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>, <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>, <a href="https://www.keio.ac.jp/">Keio</a>, <a href="http://ev.buaa.edu.cn/">Beihang</a>). <abbr title="World Wide Web Consortium">W3C</abbr> <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a rel="license" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document">permissive document license</a> rules apply.</p>
+  <hr title="Separator for header">
+</div>
+    <section id="abstract" class="introductory"><h2 id="abstract-0">概要</h2>
+      <p>ActivityPub プロトコルは、[<cite><a class="bibref" href="#bib-ActivityStreams">ActivityStreams</a></cite>] 2.0 データ形式を基とした 非中央集権型ソーシャルネットワークプロトコルである。これはコンテンツの作成、更新、削除のためのクライアント-サーバ間 API および、 通知とコンテンツを配送するための連合サーバ間 API を提供する。</p>
+    </section>
+
+    <section id="sotd" class="introductory"><h2 id="status-of-this-document">この文書の状態</h2>
+      <p><em>この節は、発行時点でのこの文書の状態を説明している。他の文書がこの文書に取って代わることがある。現在の <abbr title="World Wide Web Consortium">W3C</abbr> による発行物と この技術報告の最新版は https://www.w3.org/TR/ の <a href="https://www.w3.org/TR/"><abbr title="World Wide Web Consortium">W3C</abbr> technical reports index</a> にある。</em></p>
+        
+    
+        <p>この文書は <a href="https://www.w3.org/Social/WG">Social Web Working Group</a> によって 勧告として発行された。</p>
+        <p>全ての関心のある関係者は、実装や、 Working Group の <a href="https://github.com/w3c/activitypub/issues">Issue tracker</a> を 通したバグレポートやその他のコメントを提供するよう勧める。これらは <a href="http://www.w3.org/wiki/SocialCG">Social Web Community Group</a> によって 議論され、この仕様の将来のバージョンで考慮される。</p>
+          <p>Working Group の <a href="https://activitypub.rocks/implementation-report">implementation report</a> を参照のこと。</p>
+          <p>この文書は、<abbr title="World Wide Web Consortium">W3C</abbr>メンバー、ソフトウェア開発者、およびその他の<abbr title="World Wide Web Consortium">W3C</abbr>グループと関係者によってレビューされ、<abbr title="World Wide Web Consortium">W3C</abbr>勧告としてディレクターによって承認されています。これは安定した文書であり、参考資料として使用したり、他の文書から引用したりすることができる。この勧告を作成する上での<abbr title="World Wide Web Consortium">W3C</abbr>の役割は、仕様に注意を喚起し、その広範な展開を促進することである。これは、Webの機能性と相互運用性を向上させる。</p>
+        <p>この文書は、<a href="https://www.w3.org/Consortium/Patent-Policy/"><abbr title="World Wide Web Consortium">W3C</abbr> Patent Policy</a>の下で活動しているグループによって作成された。<abbr title="World Wide Web Consortium">W3C</abbr>は、グループの成果物に関連して作成された<a href="https://www.w3.org/2004/01/pp-impl/72531/status" rel="disclosure">特許開示の公開リスト</a>を保守しており、そのページには特許を開示するための手順も含まれている。<a href="https://www.w3.org/Consortium/Patent-Policy/#def-essential">Essential Claim(s)</a>を含むと信じる特許について実際の知識を有する者は、<a href="https://www.w3.org/Consortium/Patent-Policy/#sec-Disclosure"><abbr title="World Wide Web Consortium">W3C</abbr> Patent Policy第6条</a>に従って情報を開示しなければならない。</p>
+          <p>この文書は、<a id="w3c_process_revision" href="https://www.w3.org/2017/Process-20170301/">1 March 2017 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>に準拠する。</p>
+        
+
+</section><nav id="toc"><h2 class="introductory" id="table-of-contents">目次</h2><ol class="toc"><li class="tocline"><a href="#Overview" class="tocxref"><span class="secno">1. </span>概要</a><ol class="toc"><li class="tocline"><a href="#social-web-working-group" class="tocxref"><span class="secno">1.1 </span>Social Web Working Group</a></li></ol></li><li class="tocline"><a href="#conformance" class="tocxref"><span class="secno">2. </span>適合性</a><ol class="toc"><li class="tocline"><a href="#specification-profiles" class="tocxref"><span class="secno">2.1 </span>仕様プロファイル</a></li></ol></li><li class="tocline"><a href="#obj" class="tocxref"><span class="secno">3. </span>オブジェクト</a><ol class="toc"><li class="tocline"><a href="#obj-id" class="tocxref"><span class="secno">3.1 </span>オブジェクト識別子</a></li><li class="tocline"><a href="#retrieving-objects" class="tocxref"><span class="secno">3.2 </span>オブジェクトの取得</a></li><li class="tocline"><a href="#source-property" class="tocxref"><span class="secno">3.3 </span>source 属性</a></li></ol></li><li class="tocline"><a href="#actors" class="tocxref"><span class="secno">4. </span>アクター</a><ol class="toc"><li class="tocline"><a href="#actor-objects" class="tocxref"><span class="secno">4.1 </span><i>Actor</i> オブジェクト</a></li></ol></li><li class="tocline"><a href="#collections" class="tocxref"><span class="secno">5. </span>コレクション</a><ol class="toc"><li class="tocline"><a href="#outbox" class="tocxref"><span class="secno">5.1 </span>Outbox</a></li><li class="tocline"><a href="#inbox" class="tocxref"><span class="secno">5.2 </span>Inbox</a></li><li class="tocline"><a href="#followers" class="tocxref"><span class="secno">5.3 </span>Followers コレクション</a></li><li class="tocline"><a href="#following" class="tocxref"><span class="secno">5.4 </span>Following コレクション</a></li><li class="tocline"><a href="#liked" class="tocxref"><span class="secno">5.5 </span>Liked コレクション</a></li><li class="tocline"><a href="#public-addressing" class="tocxref"><span class="secno">5.6 </span>Public アドレス指定</a></li><li class="tocline"><a href="#likes" class="tocxref"><span class="secno">5.7 </span>Likes コレクション</a></li><li class="tocline"><a href="#shares" class="tocxref"><span class="secno">5.8 </span>Shares コレクション</a></li></ol></li><li class="tocline"><a href="#client-to-server-interactions" class="tocxref"><span class="secno">6. </span>クライアントからサーバへの通信</a><ol class="toc"><li class="tocline"><a href="#client-addressing" class="tocxref"><span class="secno">6.1 </span>クライアントアドレス指定</a></li><li class="tocline"><a href="#create-activity-outbox" class="tocxref"><span class="secno">6.2 </span>Create Activity</a><ol class="toc"><li class="tocline"><a href="#object-without-create" class="tocxref"><span class="secno">6.2.1 </span>Create Activityなしでのオブジェクト作成</a></li></ol></li><li class="tocline"><a href="#update-activity-outbox" class="tocxref"><span class="secno">6.3 </span>Update Activity</a><ol class="toc"><li class="tocline"><a href="#partial-updates" class="tocxref"><span class="secno">6.3.1 </span>部分更新</a></li></ol></li><li class="tocline"><a href="#delete-activity-outbox" class="tocxref"><span class="secno">6.4 </span>Delete Activity</a></li><li class="tocline"><a href="#follow-activity-outbox" class="tocxref"><span class="secno">6.5 </span>Follow Activity</a></li><li class="tocline"><a href="#add-activity-outbox" class="tocxref"><span class="secno">6.6 </span>Add Activity</a></li><li class="tocline"><a href="#remove-activity-outbox" class="tocxref"><span class="secno">6.7 </span>Remove Activity</a></li><li class="tocline"><a href="#like-activity-outbox" class="tocxref"><span class="secno">6.8 </span>Like Activity</a></li><li class="tocline"><a href="#block-activity-outbox" class="tocxref"><span class="secno">6.9 </span>Block Activity</a></li><li class="tocline"><a href="#undo-activity-outbox" class="tocxref"><span class="secno">6.10 </span>Undo Activity</a></li><li class="tocline"><a href="#client-to-server-outbox-delivery" class="tocxref"><span class="secno">6.11 </span>配送</a></li><li class="tocline"><a href="#uploading-media" class="tocxref"><span class="secno">6.12 </span>メディアのアップロード</a></li></ol></li><li class="tocline"><a href="#server-to-server-interactions" class="tocxref"><span class="secno">7. </span>サーバからサーバへの通信</a><ol class="toc"><li class="tocline"><a href="#delivery" class="tocxref"><span class="secno">7.1 </span>配送</a><ol class="toc"><li class="tocline"><a href="#outbox-delivery" class="tocxref"><span class="secno">7.1.1 </span>サーバ-サーバ間のoutbox配送の要件</a></li><li class="tocline"><a href="#inbox-forwarding" class="tocxref"><span class="secno">7.1.2 </span>inboxからの転送</a></li><li class="tocline"><a href="#shared-inbox-delivery" class="tocxref"><span class="secno">7.1.3 </span>共有 Inbox への配送</a></li></ol></li><li class="tocline"><a href="#create-activity-inbox" class="tocxref"><span class="secno">7.2 </span>Create Activity</a></li><li class="tocline"><a href="#update-activity-inbox" class="tocxref"><span class="secno">7.3 </span>Update Activity</a></li><li class="tocline"><a href="#delete-activity-inbox" class="tocxref"><span class="secno">7.4 </span>Delete Activity</a></li><li class="tocline"><a href="#follow-activity-inbox" class="tocxref"><span class="secno">7.5 </span>Follow Activity</a></li><li class="tocline"><a href="#accept-activity-inbox" class="tocxref"><span class="secno">7.6 </span>Accept Activity</a></li><li class="tocline"><a href="#reject-activity-inbox" class="tocxref"><span class="secno">7.7 </span>Reject Activity</a></li><li class="tocline"><a href="#add-activity-inbox" class="tocxref"><span class="secno">7.8 </span>Add Activity</a></li><li class="tocline"><a href="#remove-activity-inbox" class="tocxref"><span class="secno">7.9 </span>Remove Activity</a></li><li class="tocline"><a href="#like-activity-inbox" class="tocxref"><span class="secno">7.10 </span>Like Activity</a></li><li class="tocline"><a href="#announce-activity-inbox" class="tocxref"><span class="secno">7.11 </span>Announce Activity (共有)</a></li><li class="tocline"><a href="#undo-activity-inbox" class="tocxref"><span class="secno">7.12 </span>Undo Activity</a></li></ol></li><li class="tocline"><a href="#i18n-concerns" class="tocxref"><span class="secno">A. </span>国際化</a></li><li class="tocline"><a href="#security-considerations" class="tocxref"><span class="secno">B. </span>セキュリティ上の考慮事項</a><ol class="toc"><li class="tocline"><a href="#authorization" class="tocxref"><span class="secno">B.1 </span>認証と認可</a></li><li class="tocline"><a href="#security-verification" class="tocxref"><span class="secno">B.2 </span>検証</a></li><li class="tocline"><a href="#security-localhost" class="tocxref"><span class="secno">B.3 </span>ocalhost URIへのアクセス</a></li><li class="tocline"><a href="#security-uri-schemes" class="tocxref"><span class="secno">B.4 </span>URIスキーマ</a></li><li class="tocline"><a href="#security-recursive-objects" class="tocxref"><span class="secno">B.5 </span>再帰オブジェクト</a></li><li class="tocline"><a href="#security-spam" class="tocxref"><span class="secno">B.6 </span>スパム</a></li><li class="tocline"><a href="#security-federation-dos" class="tocxref"><span class="secno">B.7 </span>連合サービス拒否</a></li><li class="tocline"><a href="#security-c2s-ratelimiting" class="tocxref"><span class="secno">B.8 </span>クライアントからサーバへの通信量制限</a></li><li class="tocline"><a href="#security-c2s-response-dos" class="tocxref"><span class="secno">B.9 </span>クライアントからサーバへのレスポンスのサービス拒否</a></li><li class="tocline"><a href="#security-sanitizing-content" class="tocxref"><span class="secno">B.10 </span>内容のサニタイズ</a></li><li class="tocline"><a href="#security-not-displaying-bto-bcc" class="tocxref"><span class="secno">B.11 </span>btoおよびbcc属性の非表示</a></li></ol></li><li class="tocline"><a href="#acknowledgements" class="tocxref"><span class="secno">C. </span>謝辞</a></li><li class="tocline"><a href="#references" class="tocxref"><span class="secno">D. </span>参考文献</a><ol class="toc"><li class="tocline"><a href="#normative-references" class="tocxref"><span class="secno">D.1 </span>引用規格</a></li><li class="tocline"><a href="#informative-references" class="tocxref"><span class="secno">D.2 </span>参考規格</a></li></ol></li></ol></nav>
+
+    <section id="Overview">
+      <!--OddPage--><h2 id="x1-overview"><span class="secno">1. </span>概要</h2>
+
+      <p>ActivityPub は二つの層を提供します:</p>
+
+      <ul>
+        <li><b>サーバからサーバへの連合プロトコル</b> (これにより非中央集権ウェブサイトが情報を共有できます)</li>
+        <li><b>クライアントからサーバへのプロトコル</b> (従って、現実世界のユーザー、ボット、その他の自動処理を含むユーザーは、 電話やデスクトップや web アプリケーションやなんでもから、 サーバでの自身のアカウントを使って ActivityPub で通信できます)</li>
+      </ul>
+
+      <p>ActivityPub 実装は、これらの一つだけを実装しても良いし、両方とも実装しても 良いです。しかし、一旦一つを実装すれば、もう一つを実装するのにそれほど多くの ステップはなく、両方に多くの利益があります (web サイトを非中央集権型ソーシャル web にし、様々なソーシャル web サイトで 動作するクライアントとクライアントライブラリを使えるようにします)。</p>
+
+      <p>ActivityPub では、ユーザーはサーバ上のアカウントを通して <a href="#actors">アクター</a> として表現されます。異なるサーバのユーザーアカウントはそれぞれ異なったアクターに対応します。全てのアクターは次のものを持ちます:</p>
+
+      <ul>
+        <li><b><code>inbox</code>:</b> 世界中からメッセージを受け取る場所</li>
+        <li><b><code>outbox</code>:</b> 他へメッセージを送る場所</li>
+      </ul>
+
+      <p><img src="illustration/tutorial-1.png" alt="Actor with inbox and outbox"></p>
+
+      <p>これらはエンドポイント、つまり実際には ActivityPub actor の ActivityStreams 記述にある単なる URL です。(ActivityStreams については後に触れます。)</p>
+
+      <p>以下は、我が友 Alyssa P.Hacker の記録の例です:</p>
+
+      <div class="example"><div class="example-title marker"><span>Example 1</span></div><pre class="highlight json hljs" aria-busy="false" aria-live="polite">{<span class="hljs-attr">"@context"</span>: <span class="hljs-string">"https://www.w3.org/ns/activitystreams"</span>,
+ <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Person"</span>,
+ <span class="hljs-attr">"id"</span>: <span class="hljs-string">"https://social.example/alyssa/"</span>,
+ <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Alyssa P. Hacker"</span>,
+ <span class="hljs-attr">"preferredUsername"</span>: <span class="hljs-string">"alyssa"</span>,
+ <span class="hljs-attr">"summary"</span>: <span class="hljs-string">"Lisp enthusiast hailing from MIT"</span>,
+ <span class="hljs-attr">"inbox"</span>: <span class="hljs-string">"https://social.example/alyssa/inbox/"</span>,
+ <span class="hljs-attr">"outbox"</span>: <span class="hljs-string">"https://social.example/alyssa/outbox/"</span>,
+ <span class="hljs-attr">"followers"</span>: <span class="hljs-string">"https://social.example/alyssa/followers/"</span>,
+ <span class="hljs-attr">"following"</span>: <span class="hljs-string">"https://social.example/alyssa/following/"</span>,
+ <span class="hljs-attr">"liked"</span>: <span class="hljs-string">"https://social.example/alyssa/liked/"</span>}</pre></div>
+
+      <p>ActivityPub は語彙として [<cite><a class="bibref" href="#bib-ActivityStreams">ActivityStreams</a></cite>] を使います。これはなかなか素晴らしいことです; ActivityStreams はソーシャルネットワークに 流れる全てのアクティビティと内容を表現する全ての一般的な用語を 含んでいるからです。おそらく ActivityStreams は既にあなたが必要な全ての語彙を 含んでいるでしょうが、もしそうでなければ、ActivityStreams は [<cite><a class="bibref" href="#bib-JSON-LD">JSON-LD</a></cite>] を使って拡張できます。あなたが JSON-LD について知っているなら、JSON-LD によって提供される クールなリンク付きデータ手法の有用性を使えます。もしそうでなくても、心配は要りません; JSON-LD 文書と ActivityStreams は どちらも単なる単純な JSON として理解すればよいです。(もし拡張を追加しようとしているなら、ここが本当に JSON-LD が助けになるところです。)</p>
+
+      <p>さて。Alyssa は彼女の友人と話したいと思っていて、彼女の友人も彼女と 話したいと思っています!幸いにもこれらの "inbox" と "outbox" がその助けになります。これらはそれぞれ GET と POST で異なった振る舞いをします。これがどのように働くのかを見てみましょう:</p>
+
+      <p><img src="illustration/tutorial-2.png" alt="Actor with messages flowing from rest of world to inbox and from outbox to rest of world"></p>
+
+      <p>では、ここでおさらいです:</p>
+
+      <ul>
+        <li>あなたは誰かにメッセージを送るためにその人の inbox に POST できます (サーバからサーバ / 連合のみ…<em>これが</em>連合です!)</li>
+        <li>あなたはあなたの最新のメッセージを読むためにあなたの inbox を GET できます (クライアントからサーバ; これはあなたのソーシャルネットワークストリームを 読むようなものです)</li>
+        <li>あなたは世界中にメッセージを送るためにあなたの outbox に POST できます (クライアントからサーバ)</li>
+        <li>あなたは誰か(あるいは少なくともあなたが読むことを許されている人)が どんなメッセージを書いたかを見るためにその人の outbox を GET できます。(クライアントからサーバとサーバからサーバ)</li>
+      </ul>
+ 
+      <p>もちろん、もし最後のもの (誰かの outbox を GET する) が、人々が 送っているものを見る唯一の方法なら、これはとても効率的な 連合プロトコルとは言えません!実際には、連合は普通サーバが他のサーバのactorのinboxに送るときに起こります。</p>
+
+      <p>例を見てみましょう!Alyssa は友人である Ben Bitdiddle と話したいとします。彼女は彼に最近本を貸していて、それを返してくれるか確認したいです。以下は、彼女が書いた、ActivityStreams オブジェクトとしての メッセージです。</p>
+
+      <div class="example"><div class="example-title marker"><span>Example 2</span></div><pre class="highlight json hljs" aria-busy="false" aria-live="polite">{<span class="hljs-attr">"@context"</span>: <span class="hljs-string">"https://www.w3.org/ns/activitystreams"</span>,
+ <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Note"</span>,
+ <span class="hljs-attr">"to"</span>: [<span class="hljs-string">"https://chatty.example/ben/"</span>],
+ <span class="hljs-attr">"attributedTo"</span>: <span class="hljs-string">"https://social.example/alyssa/"</span>,
+ <span class="hljs-attr">"content"</span>: <span class="hljs-string">"Say, did you finish reading that book I lent you?"</span>}</pre></div>
+
+      <p>これは Ben に向けた note です。彼女はこれを彼女の outbox に POST します。</p>
+
+      <p><img src="illustration/tutorial-3.png" alt="Actor posting message to outbox"></p>
+
+      <p>これは非アクティビティオブジェクトなので、サーバは これは新しく作成されたオブジェクトと認識し、これを Create アクティビティにラッピングします。(ActivityPub で送られる Activity は一般的に ある actor があるオブジェクトに対して行われるアクティビティ、という パターンに従います。この場合は、アクティビティは Person によって投稿される Note オブジェクトの Create です。)</p>
+
+
+      <div class="example"><div class="example-title marker"><span>Example 3</span></div><pre class="highlight json hljs" aria-busy="false" aria-live="polite">{<span class="hljs-attr">"@context"</span>: <span class="hljs-string">"https://www.w3.org/ns/activitystreams"</span>,
+ <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Create"</span>,
+ <span class="hljs-attr">"id"</span>: <span class="hljs-string">"https://social.example/alyssa/posts/a29a6843-9feb-4c74-a7f7-081b9c9201d3"</span>,
+ <span class="hljs-attr">"to"</span>: [<span class="hljs-string">"https://chatty.example/ben/"</span>],
+ <span class="hljs-attr">"actor"</span>: <span class="hljs-string">"https://social.example/alyssa/"</span>,
+ <span class="hljs-attr">"object"</span>: {<span class="hljs-attr">"type"</span>: <span class="hljs-string">"Note"</span>,
+            <span class="hljs-attr">"id"</span>: <span class="hljs-string">"https://social.example/alyssa/posts/49e2d03d-b53a-4c4c-a95c-94a6abf45a19"</span>,
+            <span class="hljs-attr">"attributedTo"</span>: <span class="hljs-string">"https://social.example/alyssa/"</span>,
+            <span class="hljs-attr">"to"</span>: [<span class="hljs-string">"https://chatty.example/ben/"</span>],
+            <span class="hljs-attr">"content"</span>: <span class="hljs-string">"Say, did you finish reading that book I lent you?"</span>}}</pre></div>
+
+      <p>Alyssa のサーバは Ben の ActivityStreams actor オブジェクトを探し、 彼の inbox エンドポイントを見つけ、彼の inbox に彼女のオブジェクトを POST します。</p>
+
+      <p><img src="illustration/tutorial-4.png" alt="Server posting to remote actor's inbox"></p>
+
+      <p>技術的にはこれは二つに分割されたステップです…一つ目は クライアントからサーバへの通信、もう一つはサーバからサーバへの通信(連合)です。しかし、この例では両方を使っているので、 outbox から inbox への一連の流れとしての投稿と抽象化して考えられます:</p>
+
+      <p><img src="illustration/tutorial-5.png" alt="Note flowing from one actor's outbox to other actor's inbox"></p>
+
+      <p>すばらしい!しばらく後に、Alyssa は彼女が受け取った新しいメッセージを チェックします。彼女のスマートフォンは彼女の inbox を GET でポーリングし、 友人が投稿した大量の猫動画や姉が投稿した甥の写真の中から、 彼女は次のメッセージを見つけます:</p>
+
+      <div class="example"><div class="example-title marker"><span>Example 4</span></div><pre class="highlight json hljs" aria-busy="false" aria-live="polite">{"@context": "https://www.w3.org/ns/activitystreams",
+ "type": "Create",
+ "id": "https://chatty.example/ben/p/51086",
+ "to": ["https://social.example/alyssa/"],
+ "actor": "https://chatty.example/ben/",
+ "object": {"type": "Note",
+            "id": "https://chatty.example/ben/p/51085",
+            "attributedTo": "https://chatty.example/ben/",
+            "to": ["https://social.example/alyssa/"],
+            "inReplyTo": "https://social.example/alyssa/posts/49e2d03d-b53a-4c4c-a95c-94a6abf45a19",
+            "content": "&lt;p&gt;Argh, yeah, sorry, I'll get it back to you tomorrow.&lt;/p&gt;
+                        &lt;p&gt;I was reviewing the section on register machines,
+                           since it's been a while since I wrote one.&lt;/p&gt;"}}</pre></div>
+
+      <p>Alyssa はほっとして、Ben の投稿に「いいね」します:</p>
+
+      <div class="example"><div class="example-title marker"><span>Example 5</span></div><pre class="highlight json hljs" aria-busy="false" aria-live="polite">{<span class="hljs-attr">"@context"</span>: <span class="hljs-string">"https://www.w3.org/ns/activitystreams"</span>,
+ <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Like"</span>,
+ <span class="hljs-attr">"id"</span>: <span class="hljs-string">"https://social.example/alyssa/posts/5312e10e-5110-42e5-a09b-934882b3ecec"</span>,
+ <span class="hljs-attr">"to"</span>: [<span class="hljs-string">"https://chatty.example/ben/"</span>],
+ <span class="hljs-attr">"actor"</span>: <span class="hljs-string">"https://social.example/alyssa/"</span>,
+ <span class="hljs-attr">"object"</span>: <span class="hljs-string">"https://chatty.example/ben/p/51086"</span>}</pre></div>
+
+      <p>彼女はこのメッセージを彼女の outbox に POST します。(これはアクティビティなので、彼女のサーバは これを Create オブジェクトでラップする必要がないことを分かっています。)</p>
+
+      <p>幸せな気分になったので、彼女は彼女のフォロワーに公開メッセージを 投稿することにしました。ほどなくして以下のメッセージが彼女の followers コレクションの全ての メンバーに送信され、またこれは特殊な Public グループ宛になっているので、 誰でも一般に読むことができます。</p>
+
+      <div class="example"><div class="example-title marker"><span>Example 6</span></div><pre class="highlight json hljs" aria-busy="false" aria-live="polite">{<span class="hljs-attr">"@context"</span>: <span class="hljs-string">"https://www.w3.org/ns/activitystreams"</span>,
+ <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Create"</span>,
+ <span class="hljs-attr">"id"</span>: <span class="hljs-string">"https://social.example/alyssa/posts/9282e9cc-14d0-42b3-a758-d6aeca6c876b"</span>,
+ <span class="hljs-attr">"to"</span>: [<span class="hljs-string">"https://social.example/alyssa/followers/"</span>,
+        <span class="hljs-string">"https://www.w3.org/ns/activitystreams#Public"</span>],
+ <span class="hljs-attr">"actor"</span>: <span class="hljs-string">"https://social.example/alyssa/"</span>,
+ <span class="hljs-attr">"object"</span>: {<span class="hljs-attr">"type"</span>: <span class="hljs-string">"Note"</span>,
+            <span class="hljs-attr">"id"</span>: <span class="hljs-string">"https://social.example/alyssa/posts/d18c55d4-8a63-4181-9745-4e6cf7938fa1"</span>,
+            <span class="hljs-attr">"attributedTo"</span>: <span class="hljs-string">"https://social.example/alyssa/"</span>,
+            <span class="hljs-attr">"to"</span>: [<span class="hljs-string">"https://social.example/alyssa/followers/"</span>,
+                   <span class="hljs-string">"https://www.w3.org/ns/activitystreams#Public"</span>],
+            <span class="hljs-attr">"content"</span>: <span class="hljs-string">"Lending books to friends is nice.  Getting them back is even nicer! :)"</span>}}</pre></div>
+
+      <section id="social-web-working-group" inlist="" rel="schema:hasPart" resource="#social-web-working-group">
+        <h3 property="schema:name" id="x1-1-social-web-working-group"><span class="secno">1.1 </span>Social Web Working Group</h3>
+        <div datatype="rdf:HTML" property="schema:description">
+          <p><a href="#Overview">ActivityPub</a> は、Social Web Working Group によって 発行されているいくつかの関連する仕様の一つである。代替手法と補完するプロトコルに関心のある実装者は、 [<cite><a class="bibref" href="#bib-Micropub">Micropub</a></cite>] と 概観文書 [<cite><a class="bibref" href="#bib-Social-Web-Protocols">Social-Web-Protocols</a></cite>] を調査すると良い。</p>
+        </div>
+      </section>
+    </section>
+
+    <section id="conformance"><!--OddPage--><h2 id="x2-conformance"><span class="secno">2. </span>適合性</h2>
+<p>この仕様における、非規範的とされている節および、全ての作成ガイドライン、 図、例、注記は非規範的である。この仕様におけるその他の全ては規範的である。</p>
+<p id="respecRFC2119">キーワード<em class="rfc2119">MAY</em>, <em class="rfc2119">MUST</em>, <em class="rfc2119">MUST NOT</em>, <em class="rfc2119">SHOULD</em>, <em class="rfc2119">SHOULD NOT</em> は、 [<cite><a class="bibref" href="#bib-RFC2119">RFC2119</a></cite>] に 記述されているように解釈される。</p>
+
+      <section id="specification-profiles">
+        <h3 id="x2-1-specification-profiles"><span class="secno">2.1 </span>仕様プロファイル</h3>
+        <p>この仕様は、密接に関連し相互に作用する二つのプロトコルを定義する:</p>
+        <dl>
+          <dt>クライアント-サーバ間プロトコル(ソーシャル API)</dt>
+          <dd>このプロトコルは、クライアントがユーザーに<i>代わって</i>行動することを認める。例えば、このプロトコルはあるユーザーのactorのソーシャルストリームに 相互作用するモバイルフォンアプリケーションで使われる。</dd>
+          <dt>サーバ-サーバ間プロトコル(連合プロトコル)</dt>
+          <dd>このプロトコルは、異なるサーバにあり、同じソーシャルグラフ上で 結びつけられているactorの間でアクティビティを配布するために使われる。</dd>
+        </dl>
+        <p>ActivityPub 仕様は、一旦これらのどちらかのプロトコルが実装されると、 もう片方への対応はほとんど追加の作業が不要であるように設計されている。しかし、それでもサーバはもう片方なしで片方を実装できる。これは三つの準拠クラスを与える:</p>
+        <dl>
+          <dt>ActivityPub 準拠クライアント</dt>
+          <dd>この指定は、クライアント-サーバプロトコルのクライアント部分を全て 実装しているものに適用される。</dd>
+          <dt>ActivityPub 準拠サーバ</dt>
+          <dd>この指定は、クライアント-サーバプロトコルのサーバ部分を全て 実装しているものに適用される。</dd>
+          <dt>ActivityPub 準拠連合サーバ</dt>
+          <dd>この指定は、連合プロトコルを全て実装しているものに 適用される。</dd>
+        </dl>
+        <p>これは、仕様のうち、連合プロトコルの実装にのみ適用されるものに付記される。さらに、要件が指定される場合、(クライアント-サーバプロトコルでは) クライアントとサーバのどちらに適用されるかが明示され、 サーバ間プロトコルでは送信サーバと受信サーバのどちらを参照するかが 明示される。</p>
+      </section>
+    </section>
+
+    <section id="obj">
+      <!--OddPage--><h2 id="x3-objects"><span class="secno">3. </span>オブジェクト</h2>
+      <p>オブジェクトは [<cite><a class="bibref" href="#bib-ActivityStreams">ActivityStreams</a></cite>] と ActivityPub 両方の中核となる概念である。オブジェクトはしばしば Activity でラッピングされ、自身が Object の サブクラスである Collection に含まれる。[<cite><a class="bibref" href="#bib-Activity-Vocabulary">Activity-Vocabulary</a></cite>] 文書、特に <a href="https://www.w3.org/TR/activitystreams-vocabulary/#types">Core Classes</a> を参照のこと; ActivityPub はこの語彙のマッピングに非常に密接に従う。</p>
+      <p>ActivityPub は ActivityStreams によって提供されるものに加えていくつかの 用語を定義している。これらの用語は <code>https://www.w3.org/ns/activitystreams</code> で ActivityPub <a href="http://www.w3.org/TR/json-ld/#the-context">JSON-LD context</a> として提供される。実装者はそのオブジェクト定義に ActivityPub context を含むべきである(SHOULD)。実装者は追加の context を必要に応じて含んでも良い(MAY)。</p>
+      <p>ActivityPub は <a href="https://www.w3.org/TR/activitystreams-core/#urls"> ActivityStreams の URI / IRI 仕様</a> と同じものを共有する。</p>
+      <p>サーバはコンテンツスプーフィング攻撃を防ぐために受信したコンテンツを 検証するべきである(SHOULD)。(サーバは少なくとも、そのオブジェクトがその発信元から受信したことをチェックするのと 同じぐらい頑強な何かをするべきであるが、 可能であれば署名検証のような機構が望ましい。)特定の検証機構をこの文書で命令的に指定することはしないが、 いくつかの提案と良い習慣については <a href="#security-considerations">セキュリティ上の考慮事項</a> を参照してほしい。</p>
+      <div class="informative">例えば、example.com が次のアクティビティを受信すると、<div class="example"><div class="example-title marker"><span>Example 7</span></div><pre class="hljs json" aria-busy="false" aria-live="polite">{
+  <span class="hljs-attr">"@context"</span>: <span class="hljs-string">"https://www.w3.org/ns/activitystreams"</span>,
+  <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Like"</span>,
+  <span class="hljs-attr">"actor"</span>: <span class="hljs-string">"https://example.net/~mallory"</span>,
+  <span class="hljs-attr">"to"</span>: [<span class="hljs-string">"https://hatchat.example/sarah/"</span>,
+         <span class="hljs-string">"https://example.com/peeps/john/"</span>],
+  <span class="hljs-attr">"object"</span>: {
+    <span class="hljs-attr">"@context"</span>: {<span class="hljs-attr">"@language"</span>: <span class="hljs-string">"en"</span>},
+    <span class="hljs-attr">"id"</span>: <span class="hljs-string">"https://example.org/~alice/note/23"</span>,
+    <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Note"</span>,
+    <span class="hljs-attr">"attributedTo"</span>: <span class="hljs-string">"https://example.org/~alice"</span>,
+    <span class="hljs-attr">"content"</span>: <span class="hljs-string">"I'm a goat"</span>
+  }
+}</pre></div><code>id</code> の参照先を取得して、これが存在して妥当なオブジェクトであり、 このオブジェクトが不正確ではないことを確認するべきである。(この例では、Mallory が Alice によって投稿されたとされているオブジェクトを 捏造している可能性がある。)</div>
+      <section id="obj-id">
+        <h3 id="x3-1-object-identifiers"><span class="secno">3.1 </span>オブジェクト識別子</h3>
+        <p>[<cite><a class="bibref" href="#bib-ActivityStreams">ActivityStreams</a></cite>] の全てのオブジェクトはユニークなグローバル識別子を 付けるべきとされている。ActivityPub はこの要求を拡張する; ActivityPub プロトコルで配布される全てのオブジェクトは、 意図的に一時的なもの(ある種のチャットメッセージやゲーム通知のような、短命の アクティビティで検索されることを意図していないもの)でない限り、 ユニークなグローバル識別子を持たなければならない(MUST)。これらの識別子は以下のグループのどれか一つでなければならない:</p>
+        <ol>
+          <li>HTTPS URI のような、参照先をパブリックに取得可能な URI で、 その権限が発信元サーバに帰属するもの。(公開用のコンテンツは HTTPS URI を使うべきである(SHOULD)。)</li>
+          <li>明示的に JSON <code>null</code> オブジェクトとして指定された ID; この場合は無名オブジェクト(親コンテキストの一部) を意味する。</li>
+        </ol>
+        <p>識別子は、アクティビティが意図的に一時的なものでない限り、 サーバからサーバへの通信で投稿するアクティビティでは 提供しなければならない(MUST)。しかし、クライアントからサーバへの通信では、<code>id</code> の指定なしに outbox に投稿されたオブジェクトを受信したサーバは、 その actor の名前空間の ID を割り当て、投稿されたオブジェクトに それを添付するべきである(SHOULD)。</p>
+        <p>全てのオブジェクトは以下の属性を持つ:</p>
+        <dl>
+          <dt>id</dt>
+          <dd>オブジェクトのユニークなグローバル識別子(オブジェクトが一時的なものの場合を 除く; この場合 <code>id</code> は省略しても良い(MAY))。</dd>
+          <dt>type</dt>
+          <dd>オブジェクトの型。</dd>
+        </dl>
+      </section>
+
+      <section id="retrieving-objects">
+        <h3 id="x3-2-retrieving-objects"><span class="secno">3.2 </span>オブジェクトの取得</h3>
+        <p>アクティビティを取得するために、 オブジェクトの <code>id</code> 属性に対して HTTP GET メソッドを使うことがある。リクエストに対するレスポンスとして返すデータの種類を選択するために、 サーバは [<cite><a class="bibref" href="#bib-RFC7231">RFC7231</a></cite>] で定義されている HTTP content negotiation を使っても良い(MAY)が、 <code>application/ld+json; profile="https://www.w3.org/ns/activitystreams"</code> への返答として ActivityStreams オブジェクト表現を表現しなければならず(MUST)、 <code>application/activity+json</code> への返答としても ActivityStreams 表現を表現するべきである(SHOULD)。クライアントはアクティビティを取得するために <code>Accept</code> ヘッダに <code>application/ld+json; profile="https://www.w3.org/ns/activitystreams"</code> メディアタイプを指定しなければならない(MUST)。</p>
+        <p>サーバは前述する要求に従わないリクエストに対して他の振る舞いを 実装しても良い(MAY)。(例えば、サーバは追加でレガシーなプロトコルを実装しても良いし、 あるリソースの HTML 表現と ActivityStreams 表現で同じ URI を使っても良い。)</p>
+        <p>サーバは <a href="#authorization" class="sec-ref"><span class="secno">B.1</span> <span class="sec-title">Authentication and Authorization</span></a> で指定された認証を要求したり、 独自の認証規則を実装したりしても良い(MAY)。サーバは、認証チェックを通過しなかったリクエストに対して適切な HTTP エラーコードか、 オブジェクトの存在がプライベートなものと考えられる場合は 403 Forbidden エラーコードで失敗するべきである(SHOULD)。プライベートターゲットの存在を公開したくない発信元サーバは、 代わりに 404 Not Found のステータスコードを返しても良い(MAY)。</p>
+      </section>
+
+      <section id="source-property">
+        <h3 id="x3-3-the-source-property"><span class="secno">3.3 </span>source 属性</h3>
+        <p>[<cite><a class="bibref" href="#bib-Activity-Vocabulary">Activity-Vocabulary</a></cite>] で定義されている全ての属性に加えて、 ActivityPub は <code>Object</code> に <code>source</code> 属性を提供するように拡張する。<code>source</code> 属性は、<code>content</code> マークアップが 由来するなんらかのソースを出所の形式として伝えたり、 クライアントによる将来の編集に対応することを意図している。一般的に、クライアントは <code>source</code> から <code>content</code> への変換を行い、逆は行わない。</p>
+        <p><code>source</code> の値は、 ソース情報を提供するために自身の <code>content</code> と <code>mediaType</code> フィールドを持つオブジェクトである。</p>
+        <div class="example"><div class="example-title marker"><span>Example 8</span></div><pre class="hljs json" aria-busy="false" aria-live="polite">{
+  <span class="hljs-attr">"@context"</span>: [<span class="hljs-string">"https://www.w3.org/ns/activitystreams"</span>,
+               {<span class="hljs-attr">"@language"</span>: <span class="hljs-string">"en"</span>}],
+  <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Note"</span>,
+  <span class="hljs-attr">"id"</span>: <span class="hljs-string">"http://postparty.example/p/2415"</span>,
+  <span class="hljs-attr">"content"</span>: <span class="hljs-string">"&lt;p&gt;I &lt;em&gt;really&lt;/em&gt; like strawberries!&lt;/p&gt;"</span>,
+  <span class="hljs-attr">"source"</span>: {
+    <span class="hljs-attr">"content"</span>: <span class="hljs-string">"I *really* like strawberries!"</span>,
+    <span class="hljs-attr">"mediaType"</span>: <span class="hljs-string">"text/markdown"</span>}
+}</pre></div>
+        <div class="note"><div role="heading" class="note-title marker" id="h-note" aria-level="4"><span>Note</span><span style="text-transform: none">: What to do when clients can't meaningfully handle a mediaType?</span></div><div class="">
+          <p>一般的に、元々作成したのと同じソース形式でユーザーに元の投稿を編集させるのが 最善である。しかし、全てのクライアントが全てのソース型に対するよいインターフェースを 安定して提供できるわけではなく、 クライアントは <code>source</code> から <code>content</code> への変換が行われることを 想定するので、 クライアントによっては、他のクライアントがどのように動作するかを知らない メディア型で動作するかもしれない。クライアントは編集するための <code>content</code> を都合良く提供して ソースを無視するかもしれないが、これはユーザーが将来の編集で元の <code>source</code> の望ましい形式を失うことを意味する。従って、そのようにするクライアントは最低限、元のソース形式が理解できないので 無視することを注意するような目立つ形での警告を提供するべきである。</p>
+          <p>例えば、Alyssa P.Hacker は、<a href="http://orgmode.org/">Org mode</a> を 利用して彼女が書いた Emacs クライアントを使って ActivityPub 対応のブログに 投稿するのが好きです。後に彼女は電話のクライアントでの編集に切り替えました; これは <code>text/x-org</code> が何であるかや、これを HTML にレンダリングする 方法を知らないので、代わりに元の <code>content</code> を編集するための テキストボックスを提供します。この編集エリアの上には、助けになる警告が表示されます;「これは元々私たちが扱い方を知らないマークアップ言語で 書かれています。 これを編集すると、元のソースが失われます!」ちょっとした誤字修正に、いい感じの org-mode のマークアップを失う価値が ないと彼女は判断し、家に帰ってから更新することに決めました。</p>
+        </div></div>
+      </section>
+    </section>
+
+    <section id="actors">
+      <!--OddPage--><h2 id="x4-actors"><span class="secno">4. </span>アクター</h2>
+      <p>ActivityPub のアクターは一般的には <a href="https://www.w3.org/TR/activitystreams-vocabulary/#actor-types"> ActivityStreams Actor Types</a> の一つであるが、 それに制限されない。例えば、 <a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-profile"> Profile</a> オブジェクトが アクターとして使われるかもしれないし、 ActivityStreams 拡張からの型が使われるかもしれない。アクターは ActivityPub の他の Object と同様に <a href="#retrieving-objects">取得</a> される。他の ActivityStreams オブジェクトと同様、アクターは URI である <code>id</code> を持つ。(例えばログインフォームのような)ユーザーインターフェースから直接入力された 場合、単純化した命名規則に対応しているのが望ましい。この目的のため、ID 正規化は以下のように行われるべきである(SHOULD):</p>
+      <ol>
+        <li>入力された ID が有効な URI の場合、これが直接使われる。</li>
+        <li> <code>example.org/alice/</code> のように、ユーザーが URI にスキームを追加するのを怠ったがそれ以外は有効であるように 見える場合、クライアントはデフォルトのスキーム (<code>https</code> が望ましい) を提供しようとしても良い(MAY)。</li>
+        <li>さもなければ、入力された値は不正として扱われるべきである。</li>
+      </ol>
+
+      <p>一旦アクターの URI が識別されると、この参照先を取得するべきである。</p>
+
+      <div class="note"><div role="heading" class="note-title marker" id="h-note-0" aria-level="3"><span>Note</span></div><div class="">ActivityPub は「ユーザー」と Actor との間で特定の関係を決定しない; 多くの設定が考えられる。ある Actor を複数の人間や組織が制御しているかもしれないし、 一人の人間や組織が複数の Actor を制御しているかもしれない。同様に、ある Actor はボットや自動化プロセスのようなソフトウェアの 一部を表現しているかもしれない。より詳細な「ユーザー」のモデリングとして、 例えば、同じ実体によって制御される複数の Actor を結びつけたり、 一つの Actor を複数のプロファイルや様相を通して表現できるようにすることは、 実装の裁量である。</div></div>
+
+      <section id="actor-objects">
+        <h3 id="x4-1-actor-objects"><span class="secno">4.1 </span><i>Actor</i> オブジェクト</h3>
+        <p>Actor オブジェクトは、<a href="#obj-id" class="sec-ref"><span class="secno">3.1</span> <span class="sec-title">Object Identifiers</span></a> で強制される属性に加えて、 以下の属性を持たなければならない(MUST):</p>
+        <dl>
+          <dt id="inbox-property">inbox</dt>
+          <dd>この actor が受け取った全てのメッセージから成る [<cite><a class="bibref" href="#bib-ActivityStreams">ActivityStreams</a></cite>] <a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-orderedcollection"> <code>OrderedCollection</code></a> への参照; <a href="#inbox" class="sec-ref"><span class="secno">5.2</span> <span class="sec-title">Inbox</span></a> を参照のこと。</dd>
+          <dt id="outbox-property">outbox</dt>
+          <dd>この actor によって作成された全てのメッセージから成る [<cite><a class="bibref" href="#bib-ActivityStreams">ActivityStreams</a></cite>] <a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-orderedcollection"> <code>OrderedCollection</code></a>; <a href="#outbox" class="sec-ref"><span class="secno">5.1</span> <span class="sec-title">Outbox</span></a> を参照のこと。</dd>
+        </dl>
+        <p>実装は、これに加えて、以下の属性を提供するべきである(SHOULD):</p>
+        <dl>
+          <dt id="following-property">following</dt>
+          <dd>この actor がフォローしている actor を示す [<cite><a class="bibref" href="#bib-ActivityStreams">ActivityStreams</a></cite>] コレクションへのリンク; <a href="#following" class="sec-ref"><span class="secno">5.4</span> <span class="sec-title">Following Collection</span></a> 参照。</dd>
+          <dt id="followers-property">followers</dt>
+          <dd>この actor をフォローしている actor を示す [<cite><a class="bibref" href="#bib-ActivityStreams">ActivityStreams</a></cite>] コレクションへのリンク; <a href="#followers" class="sec-ref"><span class="secno">5.3</span> <span class="sec-title">Followers Collection</span></a> 参照。</dd>
+        </dl>
+        <p>実装は以下の属性を提供しても良い(MAY):</p>
+        <dl>
+          <dt id="liked-property">liked</dt>
+          <dd>この actor が好んでいるオブジェクトを示す [<cite><a class="bibref" href="#bib-ActivityStreams">ActivityStreams</a></cite>] コレクションへのリンク; <a href="#liked" class="sec-ref"><span class="secno">5.5</span> <span class="sec-title">Liked Collection</span></a> 参照。</dd>
+        </dl>
+        <div class="example"><div class="example-title marker"><span>Example 9</span></div><pre class="hljs json" aria-busy="false" aria-live="polite">{
+  <span class="hljs-attr">"@context"</span>: [<span class="hljs-string">"https://www.w3.org/ns/activitystreams"</span>,
+               {<span class="hljs-attr">"@language"</span>: <span class="hljs-string">"ja"</span>}],
+  <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Person"</span>,
+  <span class="hljs-attr">"id"</span>: <span class="hljs-string">"https://kenzoishii.example.com/"</span>,
+  <span class="hljs-attr">"following"</span>: <span class="hljs-string">"https://kenzoishii.example.com/following.json"</span>,
+  <span class="hljs-attr">"followers"</span>: <span class="hljs-string">"https://kenzoishii.example.com/followers.json"</span>,
+  <span class="hljs-attr">"liked"</span>: <span class="hljs-string">"https://kenzoishii.example.com/liked.json"</span>,
+  <span class="hljs-attr">"inbox"</span>: <span class="hljs-string">"https://kenzoishii.example.com/inbox.json"</span>,
+  <span class="hljs-attr">"outbox"</span>: <span class="hljs-string">"https://kenzoishii.example.com/feed.json"</span>,
+  <span class="hljs-attr">"preferredUsername"</span>: <span class="hljs-string">"kenzoishii"</span>,
+  <span class="hljs-attr">"name"</span>: <span class="hljs-string">"石井健蔵"</span>,
+  <span class="hljs-attr">"summary"</span>: <span class="hljs-string">"この方はただの例です"</span>,
+  <span class="hljs-attr">"icon"</span>: [
+    <span class="hljs-string">"https://kenzoishii.example.com/image/165987aklre4"</span>
+  ]
+}</pre></div>
+        <p>実装は、これに加えて、以下の属性を提供しても良い(MAY):</p>
+        <dl>
+          <dt id="streams-property">streams</dt>
+          <dd>関心のある補助的な Collection のリスト。</dd>
+          <dt id="preferredUsername">preferredUsername</dt>
+          <dd>actor を参照するために使われる短いユーザー名; ユニーク性は保証されない。</dd>
+          <dt id="endpoints">endpoints</dt>
+          <dd>この actor またはこの actor を参照する誰かにとって有用かもしれない (典型的にはサーバ/ドメイン単位の) 追加のエンドポイントをマッピングした json オブジェクト。このマッピングは actor 文書の中で値としてネストしても良いし、 これらの属性を持つ JSON-LD 文書へのリンクでも良い。</dd>
+        </dl>
+
+        <p><code>endpoints</code> マッピングは以下の属性を含んでいても良い(MAY):</p>
+        <dl>
+          <dt id="proxyUrl">proxyUrl</dt>
+          <dd>actor のクライアントが、 アクセスするのに認証が必要なリモート ActivityStreams にアクセスするのに 使われる エンドポイント URI。このエンドポイントを使うには、クライアントは 要求する ActivityStreams オブジェクトの <code>id</code> の値を持つ <code>x-www-form-urlencoded</code> <code>id</code> 引数を 投稿する。</dd>
+          <dt id="oauthAuthorizationEndpoint">oauthAuthorizationEndpoint</dt>
+          <dd>OAuth 2.0 bearer トークン [<cite><a class="bibref" href="#bib-RFC6749">RFC6749</a></cite>] [<cite><a class="bibref" href="#bib-RFC6750">RFC6750</a></cite>] が <a href="#client-to-server-interactions">クライアントからサーバへの通信</a> の 認証として使われる場合、 このエンドポイントは、ブラウザ認証ユーザーが新しい認証グラントを得るための URI を指定する。</dd>
+          <dt id="oauthTokenEndpoint">oauthTokenEndpoint</dt>
+          <dd>OAuth 2.0 bearer トークン [<cite><a class="bibref" href="#bib-RFC6749">RFC6749</a></cite>] [<cite><a class="bibref" href="#bib-RFC6750">RFC6750</a></cite>] が <a href="#client-to-server-interactions">クライアントからサーバへの通信</a> の 認証として使われる場合、 このエンドポイントは、クライアントがアクセストークンを得るための URI を指定する。</dd>
+          <dt id="provideClientKey">provideClientKey</dt>
+          <dd>Linked Data Signatures と HTTP Signatures が認証と認可として使われている場合、 このエンドポイントはブラウザ認証ユーザーが <a href="#client-to-server-interactions">クライアントからサーバへの通信</a> の ためのクライアントの公開鍵を認証する URI を指定する。</dd>
+          <dt id="signClientKey">signClientKey</dt>
+          <dd>Linked Data Signatures と HTTP Signatures が認証と認可として使われている場合、 このエンドポイントは 外部サーバと通信する際に actor に代わって動作するタイミングのための、 actor のキーによって署名されるクライアントキーの URI を指定する。</dd>
+          <dt id="sharedInbox">sharedInbox</dt>
+          <dd><a href="#shared-inbox-delivery">パブリックに宛先指定された アクティビティとフォロワーによって送られたアクティビティを 広く配布するために使われる</a> オプションのエンドポイント。<code>publicInbox</code> エンドポイントは、 パブリックに読み込み可能な、 <a href="#public-addressing">Public</a> 特殊コレクションを示す オブジェクトを含む <code>OrderedCollection</code> オブジェクトであるべきである(SHOULD)。<code>sharedInbox</code> エンドポイントからの読み込みは、 <code>Public</code> エンドポイントにアドレス指定されていないオブジェクトを 表現してはならない(MUST NOT)。</dd>
+        </dl>
+
+        <div class="note"><div role="heading" class="note-title marker" id="h-note-1" aria-level="4"><span>Note</span></div><div class="" id="as2-actor-properties">
+          <p>ActivityPub のための上流語彙として、 任意の適用可能な [<cite><a class="bibref" href="#bib-ActivityStreams">ActivityStreams</a></cite>] 属性は ActivityPub Actor として使われる。一部の ActivityStreams 属性は特に注目する価値がある; これが ActivityPub 実装でどう使われるかを例示する。</p>
+
+          <dl>
+            <dt id="url-property">url</dt>
+            <dd>actor の「プロフィール web ページ」へのリンク (これが <code>id</code> の値と同じではない場合)。</dd>
+            <dt id="name-property">name</dt>
+            <dd>actor の、望ましい「ニックネーム」や「表示名」。</dd>
+            <dt id="summary-property">summary</dt>
+            <dd>ユーザー自身の簡単な要約や経歴</dd>
+            <dt id="icon-property">icon</dt>
+            <dd>ユーザーのプロフィール画像を表現する、画像へのリンクまたは Image オブジェクト (これはサムネイルかもしれない)。</dd>
+          </dl>
+        </div></div>
+        <div class="note"><div role="heading" class="note-title marker" id="h-note-2" aria-level="4"><span>Note</span></div><p class="" id="actor-text-direction"><code>name</code>, <code>preferredUsername</code>, <code>summary</code> の ような、自然言語値を含む属性は、 <a href="https://www.w3.org/TR/activitystreams-core/#naturalLanguageValues"> natural language support defined in ActivityStreams</a> を使う。</p></div>
+      </section>
+
+    </section>
+
+    <section id="collections">
+      <!--OddPage--><h2 id="x5-collections"><span class="secno">5. </span>コレクション</h2>
+      <p>[<cite><a class="bibref" href="#bib-ActivityStreams">ActivityStreams</a></cite>] はコレクションの概念を定義している; ActivityPub は特殊な振る舞いをするコレクションをいくつか定義する。ActivityPub は大きなオブジェクトの集合を辿るために <a href="https://www.w3.org/TR/activitystreams-core/#paging">ActivityStreams paging</a> を使うことに注意すること。</p>
+
+      <p>これらのコレクションの一部は特に <a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-orderedcollection"> <code>OrderedCollection</code></a> 型を指定しており、一方その他は <a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-collection"> <code>Collection</code></a> または <a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-orderedcollection"> <code>OrderedCollection</code></a> の両方を許していることに注意すること。<a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-orderedcollection"> <code>OrderedCollection</code></a> は一貫して逆時系列順で表現されなければならない(MUST)。</p>
+
+      <div class="note"><div role="heading" class="note-title marker" id="h-note-3" aria-level="3"><span>Note</span></div><p class="">逆時系列順を決定するのにどの属性が使われるかは、意図的に実装詳細として 残してある。例えば、多くの SQL スタイルのデータベースは識別子としてインクリメントする 整数を使う; これはほとんどの場合挿入順として合理的に使われる。その他のデータベースでは、挿入時刻タイムスタンプが好まれるかもしれない。何が使われるかは重要ではないが、新しいアイテムが最初になるような形で 要素の順序が保持されていなければならない。「最終更新」タイムスタンプのような定期的に変更される属性は 使われるべきではない。</p></div>
+
+      <section id="outbox">
+        <h3 id="x5-1-outbox"><span class="secno">5.1 </span>Outbox</h3>
+        <p>outbox は <a href="#actors">actor</a> のプロファイルの <code>outbox</code> プロパティを使って発見される。<code>outbox</code> は <a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-orderedcollection"> <code>OrderedCollection</code></a>でなければならない(MUST)。</p>
+        <p>outboxストリームは、要求者がアクティビティを取得する能力があるという前提で、 ユーザーが発行したアクティビティを含む (つまり、outbox の内容はそれを読む人の権限によってフィルタされる)。ユーザーが <a href="#authorization">Authorization</a> なしでリクエストを投稿した場合、 サーバは全ての <a href="#public-addressing">Public</a> 投稿を 応答するべきである。これは場合によってはそのユーザーによって発行された、全ての関連する オブジェクトとなるかもしれないが、 利用可能なアイテムの数はサーバの実装とデプロイの自由裁量に任されている。</p>
+        <p>outbox は HTTP POST リクエストを受け付ける; その振る舞いは <a href="#client-to-server-interactions">クライアントからサーバへの通信</a>に 記述されている。</p>
+      </section>
+
+      <section id="inbox">
+        <h3 id="x5-2-inbox"><span class="secno">5.2 </span>Inbox</h3>
+
+        <p>inbox は <a href="#actors">actor</a> のプロファイルの <code>inbox</code> プロパティを使って発見される。<code>inbox</code> は <a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-orderedcollection"> <code>OrderedCollection</code></a> でなければならない(MUST)。</p>
+
+        <p>inbox ストリームは actor が受信した全てのアクティビティを含む。サーバは要求者の権限に応じてコンテンツをフィルタリングするべきである(SHOULD)。一般的に、inbox の所有者は その inbox のコンテンツ全てにアクセスできる。inbox にアクセスできる場合でも、アクセス制御に依存して、その他のコンテンツの 一部はパブリックで、一方その他のコンテンツは非所有者のユーザーは認証を 要求されるかもしれない。</p>
+
+        <p>サーバは inbox に返されたアクティビティの重複解消を 実行しなければならない(MUST)。重複は、あるアクティビティがある actor のフォロワーと、受信 actor を フォローしている特定の actor の両方にアドレス指定され、 サーバが受信リストの重複解消に失敗したときに起こる。このような重複解消は、アクティビティの <code>id</code> を比較して、 既に読んだアクティビティを落とす形で行われなければならない(MUST)。</p>
+
+        <p>連合サーバ上の actor の inbox は HTTP POST リクエストを受け付ける; その振る舞いは <a href="#delivery">Delivery</a> に記述されている。非連合サーバは POST リクエストを受け取った場合は 405 Method Not Allowed を 返すべきである(SHOULD)。</p>
+      </section>
+
+      <section id="followers">
+        <h3 id="x5-3-followers-collection"><span class="secno">5.3 </span>Followers コレクション</h3>
+        <p>各 <a href="#actors">actor</a> は <code>followers</code> コレクションを 持つべきである(SHOULD)。これはこの actor に <a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-follow">Follow</a> アクティビティを送信したときに <a href="#follow-activity-outbox">副作用</a> として追加された送信者の一覧である。これは誰かがある actor をフォローしている全てのユーザーの一覧を 見つける場所である。<code>followers</code> コレクションは <a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-orderedcollection"> <code>OrderedCollection</code></a> または <a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-collection"> <code>Collection</code></a> でなければならず(MUST)、 認証されたユーザーの権限や、認証がない場合は適切な形でフィルタリングしても 良い(MAY)。</p>
+
+        <div class="note"><div role="heading" class="note-title marker" id="h-note-4" aria-level="4"><span>Note</span><span style="text-transform: none">: Default for notification targeting</span></div><p class="">follow アクティビティは一般的には、ある actor が作成したオブジェクトを 見るための要求である。これにより、Followers コレクションは通知の <a href="#delivery">配送</a> の 適切なデフォルトターゲットになる。</p></div>
+      </section>
+
+      <section id="following">
+        <h3 id="x5-4-following-collection"><span class="secno">5.4 </span>Following コレクション</h3>
+        <p>各 actor は <code>following</code> コレクションを持つべきである(SHOULD)。これは <a href="#follow-activity-outbox">副作用</a> として追加された、 この actor がフォローした相手の一覧である。<code>following</code> コレクションは <a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-orderedcollection"> <code>OrderedCollection</code></a> または <a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-collection"> <code>Collection</code></a> でなければならず(MUST)、 認証されたユーザーの権限や、認証がない場合は適切な形でフィルタリングしても 良い(MAY)。</p>
+      </section>
+
+      <section id="liked">
+        <h3 id="x5-5-liked-collection"><span class="secno">5.5 </span>Liked コレクション</h3>
+        <p>各 actor は <code>liked</code> コレクションを持っても良い(MAY)。これは <a href="#like-activity-outbox">副作用</a> として追加された、 この actor の全ての <code>Like</code> のオブジェクトの一覧である。<code>liked</code> コレクションは <a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-orderedcollection"> <code>OrderedCollection</code></a> または <a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-collection"> <code>Collection</code></a> でなければならず(MUST)、 認証されたユーザーの権限や、認証がない場合は適切な形でフィルタリングしても 良い(MAY)。</p>
+      </section>
+
+      <section id="public-addressing">
+        <h3 id="x5-6-public-addressing"><span class="secno">5.6 </span>Public アドレス指定</h3>
+        <p>[<cite><a class="bibref" href="#bib-ActivityStreams">ActivityStreams</a></cite>] コレクションとオブジェクトに加えて、 activity は追加で特殊な「パブリック」コレクションを宛先に指定できる; これは識別子 <code>https://www.w3.org/ns/activitystreams#Public</code> である。例:</p>
+        <div class="example"><div class="example-title marker"><span>Example 10</span></div><pre class="hljs json" aria-busy="false" aria-live="polite">{
+  <span class="hljs-attr">"@context"</span>: <span class="hljs-string">"https://www.w3.org/ns/activitystreams"</span>,
+  <span class="hljs-attr">"id"</span>: <span class="hljs-string">"https://www.w3.org/ns/activitystreams#Public"</span>,
+  <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Collection"</span>
+}</pre></div>
+        <p>この特殊な URI を宛先に指定された activity は全てのユーザーから 認証なしにアクセスできる。実装者は「パブリック」特殊コレクションへ配送してはならない(MUST NOT); これは実際の activity を受信する能力を持たない。しかし、 actor はパブリックな投稿の効率的な共有配送のために利用可能である <a href="#sharedInbox"><code>sharedInbox</code></a> エンドポイントを 持ってもよい(MAY); <a href="#shared-inbox-delivery" class="sec-ref"><span class="secno">7.1.3</span> <span class="sec-title">Shared Inbox Delivery</span></a> を参照のこと。</p>
+        <div class="note"><div role="heading" class="note-title marker" id="h-note-5" aria-level="4"><span>Note</span></div><div class="">
+          <p>ActivityStreams JSON-LD コンテキストを使って ActivityStreams オブジェクトを短縮化すると、 <code>https://www.w3.org/ns/activitystreams#Public</code> は、 それぞれバプリックコレクションの正当な表現である、 単に <code>Public</code> および <code>as:Public</code> と 表現できることに注意すること。ActivityStreams に関して、 受信したアクティビティを JSON-LD ツールを使ってローカルなコンテキストに 変換するのではなく、単に JSON として扱う実装はこれに注意するべきで、 3 種類全ての表現を受け付けるように準備するべきである。</p>
+        </div></div>
+      </section>
+
+      <section id="likes">
+        <h3 id="x5-7-likes-collection"><span class="secno">5.7 </span>Likes コレクション</h3>
+        <p>各オブジェクトは <code>likes</code> コレクションを持ってもよい(MAY)。これは <a href="#like-activity-inbox">副作用</a> として追加された、 このオブジェクトを <code>object</code> 属性として持つ全ての <code>Like</code> アクティビティの一覧である。<code>likes</code> コレクションは <a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-orderedcollection"> <code>OrderedCollection</code></a> または <a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-collection"> <code>Collection</code></a> でなければならず(MUST)、 認証されたユーザーの権限や、認証がない場合は適切な形でフィルタリングしても 良い(MAY)。</p>
+
+        <div class="note"><div role="heading" class="note-title marker" id="h-note-6" aria-level="4"><span>Note</span></div><div class="">
+          <p><a href="#likes"><code>likes</code></a> コレクションを、似たような名前であるけれども異なる <a href="#liked"><code>liked</code></a> コレクションと 混同しないように注意すること。まとめると:</p>
+
+          <ul>
+            <li><b>liked:</b> 明確に actor の属性。これは <i>このアクターによって</i> 行われた <code>Like</code> アクティビティのコレクションで、 <a href="#like-activity-outbox">outbox への配送の副作用</a> として コレクションに追加される。</li>
+
+            <li><b>likes:</b> あらゆるオブジェクトの属性となり得る。これはこのオブジェクトを参照している <code>Like</code> アクティビティの コレクションで、 <a href="#like-activity-inbox">inbox への配達の副作用</a> として コレクションに追加される。</li>
+          </ul>
+        </div></div>
+      </section>
+
+      <section id="shares">
+        <h3 id="x5-8-shares-collection"><span class="secno">5.8 </span>Shares コレクション</h3>
+        <p>各オブジェクトは <code>shares</code> コレクションを持っても良い(MAY)。これは、このオブジェクトを <code>object</code> 属性に含む全ての <code>Announce</code> アクティビティの一覧で、 <a href="#announce-activity-inbox">副作用</a> として追加されたものである。<code>shares</code> コレクションは <a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-orderedcollection"> <code>OrderedCollection</code></a> または <a href="https://www.w3.org/TR/activitystreams-vocabulary/#dfn-collection"> <code>Collection</code></a> でなければならず(MUST)、 認証ユーザーの権限によってや、認証が与えられなかったときに適切になるように、 フィルタリングしても良い(MAY)。</p>
+      </section>
+    </section>
+
+    <section id="client-to-server-interactions">
+      <!--OddPage--><h2 id="x6-client-to-server-interactions"><span class="secno">6. </span>クライアントからサーバへの通信</h2>
+      <p>[<cite><a class="bibref" href="#bib-ActivityStreams">ActivityStreams</a></cite>] で定義された Activity は、ソーシャルグラフ内で コンテンツを作成、変更、共有するための中心となる機構である。</p>
+
+      <p>クライアントからサーバへの通信は、クライアントが actor の <a href="#outbox">outbox</a> に Activitity 投稿することで行われる。これを行うために、クライアントは actor の <a href="#actor-objects">profile</a> からその outbox の URL を 発見しなければならず(MUST)、 それから、Content-Type に <code>application/ld+json; profile="https://www.w3.org/ns/activitystreams"</code> を指定した <code>POST</code> リクエストをこの URL に行わなければならない(MUST)。サーバはクライアントからサーバへの通信において、 Content-Type や Accept のヘッダで <code>application/activity+json</code> を <code>application/ld+json; profile="https://www.w3.org/ns/activitystreams"</code> と等価と見なしてもよい(MAY)。このリクエストは、outbox を所有するユーザーの認証情報で 認証されなければならない(MUST)。<code>POST</code> リクエストのボディは、単一の Activity (組み込みオブジェクトを含んでいても良い(MAY))、あるいは <a href="#object-without-create">サーバによって Create アクティビティにラッピングされる</a> 単一の非 Activity オブジェクトのどちらかを含んでいなければならない(MUST)。</p>
+      <div class="example"><div class="example-title marker"><span>Example 11</span><span style="text-transform: none">: Submitting an Activity to the Outbox</span></div><pre class="hljs http" aria-busy="false" aria-live="polite"><span class="hljs-keyword">POST</span> <span class="hljs-string">/outbox/</span> HTTP/1.1
+<span class="hljs-attribute">Host</span>: dustycloud.org
+<span class="hljs-attribute">Authorization</span>: Bearer XXXXXXXXXXX
+<span class="hljs-attribute">Content-Type</span>: application/ld+json; profile="https://www.w3.org/ns/activitystreams"
+
+<span class="json">{
+  <span class="hljs-attr">"@context"</span>: [<span class="hljs-string">"https://www.w3.org/ns/activitystreams"</span>,
+               {<span class="hljs-attr">"@language"</span>: <span class="hljs-string">"en"</span>}],
+  <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Like"</span>,
+  <span class="hljs-attr">"actor"</span>: <span class="hljs-string">"https://dustycloud.org/chris/"</span>,
+  <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Chris liked 'Minimal ActivityPub update client'"</span>,
+  <span class="hljs-attr">"object"</span>: <span class="hljs-string">"https://rhiaro.co.uk/2016/05/minimal-activitypub"</span>,
+  <span class="hljs-attr">"to"</span>: [<span class="hljs-string">"https://rhiaro.co.uk/#amy"</span>,
+         <span class="hljs-string">"https://dustycloud.org/followers"</span>,
+         <span class="hljs-string">"https://rhiaro.co.uk/followers/"</span>],
+  <span class="hljs-attr">"cc"</span>: <span class="hljs-string">"https://e14n.com/evan"</span>
+}</span></pre></div>
+
+      <p><code>id</code> 属性付きの Activity が投稿されたとき、 サーバはこれを無視してこの Activity のための新しい <code>id</code> を 生成しなければならない(MUST)。サーバは <code>201 Created</code> HTTP コードを返さなければならず(MUST)、 Activity が一時的なものでない限り、 <code>Location</code> ヘッダに新しい <code>id</code> を 含めなければならない(MUST)。</p>
+      <div class="example"><div class="example-title marker"><span>Example 12</span><span style="text-transform: none">: Outbox response to submitted Activity</span></div><pre class="hljs http" aria-busy="false" aria-live="polite">HTTP/1.1 <span class="hljs-number">201</span> Created
+<span class="hljs-attribute">Location</span>: https://dustycloud.org/likes/345</pre></div>
+
+      <p id="remove-bto-bcc-before-delivery">ActivityStreams オブジェクトに <code>bto</code> や <code>bcc</code> 属性がある 場合、サーバは配送の前にこれらを削除しなければならない(MUST)が、 もともと <code>bto</code> / <code>bcc</code> 属性に保管されていた宛先を <a href="#delivery">delivery</a> での宛先を決定するのに使用しなければならない(MUST)。</p>
+
+      <p>それからサーバは新しい Activity を <a href="#outbox">outbox</a> コレクションに 追加しなければならない(MUST)。Activity の型に依存して、サーバはさらなる副作用を実行することが要求される。(しかし、Activity が outbox に現れる時刻には保証されない。Activity は遅延して現れたり、任意の時点で消滅したりするかもしれない。)これらは後述する個々の Activity に記述されている。</p>
+
+      <p>クライアントからサーバで実装されていないサーバにオブジェクトを投稿しようとした 場合、<code>405 Method Not Allowed</code> レスポンスを返すべきである(SHOULD)。</p>
+
+
+      <p>HTTP キャッシュ機構 [<cite><a class="bibref" href="#bib-RFC7234">RFC7234</a></cite>] は、 クライアントがサーバから応答を受信する場合とサーバがクライアントに 応答を送信する場合の両方において、適切な場合には遵守するべきである(SHOULD)。</p>
+
+      <section id="client-addressing">
+        <h3 id="x6-1-client-addressing"><span class="secno">6.1 </span>クライアントアドレス指定</h3>
+          <p><strong>クライアント</strong> は、 新しい Activity を適切にアドレス指定することに責任を持つ。これはある程度特定のクライアントの実装に依存するが、 サーバは新しい Activity を <code>to</code>, <code>bto</code>, <code>cc</code>, <code>bcc</code>, <code>audience</code> フィールドのアドレス指定先にのみ 転送する、ということをクライアントは認識しておかなければならない。</p>
+        <p><a href="#followers">Followers Collection</a> と <a href="#public-addressing">Public Collection</a> は、 新しい Activity のデフォルトの宛先として良い選択肢である。</p>
+        <p>クライアントは、 <code>object</code>, <code>target</code>, <code>inReplyTo</code>, <code>tag</code> フィールドで 新しい Activity に添付されたオブジェクトを見るべきであり(SHOULD)、 <em>その</em> <code>actor</code> や <code>attributedTo</code> 属性を取得して、 また、そのアドレス指定属性を取得して、 作成された新しい Activity の <code>to</code> または <code>cc</code> フィールドに追加してもよい(MAY)。クライアントは添付されたオブジェクトを再帰しても良い(MAY)が、 そうする場合はこの再帰に制限を設定するべきである(SHOULD)。(これは、クライアントがアドレス指定されたactorのコレクションを個々の宛先として 「展開」することを提案しているのではないことに注意すること。)</p>
+        <p>クライアントは UI でユーザーに宛先を変更する機会を与えても良い(MAY)。</p>
+        <p>例えば、Chris が Amy による次の記事に「いいね」をするとき:</p>
+
+        <div class="example"><div class="example-title marker"><span>Example 13</span><span style="text-transform: none">: An Article</span></div><pre class="hljs json" aria-busy="false" aria-live="polite">{
+  <span class="hljs-attr">"@context"</span>: [<span class="hljs-string">"https://www.w3.org/ns/activitystreams"</span>,
+               {<span class="hljs-attr">"@language"</span>: <span class="hljs-string">"en-GB"</span>}],
+  <span class="hljs-attr">"id"</span>: <span class="hljs-string">"https://rhiaro.co.uk/2016/05/minimal-activitypub"</span>,
+  <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Article"</span>,
+  <span class="hljs-attr">"name"</span>: <span class="hljs-string">"Minimal ActivityPub update client"</span>,
+  <span class="hljs-attr">"content"</span>: <span class="hljs-string">"Today I finished morph, a client for posting ActivityStreams2..."</span>,
+  <span class="hljs-attr">"attributedTo"</span>: <span class="hljs-string">"https://rhiaro.co.uk/#amy"</span>,
+  <span class="hljs-attr">"to"</span>: <span class="hljs-string">"https://rhiaro.co.uk/followers/"</span>,
+  <span class="hljs-attr">"cc"</span>: <span class="hljs-string">"https://e14n.com/evan"</span>
+}</pre></div>
+
+        <p>クライアントによって生成される「いいね」は:</p>
+
+        <div class="example"><div class="example-title marker"><span>Example 14</span><span style="text-transform: none">: A Like of the Article</span></div><pre class="hljs json" aria-busy="false" aria-live="polite">{
+  <span class="hljs-attr">"@context"</span>: [<span class="hljs-string">"https://www.w3.org/ns/activitystreams"</span>,
+               {<span class="hljs-attr">"@language"</span>: <span class="hljs-string">"en"</span>}],
+  <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Like"</span>,
+  <span class="hljs-attr">"actor"</span>: <span class="hljs-string">"https://dustycloud.org/chris/"</span>,
+  <span class="hljs-attr">"summary"</span>: <span class="hljs-string">"Chris liked 'Minimal ActivityPub update client'"</span>,
+  <span class="hljs-attr">"object"</span>: <span class="hljs-string">"https://rhiaro.co.uk/2016/05/minimal-activitypub"</span>,
+  <span class="hljs-attr">"to"</span>: [<span class="hljs-string">"https://rhiaro.co.uk/#amy"</span>,
+         <span class="hljs-string">"https://dustycloud.org/followers"</span>,
+         <span class="hljs-string">"https://rhiaro.co.uk/followers/"</span>],
+  <span class="hljs-attr">"cc"</span>: <span class="hljs-string">"https://e14n.com/evan"</span>
+}</pre></div>
+
+        <p>受信した outbox は、(いいねした) Chris のフォロワーだけでなく、 元の記事を受け取っている Amy、Amy のフォロワー、Evan にも <a href="#delivery">配送</a>できる。</p>
+
+        <p>以下のアクティビティを <code>outbox</code> に投稿するクライアントは、 アクティビティに <code>object</code> 属性も提供しなければならない(MUST): <code>Create</code>, <code>Update</code>, <code>Delete</code>, <code>Follow</code>, <code>Add</code>, <code>Remove</code>, <code>Like</code>, <code>Block</code>, <code>Undo</code>。さらに、以下のアクティビティを outbox へ投稿するクライアントは、 <code>target</code> 属性も提供しなければならない(MUST): <code>Add</code>, <code>Remove</code>。</p>
+
+      </section>
+
+
+      <section id="create-activity-outbox">
+        <h3 id="x6-2-create-activity"><span class="secno">6.2 </span>Create Activity</h3>
+        <p><code>Create</code> アクティビティは新しいオブジェクトを投稿するときに使われる。これは、Activity の中に(<code>object</code> 属性として)埋め込まれている オブジェクトが作成されるという副作用がある。</p>
+        <p><code>Create</code> アクティビティが投稿されたとき、アクティビティの <code>actor</code> は <code>object</code> の <code>attributedTo</code> フィールドにコピーされるべきである(SHOULD)。</p>
+        <p>Create アクティビティとその <code>object</code> のアドレス指定の 不一致はおそらく混乱を引き起こす。従って、サーバは初期の配送時に Create アクティビティの宛先を その <code>object</code> にコピーするべきであり(SHOULD)、 同様に <code>object</code> からラップしている Create アクティビティに コピーするべきである(SHOULD)。<code>Create</code> のアドレス指定を変更することなく (例えば <code>Update</code> アクティビティで) <code>object</code> のアドレス指定を変更することは 受け入れられることに注意すること。</p>
+
+        <section id="object-without-create">
+        <h4 id="x6-2-1-object-creation-without-a-create-activity"><span class="secno">6.2.1 </span>Create Activityなしでのオブジェクト作成</h4>
+        <p>クライアントからサーバへの投稿で、 周りのアクティビティなしでオブジェクトを作成することも可能である。サーバは outbox への POST リクエストで、 <code>Activity</code> のサブタイプでない 正当な [<cite><a class="bibref" href="#bib-ActivityStreams">ActivityStreams</a></cite>] オブジェクトを受け入れなければならない(MUST)。サーバはこのオブジェクトを <a href="#create-activity-outbox">Create Activity</a> の <code>object</code> として添付しなければならない(MUST)。非一時的オブジェクトに関しては、 サーバはラッピングした <code>Create</code> とラップされた <code>Object</code> に対して、<code>id</code> を 添付しなければならない(MUST)。</p>
+
+        <div class="note"><div role="heading" class="note-title marker" id="h-note-7" aria-level="5"><span>Note</span></div><p class="">サーバから返された <code>Location</code> の値は、 新しい(オブジェクトではなく) Create アクティビティの URL であるべきである。</p></div>
+
+        <p>オブジェクトで指定されている <code>to</code>, <code>bto</code>, <code>cc</code>, <code>bcc</code>, <code>audience</code> 属性は、 サーバによって新しい Create アクティビティにコピーされなければならない(MUST)。</p>
+
+        <div class="example"><div class="example-title marker"><span>Example 15</span><span style="text-transform: none">: Object with audience targeting</span></div><pre class="hljs json" aria-busy="false" aria-live="polite">{
+  <span class="hljs-attr">"@context"</span>: <span class="hljs-string">"https://www.w3.org/ns/activitystreams"</span>,
+  <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Note"</span>,
+  <span class="hljs-attr">"content"</span>: <span class="hljs-string">"This is a note"</span>,
+  <span class="hljs-attr">"published"</span>: <span class="hljs-string">"2015-02-10T15:04:55Z"</span>,
+  <span class="hljs-attr">"to"</span>: [<span class="hljs-string">"https://example.org/~john/"</span>],
+  <span class="hljs-attr">"cc"</span>: [<span class="hljs-string">"https://example.com/~erik/followers"</span>,
+         <span class="hljs-string">"https://www.w3.org/ns/activitystreams#Public"</span>]
+}</pre></div>前述の例は以下のように変換される:<div class="example"><div class="example-title marker"><span>Example 16</span><span style="text-transform: none">: Create Activity wrapper generated by the server</span></div><pre class="hljs json" aria-busy="false" aria-live="polite">{
+  <span class="hljs-attr">"@context"</span>: <span class="hljs-string">"https://www.w3.org/ns/activitystreams"</span>,
+  <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Create"</span>,
+  <span class="hljs-attr">"id"</span>: <span class="hljs-string">"https://example.net/~mallory/87374"</span>,
+  <span class="hljs-attr">"actor"</span>: <span class="hljs-string">"https://example.net/~mallory"</span>,
+  <span class="hljs-attr">"object"</span>: {
+    <span class="hljs-attr">"id"</span>: <span class="hljs-string">"https://example.com/~mallory/note/72"</span>,
+    <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Note"</span>,
+    <span class="hljs-attr">"attributedTo"</span>: <span class="hljs-string">"https://example.net/~mallory"</span>,
+    <span class="hljs-attr">"content"</span>: <span class="hljs-string">"This is a note"</span>,
+    <span class="hljs-attr">"published"</span>: <span class="hljs-string">"2015-02-10T15:04:55Z"</span>,
+    <span class="hljs-attr">"to"</span>: [<span class="hljs-string">"https://example.org/~john/"</span>],
+    <span class="hljs-attr">"cc"</span>: [<span class="hljs-string">"https://example.com/~erik/followers"</span>,
+           <span class="hljs-string">"https://www.w3.org/ns/activitystreams#Public"</span>]
+  },
+  <span class="hljs-attr">"published"</span>: <span class="hljs-string">"2015-02-10T15:04:55Z"</span>,
+  <span class="hljs-attr">"to"</span>: [<span class="hljs-string">"https://example.org/~john/"</span>],
+  <span class="hljs-attr">"cc"</span>: [<span class="hljs-string">"https://example.com/~erik/followers"</span>,
+         <span class="hljs-string">"https://www.w3.org/ns/activitystreams#Public"</span>]
+}</pre></div>
+        </section>
+      </section>
+      <section id="update-activity-outbox">
+        <h3 id="x6-3-update-activity"><span class="secno">6.3 </span>Update Activity</h3>
+        <p><code>Update</code> アクティビティは、既に存在するオブジェクトを更新するときに 使われる。これの副作用として、actor がこのオブジェクトを更新する権限を持っている場合、 <code>object</code> は Update アクティビティで定義されている新しい構造を 反映した形で修正されなければならない(MUST)。</p>
+
+        <section id="partial-updates">
+          <h4 id="x6-3-1-partial-updates"><span class="secno">6.3.1 </span>部分更新</h4>
+          <p>クライアントからサーバへの通信では、更新は部分的である; 文書全体を一度に更新するのではなく、指定された任意のキー/値の組が 既存の値を新しい値に置き換えるために使われる。これは更新されるオブジェクトの最上位のフィールドにのみ適用される。特別な例外は、値が json の <code>null</code> 型の場合である; これは、このフィールドはサーバのオブジェクト表現から 削除されるべきと言うことを意味する。</p>
+          <p>この振る舞いは、クライアントがサーバに投稿したときのクライアントからサーバへの 通信のみであることに注意すること。サーバからサーバへの相互作用と、サーバからクライアントへの更新は、 部分的更新が適用された後の、オブジェクトの完全に新しい表現を含むべきであることに注意すること。より詳しくは <a href="#update-activity-inbox">サーバ間相互作用での Update アクティビティ</a> の説明を参照のこと。</p>
+        </section>
+      </section>
+      <section id="delete-activity-outbox">
+        <h3 id="x6-4-delete-activity"><span class="secno">6.4 </span>Delete Activity</h3>
+        <p><code>Delete</code> アクティビティは、既に存在するオブジェクトを 削除するために使われる。この副作用として、サーバは <code>object</code> を、 削除されたオブジェクトを参照するアクティビティで表示される <code>Tombstone</code> のオブジェクトに置き換えても良い(MAY)。削除されたオブジェクトが要求された場合、サーバは、 レスポンスボディとして <code>Tombstone</code> オブジェクトが表現されている場合は HTTP 410 Gone ステータスを、 さもなければ HTTP 404 Not Found ステータスを返すべきである (SHOULD)。</p>
+
+        <p>削除されたオブジェクト:</p>
+        <div class="example"><div class="example-title marker"><span>Example 17</span></div><pre class="hljs json" aria-busy="false" aria-live="polite">{
+  <span class="hljs-attr">"@context"</span>: <span class="hljs-string">"https://www.w3.org/ns/activitystreams"</span>,
+  <span class="hljs-attr">"id"</span>: <span class="hljs-string">"https://example.com/~alice/note/72"</span>,
+  <span class="hljs-attr">"type"</span>: <span class="hljs-string">"Tombstone"</span>,
+  <span class="hljs-attr">"published"</span>: <span class="hljs-string">"2015-02-10T15:04:55Z"</span>,
+  <span class="hljs-attr">"updated"</span>: <span class="hljs-string">"2015-02-10T15:04:55Z"</span>,
+  <span class="hljs-attr">"deleted"</span>: <span class="hljs-string">"2015-02-10T15:04:55Z"</span>
+}</pre></div>
+      </section>
+      <section id="follow-activity-outbox">
+        <h3 id="x6-5-follow-activity"><span class="secno">6.5 </span>Follow Activity</h3>
+        <p><code>Follow</code> アクティビティは、他の actor のアクティビティを 購読するために使われる。</p>
+        <p>これを <strong>outbox</strong> に受信した場合の副作用として、 サーバは、この <code>Follow</code> アクティビティをオブジェクトとした <code>Accept</code> アクティビティを引き続いて受信した場合にのみ、 <code>actor</code> の <a href="#following"><code>following</code> コレクション</a> に <code>object</code> を追加するべきである(SHOULD)。</p>
+      </section>
+      <section id="add-activity-outbox">
+        <h3 id="x6-6-add-activity"><span class="secno">6.6 </span>Add Activity</h3>
+        <p><code>Add</code> アクティビティを <strong>outbox</strong> に受け取ったとき、 以下の場合を除いて、サーバは <code>object</code> を <code>target</code> プロパティで指定されたコレクションに追加するべきである(SHOULD):</p>
+        <ul>
+          <li><code>target</code> が受信サーバによって所有されておらず、従ってこれを更新する権限がない。</li>
+          <li>受信サーバの裁量により、なんらかの理由によって <code>object</code> を <code>target</code> コレクションに追加することを 認められていない。</li>
+        </ul>
+      </section>
+      <section id="remove-activity-outbox">
+        <h3 id="x6-7-remove-activity"><span class="secno">6.7 </span>Remove Activity</h3>
+        <p><strong>outbox</strong> に <code>Remove</code> アクティビティを受信すると、 サーバは次の場合を除いて、 <code>target</code> 属性で指定されたコレクションから <code>object</code> を削除するべきである(SHOULD)。</p><ul>
+          <li><code>target</code> が受信サーバによって所有されておらず、従ってこれを更新する権限がない。</li>
+          <li><code>object</code> が、受信サーバの裁量により、何らかの他の理由で <code>target</code> から削除することを認められていない。</li>
+        </ul>
+      </section>
+      <section id="like-activity-outbox">
+        <h3 id="x6-8-like-activity"><span class="secno">6.8 </span>Like Activity</h3>
+        <p><code>Like</code> アクティビティは <code>actor</code> が <code>object</code> を好んでいることを示す。</p>
+        <p>これを <strong>outbox</strong> に受信したときの副作用として、 サーバは <code>actor</code> の <a href="#liked"><code>liked</code> コレクション</a> に この <code>object</code> を追加するべきである(SHOULD)。</p>
+      </section>
+      <section id="block-activity-outbox">
+        <h3 id="x6-9-block-activity"><span class="secno">6.9 </span>Block Activity</h3>
+        <p><code>Block</code> アクティビティは、投稿したアクターは (<code>object</code>属性で定義された)アクターが <code>Block</code> アクティビティを投稿したアクターによって投稿された オブジェクトと相互作用出来ることを望まないことを示すために使われる。サーバはブロックしたユーザーと、このアクターによって投稿された任意の オブジェクトとの相互作用を防止するべきである (SHOULD)。</p>
+        <p>サーバは Block アクティビティをその <code>object</code> に 配送するべきではない(SHOULD NOT)。</p>
+      </section>
+      <section id="undo-activity-outbox">
+        <h3 id="x6-10-undo-activity"><span class="secno">6.10 </span>Undo Activity</h3>
+        <p><code>Undo</code> アクティビティは以前のアクティビティを取り消すときに使われる。Activity Vocabulary 文書の <a href="https://www.w3.org/TR/activitystreams-vocabulary/#inverse"> Inverse Activities and "Undo"</a> を参照のこと。例えば、<code>Undo</code> は以前の <code>Like</code>, <code>Follow</code>, <code>Block</code> のいずれかの 取り消しのために使われる。Undo アクティビティと取り消されるアクティビティはどちらも同じ actor を 持っていなければならない(MUST)。副作用として、できるだけ広範囲に取り消しを行うべきである。例えば、もし <code>Like</code> を取り消すと、その前にインクリメントされた カウンタは適切にデクリメントされるべきである。</p>
+
+        <p>既存の明示的な「逆アクティビティ」を代わりに使うべき例外がある。<code>Create</code> ベースのアクティビティは <code>Delete</code> を、 <code>Add</code> アクティビティは <code>Remove</code> を使うべきである。</p>
+      </section>
+
+      <section id="client-to-server-outbox-delivery">
+        <h3 id="x6-11-delivery"><span class="secno">6.11 </span>配送</h3>
+        <p>連合サーバは <strong>outbox</strong> に投稿された全ての Activity を <a href="#outbox-delivery">outbox配送</a> に従って配送を実行しなければならない(MUST)。</p>
+      </section>
+
+      <section id="uploading-media" class="informative">
+        <h3 id="x6-12-uploading-media"><span class="secno">6.12 </span>メディアのアップロード</h3><p><em>この節は非規範的である。</em></p>
+        <p>サーバは、画像、ビデオ、その他のバイナリデータのような、 アクティビティで参照される文書型のアップロードに対応しても良い(MAY)が、 正確な機構はこのバージョンの ActivityPub のスコープ外である。The Social Web Community Group は <a href="https://www.w3.org/wiki/SocialCG/ActivityPub/MediaUpload">ActivityPub Media Upload report</a> でプロトコルを洗練させている。</p>
+      </section>
+
+
+    </section>
+
+    <section id="server-to-server-interactions">
+      <!--OddPage--><h2 id="x7-server-to-server-interactions"><span class="secno">7. </span>サーバからサーバへの通信</h2>
+      <p>サーバは、activity を actor の <a href="#inbox">inbox</a> エンドポイントに ポストすることで、他のサーバと通信し、情報をソーシャルグラフ上に伝搬させる。ネットワーク上を送られる Activity は、一時的であることを意図している場合を 除き、<code>id</code> を持つべきである(SHOULD) (一時的な場合は <code>id</code> を省略しても良い(MAY))。</p><p>(inbox などへの) <code>POST</code> リクエストは Content-Type に <code>application/ld+json; profile="https://www.w3.org/ns/activitystreams"</code> を設定しなければならず(MUST)、<code>GET</code> リクエスト (<a href="#retrieving-objects" class="sec-ref"><span class="secno">3.2</span> <span class="sec-title">Retrieving objects</span></a> も参照のこと) は Accept ヘッダに <code>application/ld+json; profile="https://www.w3.org/ns/activitystreams"</code> を 設定しなければならない(MUST)。サーバは、サーバからサーバへの通信において、Content-Type や Accept ヘッダの <code>application/activity+json</code> を <code>application/ld+json; profile="https://www.w3.org/ns/activitystreams"</code> と 等価なものとして扱うべきである(SHOULD)。</p>
+      <p>ソーシャルグラフ上に更新を伝搬させるために、Activity は適切な宛先に 送信される。まず、これらの宛先は、actor に到達するまでオブジェクト間の適切なリンクを 辿ることで決定され、 それからこの Activity は actor の <em>inbox</em> に挿入される (<a href="#delivery">delivery</a>)。これにより、宛先サーバは:</p>
+      <ul>
+        <li>そのアクティビティに関連する副作用を実施する (例えば、ある actor があるオブジェクトに「いいね」をした通知は、 そのオブジェクトの「いいね」カウントを更新するのに使われる);</li>
+        <li>更新が確実にソーシャルグラフ全体に伝搬するように、 Activity を元のオブジェクトの宛先に配送する (<a href="#inbox-forwarding">inbox delivery</a> を参照のこと)。</li>
+      </ul>
+      <p>配送は通常、例えば以下のもので引き起こされる:</p>
+      <ul>
+        <li>actor の <a href="#outbox">outbox</a> に、宛先として <a href="#followers">Followers Collection</a> を指定して Activity が作成された。</li>
+        <li>actor の <a href="#outbox">outbox</a> に、 直接アドレス指定された宛先で Activity が作成された。</li>
+        <li>actor の <a href="#outbox">outbox</a> に、 ユーザーが選んだコレクションを宛先として Activity が作成された。</li>
+        <li>actor の <a href="#outbox">outbox</a> や <a href="#inbox">inbox</a> に、 他のオブジェクトを参照する Activity が作成された。</li>
+      </ul>
+
+      <p>他のサーバ上の actor の <code>inbox</code> や <code>publicInbox</code> 属性への配送を実行するサーバは、 次のアクティビティ内に <code>object</code> 属性を提供しなければならない(MUST): <code>Create</code>, <code>Update</code>, <code>Delete</code>, <code>Follow</code>, <code>Add</code>, <code>Remove</code>, <code>Like</code>, <code>Block</code>, <code>Undo</code>。さらに、以下のアクティビティのサーバ間配送を実行するサーバは、 <code>target</code> 属性も提供しなければならない(MUST): <code>Add</code>, <code>Remove</code></p>
+
+      <p>他のサーバからの返答を受信するときと他のサーバへ返答を送信するときの 両方において、適切な場合には HTTP キャッシュ機構 [<cite><a class="bibref" href="#bib-RFC7234">RFC7234</a></cite>] に 遵守するべきである(SHOULD)。</p>
+
+      <section id="delivery">
+        <h3 id="x7-1-delivery"><span class="secno">7.1 </span>配送</h3>
+
+        <p><i>以下は他の連合サーバと通信する連合サーバのみに要求される。</i></p>
+
+        <p>アクティビティは、まずターゲット(これは<a href="#actors">actor</a>)の inboxを探して、それからそのinboxにアクティビティを投稿することで配送される。配送するターゲットは、 <a href="https://www.w3.org/TR/activitystreams-vocabulary/#audienceTargeting"> ActivityStreams audience targeting</a> をチェックすることで決定される; つまり、アクティビティの <code>to</code>, <code>bto</code>, <code>cc</code>, <code>bcc</code>, <code>audience</code> フィールドである。</p>
+
+        <p><a href="#inbox">inbox</a> はまず <a href="#retrieving-objects">ターゲットactorのJSON-LD表現を取得</a>し、 それから <code>inbox</code> 属性を探すことで決定される。宛先が <code>Collection</code> または <code>OrderedCollection</code> の場合、 サーバはコレクションを(ユーザーの認証情報と共に)展開し、コレクションの それぞれの要素の inbox を発見しなければならない(MUST)。サーバはコレクションの展開を実行する層の数を制限しなければならない(MUST); これは 1 でもよい(MAY)。</p>
+
+        <p>サーバは最終的な宛先リストの重複を解消しなければならい(MUST)。サーバはまた、通知される Activity の <code>actor</code> と同じ actor を リストから除去しなければならない(MUST)。つまり、ユーザーは自分の activity を自分に配送することはできない。</p>
+
+        <div class="note"><div role="heading" class="note-title marker" id="h-note-8" aria-level="4"><span>Note</span><span style="text-transform: none">: Silent and private activities</span></div><p class="">宛先がない場合にどうするかは未定義であるが、もし宛先が指定されなかった場合、 オブジェクトを完全にプライベートな状態において、アクセスコントロールは そのオブジェクトへのアクセスを制限することが推奨される。もしオブジェクトが単に「パブリック」コレクションに送信された場合、 オブジェクトは誰にも配送されないが、アクターの outbox で公に閲覧可能になる。</p></div>
+
+        <p>(投稿ユーザーの認証付きの) HTTP POST リクエストは、 アクティビティをリクエストのボディとして <a href="#inbox">inbox</a>に行われる。このアクティビティは受信者によって <a href="#inbox">inbox</a> OrderedCollection の <code>item</code> として追加される。非連合サーバの inbox へ配送しようとする試みは <code>405 Method Not Allowed</code> レスポンスを返すべきである(SHOULD)。</p>
+
+        <p>連合サーバがサードパーティーサーバへ配送を実行する場合には、 配送は非同期に実行されるべきであり(SHOULD)、 これがネットワークエラーによって失敗した場合は受信者への配送を 再試行するべきである(SHOULD)。</p>
+
+        <p><strong>注記:</strong> 同じ origin のアクター間で 配送される Activity は任意の内部機構を使ってもよく、HTTP を使うことは要求されない。</p>
+
+        <div class="note"><div role="heading" class="note-title marker" id="h-note-9" aria-level="4"><span>Note</span><span style="text-transform: none">: Relationship to Linked Data Notifications</span></div><p class="" id="ldn-relationship">この仕様を理解するのに読むのは必須ではないが、 ActivityPub のターゲットと配送の機構は <a href="https://www.w3.org/TR/ldn/">Linked Data Notifications</a> 仕様と 重複していて、二つの仕様は相互に結合できることは記しておく価値がある。特に、<code>inbox</code> 属性は ActivityPub と Linked Data Notifications で 同じで、この文書に記述されているターゲットと配送の機構は Linked Data Notifications に支えられている。JSON-LD コンパクト化 ActivityStreams 文書に加えて、 Linked Data Notifications は、ActivityPub 実装で必要でない様々な RDF 直列化も対応している。しかし、より広く Linked Data Notifications 実装と互換性を持たせたい ActivityPub 実装は、その他の RDF 表現に対応した方がよい。</p></div>
+
+        <section id="outbox-delivery">
+          <h4 id="x7-1-1-outbox-delivery-requirements-for-server-to-server"><span class="secno">7.1.1 </span>サーバ-サーバ間のoutbox配送の要件</h4>
+          <p>オブジェクトを <a href="#outbox">outbox</a> に受信したとき( <a href="#client-to-server-interactions">クライアントからサーバへの通信</a> と <a href="#server-to-server-interactions">サーバからサーバへの通信</a> の両方に対応しているサーバの場合)、サーバは 以下にターゲットして配送しなければならい(MUST):</p>
+          <ul>
+            <li><code>to</code>, <code>bto</code>, <code>cc</code>, <code>bcc</code>, <code>audience</code> のいずれかのフィールド; その値が 個人かactorに所有されているコレクションの場合。</li>
+          </ul>
+          <p>これらのフィールドは、このアクティビティをoutboxに投稿した <a href="#client-addressing"> クライアントによって適切に展開されている</a>。</p>
+        </section>
+
+        <section id="inbox-forwarding">
+          <h4 id="x7-1-2-forwarding-from-inbox"><span class="secno">7.1.2 </span>inboxからの転送</h4>
+
+          <div class="note"><div role="heading" class="note-title marker" id="h-note-10" aria-level="5"><span>Note</span><span style="text-transform: none">: Forwarding to avoid the ghost replies problem</span></div><div class="">
+            <p>以下の節は、連合ネットワークで時々問題を引き起こす、 「ゴーストリプライ」問題を緩和するためのものである。この問題を例で示す。</p>
+
+            <p>Alyssa は、会議での論文の発表が上手くいったことを投稿し、 友人である Ben を含む彼女のフォロワーコレクションに送りました。Ben は祝福する内容を Alyssa のメッセージに返信し、 宛先に彼女のフォロワーコレクションを含めました。しかし、Ben は Alyssa のフォロワーコレクションの内容にアクセス出来ないので、 Ben のサーバは彼のメッセージを彼らの inbox に転送できません。次の機構がない場合、その後 Alyssa が Ben に返信すると、 彼女のフォロワーは、Ben の返信を見ることなく Alyssa が Ben に返信するのを 見ることになります。これはとても混乱します!</p>
+          </div></div>
+
+          <p>Activity を <a href="#inbox">inbox</a> に受信したとき、 サーバはこれらを送信元が配信できない宛先に転送する必要がある。これを行うために、サーバは次の全てが真の場合にのみ、 <code>to</code>, <code>cc</code>, <code>audience</code> の値にターゲットして <a href="#delivery">配送</a> しなければならない(MUST):</p>
+          <ul>
+            <li>サーバがこの Activity を見るのは初めてである。</li>
+            <li><code>to</code>, <code>cc</code>, <code>audience</code> の値に サーバが所有しているコレクションが含まれている。</li>
+            <li><code>inReplyTo</code>, <code>object</code>, <code>target</code>, <code>tag</code> の値が サーバが所有しているオブジェクトである。サーバは、自身が所有しているリンクされたオブジェクトを探すためにこれらの値を 再帰するべきであり(SHOULD)、 再帰の上限を設定するべきである(SHOULD) (つまり、スレッドが深くなった時点で、受信フォロワーは、 受信者に直接関係ない更新を受け取らなくても気にしないかもしれない)。サーバは転送された元のオブジェクトの <code>to</code>, <code>cc</code>, <code>audience</code> の値のみを ターゲットし、(これらのアドレスが意図的に変更されたりクライアントによって) リンクされたオブジェクトを再帰している間の新しい受信者を拾わないように しなかければならない(MUST)。</li>
+          </ul>
+          <p>サーバは配送ターゲットを実装依存の規則(例えば spam フィルタ)で フィルタリングしてもよい(MAY)。</p>
+        </section>
+
+        <section id="shared-inbox-delivery">
+          <h4 id="x7-1-3-shared-inbox-delivery"><span class="secno">7.1.3 </span>共有 Inbox への配送</h4>
+          <p>多くの actor をホスティングしているサーバでは、 全てのフォロワーへの配送は大量のメッセージを送信することになることがある。一部のサーバはまた、パブリックに投稿された全てのメッセージのリストを "known network" として表示したい。従って ActivityPub はこれら二つのユースケースを扱うためのオプションの機構を 提供する。</p>
+          <p>配送元actorのfollowersにオブジェクトが配送されるとき、 サーバは、同じ <a href="#sharedInbox">sharedInbox</a> を持つ全ての フォロワーを識別して、 代わりにオブジェクトを <code>sharedInbox</code> という名前に配送することで 配送する受信アクターの数を減らしても良い(MAY)。従ってこのシナリオでは、 リモート/受信サーバは特定の inbox へのターゲットと配送の実行の 決定に関与する。</p>
+          <p>さらに、オブジェクトが <a href="#public-addressing">Public</a> 特殊コレクションに アドレス指定されている場合、 サーバはこのオブジェクトをネットワーク上の全ての既知の <code>sharedInbox</code> エンドポイントに配送しても良い(MAY)。</p>
+          <p>パブリックにアドレス指定されたアクティビティを <code>sharedInbox</code> エンドポイントに送信する送信元サーバは、 その他に (<code>to</code>, <code>bto</code>, <code>cc</code>, <code>bcc</code>, および <code>audience</code> を通して) アドレス指定された、 <code>sharedInbox</code> を持たないので <code>sharedInbox</code> 機構を通じてアクティビティを 受信できない actor やコレクションには配送しなければならない(MUST)。</p>
+        </section>
+      </section>
+
+      <section id="create-activity-inbox">
+        <h3 id="x7-2-create-activity"><span class="secno">7.2 </span>Create Activity</h3>
+        <p><code>inbox</code> に <code>Create</code> アクティビティを受信したときには、 意外にもほとんど副作用はない; このアクティビティは actor の <code>inbox</code> に現れるべきで、 サーバはおそらくこのアクティビティとそれに添付されているオブジェクトの表現を ローカルに保管したいはずである。しかし、これはとにかく <code>inbox</code> にアクティビティが配送されたときに ほとんど一般的に処理されることである。</p>
+      </section>
+
+      <section id="update-activity-inbox">
+        <h3 id="x7-3-update-activity"><span class="secno">7.3 </span>Update Activity</h3>
+        <p>サーバからサーバへの通信では、 <code>Update</code> アクティビティは、 同じ <code>id</code> の <code>object</code> のコピーを、 <code>Update</code> アクティビティの中に供給されているコピーで 更新するべきである(SHOULD)。<a href="#update-activity-outbox"> Update アクティビティのクライアントからサーバへの扱い</a> と異なり、 これは部分更新ではなくオブジェクトの完全な置き換えである。</p>
+        <p>受信サーバは <code>Update</code> がその <code>object</code> を修正する権限があることを 確認することに注意しなければならない(MUST)。最小限として、これは <code>Update</code> とその <code>object</code> が同じ送信元であることを確認することで行われる。</p>
+      </section>
+
+      <section id="delete-activity-inbox">
+        <h3 id="x7-4-delete-activity"><span class="secno">7.4 </span>Delete Activity</h3>
+        <p><code>object</code> が送信した actor / server が所有していると仮定して) これを受信したときの副作用として、 delete アクティビティを受信したサーバは 同じ <code>id</code> を持つ <code>object</code> の表現を削除するべき(SHOULD)で、 表現を <code>Tombstone</code> オブジェクトに置き換えても良い(MAY)。</p>
+        <p>(あるアクティビティが発信元サーバからリモートサーバに転送された後、 オブジェクトの表現をリモートをリモートで削除することを <em>強制する</em> 方法は、ActivityPub プロトコルにはないということに注意すること。)</p>
+      </section>
+
+      <section id="follow-activity-inbox">
+        <h3 id="x7-5-follow-activity"><span class="secno">7.5 </span>Follow Activity</h3>
+
+        <p>これを <strong>inbox</strong> に受信したときの副作用として、 サーバは、この Follow を <code>object</code> に設定した <code>Accept</code> または <code>Reject</code> アクティビティを生成し、 Follow した <code>actor</code> に配送するべきである(SHOULD)。<code>Accept</code> や <code>Reject</code> は自動的に生成しても良い(MAY)し、 (おそらくはユーザーの確認のための多少の遅延の後)ユーザー入力の 結果としてもよい(MAY)。サーバは <code>Follow</code> への応答として明示的に <code>Reject</code> を 送らないという選択をしてもよい(MAY)が、実装者はリクエストを送信したサーバが 中間的な状態のままになるかもしれないことに注意するべきである。例えば、サーバはユーザーのプライバシーを守るために <code>Reject</code> を 送信しないかもしれない。</p>
+
+        <p>この <code>Follow</code> を object として参照している <code>Accept</code> を 受信する場合、サーバは object の actor の <a href="#followers">Followers Collection</a> に <code>actor</code> を追加するべきである(SHOULD)。<code>Reject</code> の場合、object の actor の <a href="#followers">Followers Collection</a> に actor を 追加してはならない(MUST NOT)。</p>
+
+        <div class="note"><div role="heading" class="note-title marker" id="h-note-11" aria-level="4"><span>Note</span></div><div class="">
+          <p>時々、<code>Follow</code> 購読が成功したものの、将来のある時点で 長期間フォロワーへの配送が失敗するようになることがある。実装は、ネットワーク上の actor が到達可能であり続ける保証がないことに注意し、 それに応じて実装するべきである。例として、ある actor への配送の試みが例えば 6 ヶ月間フォロワーに 到達不能であり続けた場合、配送サーバがその購読者を <code>followers</code> から 削除するのは合理的である。到達不能な actor を扱うための期間と振る舞いは配送サーバの 裁量に委ねられている。</p>
+        </div></div>
+        
+      </section>
+
+      <section id="accept-activity-inbox">
+        <h3 id="x7-6-accept-activity"><span class="secno">7.6 </span>Accept Activity</h3>
+        <p>これを <strong>inbox</strong> に受信した場合の副作用は、受信した <code>object</code> の型によって決定され、(例えば <code>Offer</code> のような) この文書に記述していない型を受け入れることも可能である。</p>
+
+        <p><strong>inbox</strong> に受信した <code>Accept</code> の <code>object</code> が、以前受信者によって送られた <code>Follow</code> アクティビティの場合、 サーバは 受信者の <a href="#following">Following Collection</a> に <code>actor</code> を追加するべきである(SHOULD)。</p>
+      </section>
+      
+      <section id="reject-activity-inbox">
+        <h3 id="x7-7-reject-activity"><span class="secno">7.7 </span>Reject Activity</h3>
+        <p>これを <strong>inbox</strong> に受信することによる副作用は、 受信した <code>object</code> の型によって決定され、 この文書に記述されていない型 (例えば <code>Offer</code>)を 拒否することもできる。</p>
+
+        <p><strong>inbox</strong> に受信した <code>Reject</code> の <code>object</code> が、以前受信者によって送られた <code>Follow</code> アクティビティの場合、 これは受け取り側が <code>Follow</code> リクエストを承認しなかったことを 意味する。サーバは受信者の <a href="#following">Following Collection</a> に <code>actor</code> を追加してはならない(MUST)。</p>
+      </section>
+
+      <section id="add-activity-inbox">
+        <h3 id="x7-8-add-activity"><span class="secno">7.8 </span>Add Activity</h3>
+        <p><code>Add</code> アクティビティを <strong>inbox</strong> に受け取ったとき、 次のような場合を除いて、サーバは <code>target</code> 属性で指定された コレクションに <code>object</code> を追加するべきである (SHOULD):</p>
+        <ul>
+          <li><code>target</code> を受信サーバが所有しておらず、従って更新できない場合。</li>
+          <li>受信者の裁量による何らかの理由により、 <code>object</code> を <code>target</code> コレクションに 追加することを認められていない場合。</li>
+        </ul>
+      </section>
+      <section id="remove-activity-inbox">
+        <h3 id="x7-9-remove-activity"><span class="secno">7.9 </span>Remove Activity</h3>
+        <p><code>Remove</code> アクティビティを <strong>inbox</strong> に受け取ったとき、 次のような場合を除いて、サーバは <code>target</code> 属性で指定された コレクションから <code>object</code> を除去するべきである (SHOULD):</p><ul>
+          <li><code>target</code> を受信サーバが所有しておらず、従って更新できない場合。</li>
+          <li>受信者の裁量による何らかの理由により、 <code>object</code> を <code>target</code> コレクションから 削除することを認められていない場合。</li>
+        </ul>
+      </section>
+      <section id="like-activity-inbox">
+        <h3 id="x7-10-like-activity"><span class="secno">7.10 </span>Like Activity</h3>
+        <p>これを <strong>inbox</strong> に受信したときの副作用として、 サーバは、<a href="#likes"><code>likes</code></a> コレクションがある場合は、 このコレクションに受信したアクティビティを追加することで このオブジェクトのいいねのカウントを増やすべきである (SHOULD)。</p>
+      </section>
+      <section id="announce-activity-inbox">
+        <h3 id="x7-11-announce-activity-sharing"><span class="secno">7.11 </span>Announce Activity (共有)</h3>
+        <p><code>Announce</code> アクティビティを <strong>inbox</strong> に 受け取ったとき、サーバは、<a href="#shares"><code>shares</code></a> コレクションがある場合は、このコレクションに受信したアクティビティを 追加することで、 このオブジェクトの共有のカウントを増やすべきである (SHOULD)。</p>
+        <div class="note"><div role="heading" class="note-title marker" id="h-note-12" aria-level="4"><span>Note</span></div><div class=""><code>Announce</code> アクティビティは事実上他のソーシャルネットワークでの "sharing", "reposting", "boosting" として知られているものである。</div></div>
+      </section>
+      <section id="undo-activity-inbox">
+        <h3 id="x7-12-undo-activity"><span class="secno">7.12 </span>Undo Activity</h3>
+        <p><code>Undo</code> アクティビティは、以前のアクティビティの副作用を 取り消すために使われる。ActivityStreams 文書の <a href="https://www.w3.org/TR/activitystreams-vocabulary/#inverse"> Inverse Activities and "Undo"</a> を参照のこと。<code>Undo</code> アクティビティのスコープと制限は <a href="#undo-activity-outbox"> クライアントサーバ間での Undo アクティビティ</a> と同様であるが、 連合コンテキストに適用される。</p>
+      </section>
+    </section>
+
+    <section id="i18n-concerns" class="appendix informative">
+      <!--OddPage--><h2 id="a-internationalization"><span class="secno">A. </span>国際化</h2><p><em>この節は非規範的である。</em></p>
+      <p>連合ネットワークにおいてユーザーの国際化の基礎を構築することは重要である。<a href="https://www.w3.org/TR/activitystreams-core/#naturalLanguageValues"> ActivityStreams はコンテンツの国際化のためのツールを提供</a> しており、 可能であればこれが使われるべきである。しかし、ユーザーが投稿したコンテンツに対してどの <a href="https://www.w3.org/TR/activitystreams-core/#defaultlangcontext"> <code>@language</code> 属性</a> を 提供するかを決定するのは実装上難しいかもしれない。<a href="https://www.w3.org/International/"><abbr title="World Wide Web Consortium">W3C</abbr> Internationalization group</a> はいくつかの <a href="https://www.w3.org/International/wiki/LanguageDetection"> 言語検出のガイド</a> を提供している。</p>
+    </section>
+
+    <section id="security-considerations" class="appendix informative">
+      <!--OddPage--><h2 id="b-security-considerations"><span class="secno">B. </span>セキュリティ上の考慮事項</h2><p><em>この節は非規範的である。</em></p>
+      
+      <section id="authorization">
+        <h3 id="b-1-authentication-and-authorization"><span class="secno">B.1 </span>認証と認可</h3>
+        <p>ActivityPub は認証を二つの目的で用いる; 一つ目はクライアントからサーバへの認証、 二つ目は連合実装においてサーバ間の認証である。</p>
+
+        <p>残念ながら標準化の時点で、認証機構として強力に合意されたものはない。認証で取り得る方向性は <a href="https://www.w3.org/wiki/SocialCG/ActivityPub/Authentication_Authorization">the Social Web Community Group Authentication and Authorization best practices report</a> にある。</p>
+
+      </section>
+
+      <section id="security-verification">
+        <h3 id="b-2-verification"><span class="secno">B.2 </span>検証</h3>
+        <p>何らかの形の検証なしに、サーバはクライアントが投稿したコンテンツを 信頼するべきではないし、 連合サーバはコンテンツの発信源以外のサーバから受け取ったコンテンツを 信頼するべきではない。</p>
+        <p>新しいコンテンツが、それを投稿したと主張している actor から本当に 投稿されていることと、その actor がそのリソースを更新する権限を 持っていることを、 サーバは慎重に検証するべきである。<a href="#obj" class="sec-ref"><span class="secno">3.</span> <span class="sec-title">Objects</span></a> と <a href="#authorization" class="sec-ref"><span class="secno">B.1</span> <span class="sec-title">Authentication and Authorization</span></a> も参照のこと。</p>
+      </section>
+
+      <section id="security-localhost">
+        <h3 id="b-3-accessing-localhost-uris"><span class="secno">B.3 </span>localhost URIへのアクセス</h3>
+        <p>開発中、localhost で実行したプロセスに対してテストするのはしばしば有用である。しかし、製品版クライアントやサーバインスタンスで localhost への リクエストを許すことは危険なことがある。認証を必要としない localhost の URI へのリクエストは、localhost でのみ 利用可能として保護されていることを想定されているリソースへのアクセスや修正が 意図せず起きることがある。</p>
+        <p>自作の ActivityPub サーバやクライアントが開発目的のために localhost URI への リクエストを許す場合、デフォルトでオフの設定オプションにすることを 考慮すること。</p>
+      </section>
+
+      <section id="security-uri-schemes">
+        <h3 id="b-4-uri-schemes"><span class="secno">B.4 </span>URIスキーマ</h3>
+        <p><code>http</code> と <code>https</code> に加えて、様々な種類の URI がある。ライブラリによっては様々な URI スキームでのフェッチリクエストを扱い、 賢くあろうとして、<code>file</code> のような 想定していないスキームを参照するかもしれない。クライアントとサーバの作者はライブラリがリクエストをどのように扱うかを 注意深くチェックし、<code>http</code> と <code>https</code> のような、 特定の安全な URI 型のみのホワイトリストを作るべきである。</p>
+      </section>
+
+      <section id="security-recursive-objects">
+        <h3 id="b-5-recursive-objects"><span class="secno">B.5 </span>再帰オブジェクト</h3>
+        <p>サーバはオブジェクト、あるいは特に再帰参照を持つ ActivityStream オブジェクトの 解決中にどれだけ深く再帰するかの制限を設定するべきである。これを適切に行うことに失敗すると、サービス拒否セキュリティ脆弱性を 起こすことがある。</p>
+      </section>
+
+      <section id="security-spam">
+        <h3 id="b-6-spam"><span class="secno">B.6 </span>スパム</h3>
+        <p>スパムはあらゆるネットワークで問題だが、特に連合ネットワークではそうである。ActivityPub ではスパムと闘うための特定の機構は提供しないが、 サーバは、ある種のスパムフィルタを通してローカルの信頼できないユーザーと全ての リモートユーザーの両方から入力される内容をフィルタリングすることが勧められる。</p>
+      </section>
+
+      <section id="security-federation-dos">
+        <h3 id="b-7-federation-denial-of-service"><span class="secno">B.7 </span>連合サービス拒否</h3>
+          <p>サーバは、その他の連合サーバからのサービス不能攻撃に対する防御を 実装するべきである。これは、例えば、ある種のレート制限機構のようなものを使うことで実現できる。サーバは特に、副作用を引き起こすアクティビティに関する この保護を実装することに注意するべきである。サーバは、例えば指数バックオフ戦略を使うことで、 送信することでサーバを過負荷にしないように気を使うべきである(SHOULD)。</p>
+      </section>
+
+      <section id="security-c2s-ratelimiting">
+        <h3 id="b-8-client-to-server-ratelimiting"><span class="secno">B.8 </span>クライアントからサーバへの通信量制限</h3>
+          <p>サーバは API クライアント提案を通信制限するべきである。これは二つの目的がある:</p><ol>
+              <li>悪意のあるクライアントがサーバにサービス不能攻撃を仕掛けるのを防止する。</li>
+              <li>他のサーバの <a href="#security-federation-dos">サービス不能攻撃保護</a>を 引き起こすような大量のアクティビティを配信しないようにする。</li>
+            </ol>
+          <p></p>
+      </section>
+
+      <section id="security-c2s-response-dos">
+        <h3 id="b-9-client-to-server-response-denial-of-service"><span class="secno">B.9 </span>クライアントからサーバへのレスポンスのサービス拒否</h3>
+        <p>大きすぎるコレクションによってクライアントが過負荷になることを防ぐために、 サーバはクライアントに返すコレクションページの大きさを制限することに 注意するべきである。クライアントも、悪意あるサーバや故障したサーバと接続する場合に備えて、 例えば時間切れやエラーを生成することで、レスポンスのサイズを制限することに 備えるべきである。</p>
+      </section>
+
+      <section id="security-sanitizing-content">
+        <h3 id="b-10-sanitizing-content"><span class="secno">B.10 </span>内容のサニタイズ</h3>
+        <p>ブラウザ(またはその他のリッチテキストが有効なアプリケーション)で レンダリングされる全てのアクティビティフィールドは、 クロスサイトスクリプト攻撃を防ぐために、マークアップを含む フィールドのサニタイズに注意するべきである。</p>
+      </section>
+
+      <section id="security-not-displaying-bto-bcc">
+        <h3 id="b-11-not-displaying-bto-and-bcc-properties"><span class="secno">B.11 </span>btoおよびbcc属性の非表示</h3>
+        <p><code>bto</code> と <code>bcc</code> はすでに、 <a href="#remove-bto-bcc-before-delivery">配送時に削除されなければならない</a>が、 しかしサーバは自身のストレージシステムの中でオブジェクトをどのように表現するか 自由に決定できる。しかし、<code>bto</code> と <code>bcc</code> はオブジェクト/アクティビティの 元の作者のみによって知られる/見られることを意図しているので、 サーバは表示においてこれらの属性を省略するべきである。</p>
+      </section>
+    </section>
+
+    <section class="appendix informative" id="acknowledgements">
+      <!--OddPage--><h2 id="c-acknowledgements"><span class="secno">C. </span>謝辞</h2><p><em>この節は非規範的である。</em></p>
+      <p>この仕様は、web 上の連合空間を探索する多くのコミュニティによる、 何年にもわたる多大な努力と経験に由来する。特に、この仕様の多くの部分は、 StatusNet (現在は GNU Social) と Pump.io によって開拓された <a href="https://www.w3.org/community/ostatus/wiki/Main_Page">OStatus</a> と <a href="https://github.com/pump-io/pump.io/blob/master/API.md">Pump API</a> から 情報を受けている。これらの両方の構想は多くの開発者の多大な努力の成果であるが、 その中でも、Evan Prodromou はこの分野での変わらないリーダーであり、 彼の多大な努力なしには、現在の状態のような ActivityPub が 存在することはなかったであろう。</p>
+
+      <p>Erin Shepherd は、 <a href="https://github.com/pump-io/pump.io/blob/master/API.md">Pump API</a> 文書のアイデアを借りて、この仕様の初期版を作成した; 文章はほとんど完全に書き換えられたが、ほとんどの基本的なアイデアは共有し、 ActivityStreams 1 から ActivityStreams 2 に切り替えた。</p>
+
+      <p>Jessica Tallon と Christine Lemmer-Webber は、 標準が <abbr title="World Wide Web Consortium">W3C</abbr> Social Working Group に 移動した時点で編集者を引き継ぎ、 Erin Shepherd の文書から現在の ActivityPub の状態への移行の大部分が行われた。Social Working Group の長いフィードバック手続きの下、 文書の多くは書き換えられ、再構成された。</p>
+
+      <p>ActivityPub は <abbr title="World Wide Web Consortium">W3C</abbr> Social Working Group の 多くのメンバーによる注意深い助言によって形作られた。ActivityPub は特に Amy Guy に多くの借りがある; [<cite><a class="bibref" href="#bib-Social-Web-Protocols">Social-Web-Protocols</a></cite>] での作業を通じて、 Social Working Group の様々な文書に渡るアイデアを 他の誰よりも多く位置づけた。Amy はまた、Christopher Allan Webber と共に、4 日間のスプリントで ActivityPub 仕様の大幅なリファクタリングの基礎を築いた。これらの改訂により、様々な改良の中でも、ActivityPub の [<cite><a class="bibref" href="#bib-LDN">LDN</a></cite>] との関係の 明確化と、クライアント-サーバ通信とサーバ間通信のより明確な分離が行われた。実装報告テンプレートを取りまとめた Benjamin Goering にも特に感謝する。我々はまた、素晴らしいチュートリアルイラスト (これはこの文書の他の部分と同じライセンスが適用されている) を作成した mray にも感謝する。</p>
+
+      <p>また、注意深いレビューを通して多くの人々が ActivityPub を助けた。特に、次の方々に感謝する: Aaron Parecki, AJ Jordan, Benjamin Goering, Caleb Langeslag, Elsa Balderrama, elf Pavlik, Eugen Rochko, Erik Wilde, Jason Robinson, Manu Sporny, Michael Vogel, Mike Macgirvin, nightpool, Puck Meerburg, Sandro Hawke, Sarven Capadisli, Tantek Çelik, and Yuri Volkov.</p>
+
+      <p>この文書は地球上の全ての住民に捧げる。あなた達には通信の自由がある; 私達は、このゴールと権利に向けて、 小さいながらも一部貢献していることを期待する。</p>
+    </section>
+  
+
+<section id="references" class="appendix"><!--OddPage--><h2 id="d-references"><span class="secno">D. </span>参考文献</h2><section id="normative-references"><h3 id="d-1-normative-references"><span class="secno">D.1 </span>引用規格</h3><dl class="bibliography"><dt id="bib-Activity-Vocabulary">[Activity-Vocabulary]</dt><dd><a href="https://www.w3.org/TR/activitystreams-vocabulary/"><cite>Activity Vocabulary</cite></a>. J. Snell. ActivityStreams Working Group. Editors Draft. URL: <a href="https://www.w3.org/TR/activitystreams-vocabulary/">https://www.w3.org/TR/activitystreams-vocabulary/</a>
+</dd><dt id="bib-ActivityStreams">[ActivityStreams]</dt><dd><a href="https://www.w3.org/TR/activitystreams-core/"><cite>Activity Streams 2.0</cite></a>. J. Snell. ActivityStreams Working Group. Editors Draft. URL: <a href="https://www.w3.org/TR/activitystreams-core/">https://www.w3.org/TR/activitystreams-core/</a>
+</dd><dt id="bib-JSON-LD">[JSON-LD]</dt><dd><a href="https://www.w3.org/TR/json-ld/"><cite>JSON-LD 1.0</cite></a>. Manu Sporny; Gregg Kellogg; Markus Lanthaler. W3C. 16 January 2014. W3C Recommendation. URL: <a href="https://www.w3.org/TR/json-ld/">https://www.w3.org/TR/json-ld/</a>
+</dd><dt id="bib-LDN">[LDN]</dt><dd><a href="https://www.w3.org/TR/ldn/"><cite>Linked Data Notifications</cite></a>. Sarven Capadisli; Amy Guy. W3C. 2 May 2017. W3C Recommendation. URL: <a href="https://www.w3.org/TR/ldn/">https://www.w3.org/TR/ldn/</a>
+</dd><dt id="bib-RFC2119">[RFC2119]</dt><dd><a href="https://tools.ietf.org/html/rfc2119"><cite>Key words for use in RFCs to Indicate Requirement Levels</cite></a>. S. Bradner. IETF. March 1997. Best Current Practice. URL: <a href="https://tools.ietf.org/html/rfc2119">https://tools.ietf.org/html/rfc2119</a>
+</dd><dt id="bib-RFC7231">[RFC7231]</dt><dd><a href="https://tools.ietf.org/html/rfc7231"><cite>Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content</cite></a>. R. Fielding, Ed.; J. Reschke, Ed.. IETF. June 2014. Proposed Standard. URL: <a href="https://tools.ietf.org/html/rfc7231">https://tools.ietf.org/html/rfc7231</a>
+</dd><dt id="bib-RFC7234">[RFC7234]</dt><dd><a href="https://tools.ietf.org/html/rfc7234"><cite>Hypertext Transfer Protocol (HTTP/1.1): Caching</cite></a>. R. Fielding, Ed.; M. Nottingham, Ed.; J. Reschke, Ed.. IETF. June 2014. Proposed Standard. URL: <a href="https://tools.ietf.org/html/rfc7234">https://tools.ietf.org/html/rfc7234</a>
+</dd></dl></section><section id="informative-references"><h3 id="d-2-informative-references"><span class="secno">D.2 </span>参考規格</h3><dl class="bibliography"><dt id="bib-Micropub">[Micropub]</dt><dd><a href="https://www.w3.org/TR/micropub/"><cite>Micropub</cite></a>. Aaron Parecki. W3C. 23 May 2017. W3C Recommendation. URL: <a href="https://www.w3.org/TR/micropub/">https://www.w3.org/TR/micropub/</a>
+</dd><dt id="bib-RFC6749">[RFC6749]</dt><dd><a href="https://tools.ietf.org/html/rfc6749"><cite>The OAuth 2.0 Authorization Framework</cite></a>. D. Hardt, Ed.. IETF. October 2012. Proposed Standard. URL: <a href="https://tools.ietf.org/html/rfc6749">https://tools.ietf.org/html/rfc6749</a>
+</dd><dt id="bib-RFC6750">[RFC6750]</dt><dd><a href="https://tools.ietf.org/html/rfc6750"><cite>The OAuth 2.0 Authorization Framework: Bearer Token Usage</cite></a>. M. Jones; D. Hardt. IETF. October 2012. Proposed Standard. URL: <a href="https://tools.ietf.org/html/rfc6750">https://tools.ietf.org/html/rfc6750</a>
+</dd><dt id="bib-Social-Web-Protocols">[Social-Web-Protocols]</dt><dd><a href="https://www.w3.org/TR/social-web-protocols/"><cite>Social Web Protocols</cite></a>. Amy Guy. W3C. 25 December 2017. W3C Note. URL: <a href="https://www.w3.org/TR/social-web-protocols/">https://www.w3.org/TR/social-web-protocols/</a>
+</dd></dl></section></section><p role="navigation" id="back-to-top"><a href="#toc"><abbr title="Back to Top">↑</abbr></a></p><script src="https://www.w3.org/scripts/TR/2016/fixup.js"></script></body></html>
