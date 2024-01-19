@@ -20,7 +20,7 @@
         <glossary_file>__DEFAULT__</glossary_file>
         <dictionary_dir>__DEFAULT__</dictionary_dir>
         <export_tm_dir>__DEFAULT__</export_tm_dir>
-        <export_tm_levels></export_tm_levels>
+        <export_tm_levels>omegat</export_tm_levels>
         <source_lang>en</source_lang>
         <target_lang>ja</target_lang>
         <source_tok>org.omegat.tokenizer.LuceneEnglishTokenizer</source_tok>

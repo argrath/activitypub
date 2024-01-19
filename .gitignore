@@ -5,3 +5,4 @@ omegat/omegat/last_entry.properties
 omegat/source
 omegat/target
 omegat/tm
+omegat/*.tmx
