@@ -538,7 +538,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
           <p>この文書は、<a id="w3c_process_revision" href="https://www.w3.org/2017/Process-20170301/">1 March 2017 <abbr title="World Wide Web Consortium">W3C</abbr> Process Document</a>に準拠する。</p>
         
 
-</section><nav id="toc"><h2 class="introductory" id="table-of-contents">目次</h2><ol class="toc"><li class="tocline"><a href="#Overview" class="tocxref"><span class="secno">1. </span>概要</a><ol class="toc"><li class="tocline"><a href="#social-web-working-group" class="tocxref"><span class="secno">1.1 </span>Social Web Working Group</a></li></ol></li><li class="tocline"><a href="#conformance" class="tocxref"><span class="secno">2. </span>適合性</a><ol class="toc"><li class="tocline"><a href="#specification-profiles" class="tocxref"><span class="secno">2.1 </span>仕様プロファイル</a></li></ol></li><li class="tocline"><a href="#obj" class="tocxref"><span class="secno">3. </span>オブジェクト</a><ol class="toc"><li class="tocline"><a href="#obj-id" class="tocxref"><span class="secno">3.1 </span>オブジェクト識別子</a></li><li class="tocline"><a href="#retrieving-objects" class="tocxref"><span class="secno">3.2 </span>オブジェクトの取得</a></li><li class="tocline"><a href="#source-property" class="tocxref"><span class="secno">3.3 </span>source 属性</a></li></ol></li><li class="tocline"><a href="#actors" class="tocxref"><span class="secno">4. </span>アクター</a><ol class="toc"><li class="tocline"><a href="#actor-objects" class="tocxref"><span class="secno">4.1 </span><i>Actor</i> オブジェクト</a></li></ol></li><li class="tocline"><a href="#collections" class="tocxref"><span class="secno">5. </span>コレクション</a><ol class="toc"><li class="tocline"><a href="#outbox" class="tocxref"><span class="secno">5.1 </span>Outbox</a></li><li class="tocline"><a href="#inbox" class="tocxref"><span class="secno">5.2 </span>Inbox</a></li><li class="tocline"><a href="#followers" class="tocxref"><span class="secno">5.3 </span>Followers コレクション</a></li><li class="tocline"><a href="#following" class="tocxref"><span class="secno">5.4 </span>Following コレクション</a></li><li class="tocline"><a href="#liked" class="tocxref"><span class="secno">5.5 </span>Liked コレクション</a></li><li class="tocline"><a href="#public-addressing" class="tocxref"><span class="secno">5.6 </span>Public アドレス指定</a></li><li class="tocline"><a href="#likes" class="tocxref"><span class="secno">5.7 </span>Likes コレクション</a></li><li class="tocline"><a href="#shares" class="tocxref"><span class="secno">5.8 </span>Shares コレクション</a></li></ol></li><li class="tocline"><a href="#client-to-server-interactions" class="tocxref"><span class="secno">6. </span>クライアントからサーバへの通信</a><ol class="toc"><li class="tocline"><a href="#client-addressing" class="tocxref"><span class="secno">6.1 </span>クライアントアドレス指定</a></li><li class="tocline"><a href="#create-activity-outbox" class="tocxref"><span class="secno">6.2 </span>Create Activity</a><ol class="toc"><li class="tocline"><a href="#object-without-create" class="tocxref"><span class="secno">6.2.1 </span>Create Activityなしでのオブジェクト作成</a></li></ol></li><li class="tocline"><a href="#update-activity-outbox" class="tocxref"><span class="secno">6.3 </span>Update Activity</a><ol class="toc"><li class="tocline"><a href="#partial-updates" class="tocxref"><span class="secno">6.3.1 </span>部分更新</a></li></ol></li><li class="tocline"><a href="#delete-activity-outbox" class="tocxref"><span class="secno">6.4 </span>Delete Activity</a></li><li class="tocline"><a href="#follow-activity-outbox" class="tocxref"><span class="secno">6.5 </span>Follow Activity</a></li><li class="tocline"><a href="#add-activity-outbox" class="tocxref"><span class="secno">6.6 </span>Add Activity</a></li><li class="tocline"><a href="#remove-activity-outbox" class="tocxref"><span class="secno">6.7 </span>Remove Activity</a></li><li class="tocline"><a href="#like-activity-outbox" class="tocxref"><span class="secno">6.8 </span>Like Activity</a></li><li class="tocline"><a href="#block-activity-outbox" class="tocxref"><span class="secno">6.9 </span>Block Activity</a></li><li class="tocline"><a href="#undo-activity-outbox" class="tocxref"><span class="secno">6.10 </span>Undo Activity</a></li><li class="tocline"><a href="#client-to-server-outbox-delivery" class="tocxref"><span class="secno">6.11 </span>配送</a></li><li class="tocline"><a href="#uploading-media" class="tocxref"><span class="secno">6.12 </span>メディアのアップロード</a></li></ol></li><li class="tocline"><a href="#server-to-server-interactions" class="tocxref"><span class="secno">7. </span>サーバからサーバへの通信</a><ol class="toc"><li class="tocline"><a href="#delivery" class="tocxref"><span class="secno">7.1 </span>配送</a><ol class="toc"><li class="tocline"><a href="#outbox-delivery" class="tocxref"><span class="secno">7.1.1 </span>サーバ-サーバ間のoutbox配送の要件</a></li><li class="tocline"><a href="#inbox-forwarding" class="tocxref"><span class="secno">7.1.2 </span>inboxからの転送</a></li><li class="tocline"><a href="#shared-inbox-delivery" class="tocxref"><span class="secno">7.1.3 </span>共有 Inbox への配送</a></li></ol></li><li class="tocline"><a href="#create-activity-inbox" class="tocxref"><span class="secno">7.2 </span>Create Activity</a></li><li class="tocline"><a href="#update-activity-inbox" class="tocxref"><span class="secno">7.3 </span>Update Activity</a></li><li class="tocline"><a href="#delete-activity-inbox" class="tocxref"><span class="secno">7.4 </span>Delete Activity</a></li><li class="tocline"><a href="#follow-activity-inbox" class="tocxref"><span class="secno">7.5 </span>Follow Activity</a></li><li class="tocline"><a href="#accept-activity-inbox" class="tocxref"><span class="secno">7.6 </span>Accept Activity</a></li><li class="tocline"><a href="#reject-activity-inbox" class="tocxref"><span class="secno">7.7 </span>Reject Activity</a></li><li class="tocline"><a href="#add-activity-inbox" class="tocxref"><span class="secno">7.8 </span>Add Activity</a></li><li class="tocline"><a href="#remove-activity-inbox" class="tocxref"><span class="secno">7.9 </span>Remove Activity</a></li><li class="tocline"><a href="#like-activity-inbox" class="tocxref"><span class="secno">7.10 </span>Like Activity</a></li><li class="tocline"><a href="#announce-activity-inbox" class="tocxref"><span class="secno">7.11 </span>Announce Activity (共有)</a></li><li class="tocline"><a href="#undo-activity-inbox" class="tocxref"><span class="secno">7.12 </span>Undo Activity</a></li></ol></li><li class="tocline"><a href="#i18n-concerns" class="tocxref"><span class="secno">A. </span>国際化</a></li><li class="tocline"><a href="#security-considerations" class="tocxref"><span class="secno">B. </span>セキュリティ上の考慮事項</a><ol class="toc"><li class="tocline"><a href="#authorization" class="tocxref"><span class="secno">B.1 </span>認証と認可</a></li><li class="tocline"><a href="#security-verification" class="tocxref"><span class="secno">B.2 </span>検証</a></li><li class="tocline"><a href="#security-localhost" class="tocxref"><span class="secno">B.3 </span>ocalhost URIへのアクセス</a></li><li class="tocline"><a href="#security-uri-schemes" class="tocxref"><span class="secno">B.4 </span>URIスキーマ</a></li><li class="tocline"><a href="#security-recursive-objects" class="tocxref"><span class="secno">B.5 </span>再帰オブジェクト</a></li><li class="tocline"><a href="#security-spam" class="tocxref"><span class="secno">B.6 </span>スパム</a></li><li class="tocline"><a href="#security-federation-dos" class="tocxref"><span class="secno">B.7 </span>連合サービス拒否</a></li><li class="tocline"><a href="#security-c2s-ratelimiting" class="tocxref"><span class="secno">B.8 </span>クライアントからサーバへの通信量制限</a></li><li class="tocline"><a href="#security-c2s-response-dos" class="tocxref"><span class="secno">B.9 </span>クライアントからサーバへのレスポンスのサービス拒否</a></li><li class="tocline"><a href="#security-sanitizing-content" class="tocxref"><span class="secno">B.10 </span>内容のサニタイズ</a></li><li class="tocline"><a href="#security-not-displaying-bto-bcc" class="tocxref"><span class="secno">B.11 </span>btoおよびbcc属性の非表示</a></li></ol></li><li class="tocline"><a href="#acknowledgements" class="tocxref"><span class="secno">C. </span>謝辞</a></li><li class="tocline"><a href="#references" class="tocxref"><span class="secno">D. </span>参考文献</a><ol class="toc"><li class="tocline"><a href="#normative-references" class="tocxref"><span class="secno">D.1 </span>引用規格</a></li><li class="tocline"><a href="#informative-references" class="tocxref"><span class="secno">D.2 </span>参考規格</a></li></ol></li></ol></nav>
+</section><nav id="toc"><h2 class="introductory" id="table-of-contents">目次</h2><ol class="toc"><li class="tocline"><a href="#Overview" class="tocxref"><span class="secno">1. </span>概要</a><ol class="toc"><li class="tocline"><a href="#social-web-working-group" class="tocxref"><span class="secno">1.1 </span>Social Web Working Group</a></li></ol></li><li class="tocline"><a href="#conformance" class="tocxref"><span class="secno">2. </span>適合性</a><ol class="toc"><li class="tocline"><a href="#specification-profiles" class="tocxref"><span class="secno">2.1 </span>仕様プロファイル</a></li></ol></li><li class="tocline"><a href="#obj" class="tocxref"><span class="secno">3. </span>オブジェクト</a><ol class="toc"><li class="tocline"><a href="#obj-id" class="tocxref"><span class="secno">3.1 </span>オブジェクト識別子</a></li><li class="tocline"><a href="#retrieving-objects" class="tocxref"><span class="secno">3.2 </span>オブジェクトの取得</a></li><li class="tocline"><a href="#source-property" class="tocxref"><span class="secno">3.3 </span>source 属性</a></li></ol></li><li class="tocline"><a href="#actors" class="tocxref"><span class="secno">4. </span>アクター</a><ol class="toc"><li class="tocline"><a href="#actor-objects" class="tocxref"><span class="secno">4.1 </span><i>Actor</i> オブジェクト</a></li></ol></li><li class="tocline"><a href="#collections" class="tocxref"><span class="secno">5. </span>コレクション</a><ol class="toc"><li class="tocline"><a href="#outbox" class="tocxref"><span class="secno">5.1 </span>Outbox</a></li><li class="tocline"><a href="#inbox" class="tocxref"><span class="secno">5.2 </span>Inbox</a></li><li class="tocline"><a href="#followers" class="tocxref"><span class="secno">5.3 </span>Followers コレクション</a></li><li class="tocline"><a href="#following" class="tocxref"><span class="secno">5.4 </span>Following コレクション</a></li><li class="tocline"><a href="#liked" class="tocxref"><span class="secno">5.5 </span>Liked コレクション</a></li><li class="tocline"><a href="#public-addressing" class="tocxref"><span class="secno">5.6 </span>Public アドレス指定</a></li><li class="tocline"><a href="#likes" class="tocxref"><span class="secno">5.7 </span>Likes コレクション</a></li><li class="tocline"><a href="#shares" class="tocxref"><span class="secno">5.8 </span>Shares コレクション</a></li></ol></li><li class="tocline"><a href="#client-to-server-interactions" class="tocxref"><span class="secno">6. </span>クライアントからサーバへの通信</a><ol class="toc"><li class="tocline"><a href="#client-addressing" class="tocxref"><span class="secno">6.1 </span>クライアントアドレス指定</a></li><li class="tocline"><a href="#create-activity-outbox" class="tocxref"><span class="secno">6.2 </span>Create Activity</a><ol class="toc"><li class="tocline"><a href="#object-without-create" class="tocxref"><span class="secno">6.2.1 </span>Create Activityなしでのオブジェクト作成</a></li></ol></li><li class="tocline"><a href="#update-activity-outbox" class="tocxref"><span class="secno">6.3 </span>Update Activity</a><ol class="toc"><li class="tocline"><a href="#partial-updates" class="tocxref"><span class="secno">6.3.1 </span>部分更新</a></li></ol></li><li class="tocline"><a href="#delete-activity-outbox" class="tocxref"><span class="secno">6.4 </span>Delete Activity</a></li><li class="tocline"><a href="#follow-activity-outbox" class="tocxref"><span class="secno">6.5 </span>Follow Activity</a></li><li class="tocline"><a href="#add-activity-outbox" class="tocxref"><span class="secno">6.6 </span>Add Activity</a></li><li class="tocline"><a href="#remove-activity-outbox" class="tocxref"><span class="secno">6.7 </span>Remove Activity</a></li><li class="tocline"><a href="#like-activity-outbox" class="tocxref"><span class="secno">6.8 </span>Like Activity</a></li><li class="tocline"><a href="#block-activity-outbox" class="tocxref"><span class="secno">6.9 </span>Block Activity</a></li><li class="tocline"><a href="#undo-activity-outbox" class="tocxref"><span class="secno">6.10 </span>Undo Activity</a></li><li class="tocline"><a href="#client-to-server-outbox-delivery" class="tocxref"><span class="secno">6.11 </span>配送</a></li><li class="tocline"><a href="#uploading-media" class="tocxref"><span class="secno">6.12 </span>メディアのアップロード</a></li></ol></li><li class="tocline"><a href="#server-to-server-interactions" class="tocxref"><span class="secno">7. </span>サーバからサーバへの通信</a><ol class="toc"><li class="tocline"><a href="#delivery" class="tocxref"><span class="secno">7.1 </span>配送</a><ol class="toc"><li class="tocline"><a href="#outbox-delivery" class="tocxref"><span class="secno">7.1.1 </span>サーバ-サーバ間のoutbox配送の要件</a></li><li class="tocline"><a href="#inbox-forwarding" class="tocxref"><span class="secno">7.1.2 </span>inboxからの転送</a></li><li class="tocline"><a href="#shared-inbox-delivery" class="tocxref"><span class="secno">7.1.3 </span>共有 Inbox への配送</a></li></ol></li><li class="tocline"><a href="#create-activity-inbox" class="tocxref"><span class="secno">7.2 </span>Create アクティビティ</a></li><li class="tocline"><a href="#update-activity-inbox" class="tocxref"><span class="secno">7.3 </span>Update アクティビティ</a></li><li class="tocline"><a href="#delete-activity-inbox" class="tocxref"><span class="secno">7.4 </span>Delete アクティビティ</a></li><li class="tocline"><a href="#follow-activity-inbox" class="tocxref"><span class="secno">7.5 </span>Follow アクティビティ</a></li><li class="tocline"><a href="#accept-activity-inbox" class="tocxref"><span class="secno">7.6 </span>Accept アクティビティ</a></li><li class="tocline"><a href="#reject-activity-inbox" class="tocxref"><span class="secno">7.7 </span>Reject アクティビティ</a></li><li class="tocline"><a href="#add-activity-inbox" class="tocxref"><span class="secno">7.8 </span>Add アクティビティ</a></li><li class="tocline"><a href="#remove-activity-inbox" class="tocxref"><span class="secno">7.9 </span>Remove アクティビティ</a></li><li class="tocline"><a href="#like-activity-inbox" class="tocxref"><span class="secno">7.10 </span>Like アクティビティ</a></li><li class="tocline"><a href="#announce-activity-inbox" class="tocxref"><span class="secno">7.11 </span>Announce アクティビティ (共有)</a></li><li class="tocline"><a href="#undo-activity-inbox" class="tocxref"><span class="secno">7.12 </span>Undo アクティビティ</a></li></ol></li><li class="tocline"><a href="#i18n-concerns" class="tocxref"><span class="secno">A. </span>国際化</a></li><li class="tocline"><a href="#security-considerations" class="tocxref"><span class="secno">B. </span>セキュリティ上の考慮事項</a><ol class="toc"><li class="tocline"><a href="#authorization" class="tocxref"><span class="secno">B.1 </span>認証と認可</a></li><li class="tocline"><a href="#security-verification" class="tocxref"><span class="secno">B.2 </span>検証</a></li><li class="tocline"><a href="#security-localhost" class="tocxref"><span class="secno">B.3 </span>ocalhost URIへのアクセス</a></li><li class="tocline"><a href="#security-uri-schemes" class="tocxref"><span class="secno">B.4 </span>URIスキーマ</a></li><li class="tocline"><a href="#security-recursive-objects" class="tocxref"><span class="secno">B.5 </span>再帰オブジェクト</a></li><li class="tocline"><a href="#security-spam" class="tocxref"><span class="secno">B.6 </span>スパム</a></li><li class="tocline"><a href="#security-federation-dos" class="tocxref"><span class="secno">B.7 </span>連合サービス拒否</a></li><li class="tocline"><a href="#security-c2s-ratelimiting" class="tocxref"><span class="secno">B.8 </span>クライアントからサーバへの通信量制限</a></li><li class="tocline"><a href="#security-c2s-response-dos" class="tocxref"><span class="secno">B.9 </span>クライアントからサーバへのレスポンスのサービス拒否</a></li><li class="tocline"><a href="#security-sanitizing-content" class="tocxref"><span class="secno">B.10 </span>内容のサニタイズ</a></li><li class="tocline"><a href="#security-not-displaying-bto-bcc" class="tocxref"><span class="secno">B.11 </span>btoおよびbcc属性の非表示</a></li></ol></li><li class="tocline"><a href="#acknowledgements" class="tocxref"><span class="secno">C. </span>謝辞</a></li><li class="tocline"><a href="#references" class="tocxref"><span class="secno">D. </span>参考文献</a><ol class="toc"><li class="tocline"><a href="#normative-references" class="tocxref"><span class="secno">D.1 </span>引用規格</a></li><li class="tocline"><a href="#informative-references" class="tocxref"><span class="secno">D.2 </span>参考規格</a></li></ol></li></ol></nav>
 
     <section id="Overview">
       <!--OddPage--><h2 id="x1-overview"><span class="secno">1. </span>概要</h2>
@@ -1023,13 +1023,13 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 
 
       <section id="create-activity-outbox">
-        <h3 id="x6-2-create-activity"><span class="secno">6.2 </span>Create Activity</h3>
+        <h3 id="x6-2-create-activity"><span class="secno">6.2 </span>Create アクティビティ</h3>
         <p><code>Create</code> アクティビティは新しいオブジェクトを投稿するときに使われる。これは、Activity の中に(<code>object</code> 属性として)埋め込まれている オブジェクトが作成されるという副作用がある。</p>
         <p><code>Create</code> アクティビティが投稿されたとき、アクティビティの <code>actor</code> は <code>object</code> の <code>attributedTo</code> フィールドにコピーされるべきである(SHOULD)。</p>
         <p>Create アクティビティとその <code>object</code> のアドレス指定の 不一致はおそらく混乱を引き起こす。従って、サーバは初期の配送時に Create アクティビティの宛先を その <code>object</code> にコピーするべきであり(SHOULD)、 同様に <code>object</code> からラップしている Create アクティビティに コピーするべきである(SHOULD)。<code>Create</code> のアドレス指定を変更することなく (例えば <code>Update</code> アクティビティで) <code>object</code> のアドレス指定を変更することは 受け入れられることに注意すること。</p>
 
         <section id="object-without-create">
-        <h4 id="x6-2-1-object-creation-without-a-create-activity"><span class="secno">6.2.1 </span>Create Activityなしでのオブジェクト作成</h4>
+        <h4 id="x6-2-1-object-creation-without-a-create-activity"><span class="secno">6.2.1 </span>Create アクティビティなしでのオブジェクト作成</h4>
         <p>クライアントからサーバへの投稿で、 周りのアクティビティなしでオブジェクトを作成することも可能である。サーバは outbox への POST リクエストで、 <code>Activity</code> のサブタイプでない 正当な [<cite><a class="bibref" href="#bib-ActivityStreams">ActivityStreams</a></cite>] オブジェクトを受け入れなければならない(MUST)。サーバはこのオブジェクトを <a href="#create-activity-outbox">Create Activity</a> の <code>object</code> として添付しなければならない(MUST)。非一時的オブジェクトに関しては、 サーバはラッピングした <code>Create</code> とラップされた <code>Object</code> に対して、<code>id</code> を 添付しなければならない(MUST)。</p>
 
         <div class="note"><div role="heading" class="note-title marker" id="h-note-7" aria-level="5"><span>Note</span></div><p class="">サーバから返された <code>Location</code> の値は、 新しい(オブジェクトではなく) Create アクティビティの URL であるべきである。</p></div>
@@ -1067,7 +1067,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
         </section>
       </section>
       <section id="update-activity-outbox">
-        <h3 id="x6-3-update-activity"><span class="secno">6.3 </span>Update Activity</h3>
+        <h3 id="x6-3-update-activity"><span class="secno">6.3 </span>Update アクティビティ</h3>
         <p><code>Update</code> アクティビティは、既に存在するオブジェクトを更新するときに 使われる。これの副作用として、actor がこのオブジェクトを更新する権限を持っている場合、 <code>object</code> は Update アクティビティで定義されている新しい構造を 反映した形で修正されなければならない(MUST)。</p>
 
         <section id="partial-updates">
@@ -1077,7 +1077,7 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
         </section>
       </section>
       <section id="delete-activity-outbox">
-        <h3 id="x6-4-delete-activity"><span class="secno">6.4 </span>Delete Activity</h3>
+        <h3 id="x6-4-delete-activity"><span class="secno">6.4 </span>Delete アクティビティ</h3>
         <p><code>Delete</code> アクティビティは、既に存在するオブジェクトを 削除するために使われる。この副作用として、サーバは <code>object</code> を、 削除されたオブジェクトを参照するアクティビティで表示される <code>Tombstone</code> のオブジェクトに置き換えても良い(MAY)。削除されたオブジェクトが要求された場合、サーバは、 レスポンスボディとして <code>Tombstone</code> オブジェクトが表現されている場合は HTTP 410 Gone ステータスを、 さもなければ HTTP 404 Not Found ステータスを返すべきである (SHOULD)。</p>
 
         <p>削除されたオブジェクト:</p>
@@ -1091,12 +1091,12 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 }</pre></div>
       </section>
       <section id="follow-activity-outbox">
-        <h3 id="x6-5-follow-activity"><span class="secno">6.5 </span>Follow Activity</h3>
+        <h3 id="x6-5-follow-activity"><span class="secno">6.5 </span>Follow アクティビティ</h3>
         <p><code>Follow</code> アクティビティは、他の actor のアクティビティを 購読するために使われる。</p>
         <p>これを <strong>outbox</strong> に受信した場合の副作用として、 サーバは、この <code>Follow</code> アクティビティをオブジェクトとした <code>Accept</code> アクティビティを引き続いて受信した場合にのみ、 <code>actor</code> の <a href="#following"><code>following</code> コレクション</a> に <code>object</code> を追加するべきである(SHOULD)。</p>
       </section>
       <section id="add-activity-outbox">
-        <h3 id="x6-6-add-activity"><span class="secno">6.6 </span>Add Activity</h3>
+        <h3 id="x6-6-add-activity"><span class="secno">6.6 </span>Add アクティビティ</h3>
         <p><code>Add</code> アクティビティを <strong>outbox</strong> に受け取ったとき、 以下の場合を除いて、サーバは <code>object</code> を <code>target</code> プロパティで指定されたコレクションに追加するべきである(SHOULD):</p>
         <ul>
           <li><code>target</code> が受信サーバによって所有されておらず、従ってこれを更新する権限がない。</li>
@@ -1104,24 +1104,24 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
         </ul>
       </section>
       <section id="remove-activity-outbox">
-        <h3 id="x6-7-remove-activity"><span class="secno">6.7 </span>Remove Activity</h3>
+        <h3 id="x6-7-remove-activity"><span class="secno">6.7 </span>Remove アクティビティ</h3>
         <p><strong>outbox</strong> に <code>Remove</code> アクティビティを受信すると、 サーバは次の場合を除いて、 <code>target</code> 属性で指定されたコレクションから <code>object</code> を削除するべきである(SHOULD)。</p><ul>
           <li><code>target</code> が受信サーバによって所有されておらず、従ってこれを更新する権限がない。</li>
           <li><code>object</code> が、受信サーバの裁量により、何らかの他の理由で <code>target</code> から削除することを認められていない。</li>
         </ul>
       </section>
       <section id="like-activity-outbox">
-        <h3 id="x6-8-like-activity"><span class="secno">6.8 </span>Like Activity</h3>
+        <h3 id="x6-8-like-activity"><span class="secno">6.8 </span>Like アクティビティ</h3>
         <p><code>Like</code> アクティビティは <code>actor</code> が <code>object</code> を好んでいることを示す。</p>
         <p>これを <strong>outbox</strong> に受信したときの副作用として、 サーバは <code>actor</code> の <a href="#liked"><code>liked</code> コレクション</a> に この <code>object</code> を追加するべきである(SHOULD)。</p>
       </section>
       <section id="block-activity-outbox">
-        <h3 id="x6-9-block-activity"><span class="secno">6.9 </span>Block Activity</h3>
+        <h3 id="x6-9-block-activity"><span class="secno">6.9 </span>Block アクティビティ</h3>
         <p><code>Block</code> アクティビティは、投稿したアクターは (<code>object</code>属性で定義された)アクターが <code>Block</code> アクティビティを投稿したアクターによって投稿された オブジェクトと相互作用出来ることを望まないことを示すために使われる。サーバはブロックしたユーザーと、このアクターによって投稿された任意の オブジェクトとの相互作用を防止するべきである (SHOULD)。</p>
         <p>サーバは Block アクティビティをその <code>object</code> に 配送するべきではない(SHOULD NOT)。</p>
       </section>
       <section id="undo-activity-outbox">
-        <h3 id="x6-10-undo-activity"><span class="secno">6.10 </span>Undo Activity</h3>
+        <h3 id="x6-10-undo-activity"><span class="secno">6.10 </span>Undo アクティビティ</h3>
         <p><code>Undo</code> アクティビティは以前のアクティビティを取り消すときに使われる。Activity Vocabulary 文書の <a href="https://www.w3.org/TR/activitystreams-vocabulary/#inverse"> Inverse Activities and "Undo"</a> を参照のこと。例えば、<code>Undo</code> は以前の <code>Like</code>, <code>Follow</code>, <code>Block</code> のいずれかの 取り消しのために使われる。Undo アクティビティと取り消されるアクティビティはどちらも同じ actor を 持っていなければならない(MUST)。副作用として、できるだけ広範囲に取り消しを行うべきである。例えば、もし <code>Like</code> を取り消すと、その前にインクリメントされた カウンタは適切にデクリメントされるべきである。</p>
 
         <p>既存の明示的な「逆アクティビティ」を代わりに使うべき例外がある。<code>Create</code> ベースのアクティビティは <code>Delete</code> を、 <code>Add</code> アクティビティは <code>Remove</code> を使うべきである。</p>
@@ -1218,24 +1218,24 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       </section>
 
       <section id="create-activity-inbox">
-        <h3 id="x7-2-create-activity"><span class="secno">7.2 </span>Create Activity</h3>
+        <h3 id="x7-2-create-activity"><span class="secno">7.2 </span>Create アクティビティ</h3>
         <p><code>inbox</code> に <code>Create</code> アクティビティを受信したときには、 意外にもほとんど副作用はない; このアクティビティは actor の <code>inbox</code> に現れるべきで、 サーバはおそらくこのアクティビティとそれに添付されているオブジェクトの表現を ローカルに保管したいはずである。しかし、これはとにかく <code>inbox</code> にアクティビティが配送されたときに ほとんど一般的に処理されることである。</p>
       </section>
 
       <section id="update-activity-inbox">
-        <h3 id="x7-3-update-activity"><span class="secno">7.3 </span>Update Activity</h3>
+        <h3 id="x7-3-update-activity"><span class="secno">7.3 </span>Update アクティビティ</h3>
         <p>サーバからサーバへの通信では、 <code>Update</code> アクティビティは、 同じ <code>id</code> の <code>object</code> のコピーを、 <code>Update</code> アクティビティの中に供給されているコピーで 更新するべきである(SHOULD)。<a href="#update-activity-outbox"> Update アクティビティのクライアントからサーバへの扱い</a> と異なり、 これは部分更新ではなくオブジェクトの完全な置き換えである。</p>
         <p>受信サーバは <code>Update</code> がその <code>object</code> を修正する権限があることを 確認することに注意しなければならない(MUST)。最小限として、これは <code>Update</code> とその <code>object</code> が同じ送信元であることを確認することで行われる。</p>
       </section>
 
       <section id="delete-activity-inbox">
-        <h3 id="x7-4-delete-activity"><span class="secno">7.4 </span>Delete Activity</h3>
+        <h3 id="x7-4-delete-activity"><span class="secno">7.4 </span>Delete アクティビティ</h3>
         <p><code>object</code> が送信した actor / server が所有していると仮定して) これを受信したときの副作用として、 delete アクティビティを受信したサーバは 同じ <code>id</code> を持つ <code>object</code> の表現を削除するべき(SHOULD)で、 表現を <code>Tombstone</code> オブジェクトに置き換えても良い(MAY)。</p>
         <p>(あるアクティビティが発信元サーバからリモートサーバに転送された後、 オブジェクトの表現をリモートをリモートで削除することを <em>強制する</em> 方法は、ActivityPub プロトコルにはないということに注意すること。)</p>
       </section>
 
       <section id="follow-activity-inbox">
-        <h3 id="x7-5-follow-activity"><span class="secno">7.5 </span>Follow Activity</h3>
+        <h3 id="x7-5-follow-activity"><span class="secno">7.5 </span>Follow アクティビティ</h3>
 
         <p>これを <strong>inbox</strong> に受信したときの副作用として、 サーバは、この Follow を <code>object</code> に設定した <code>Accept</code> または <code>Reject</code> アクティビティを生成し、 Follow した <code>actor</code> に配送するべきである(SHOULD)。<code>Accept</code> や <code>Reject</code> は自動的に生成しても良い(MAY)し、 (おそらくはユーザーの確認のための多少の遅延の後)ユーザー入力の 結果としてもよい(MAY)。サーバは <code>Follow</code> への応答として明示的に <code>Reject</code> を 送らないという選択をしてもよい(MAY)が、実装者はリクエストを送信したサーバが 中間的な状態のままになるかもしれないことに注意するべきである。例えば、サーバはユーザーのプライバシーを守るために <code>Reject</code> を 送信しないかもしれない。</p>
 
@@ -1248,21 +1248,21 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
       </section>
 
       <section id="accept-activity-inbox">
-        <h3 id="x7-6-accept-activity"><span class="secno">7.6 </span>Accept Activity</h3>
+        <h3 id="x7-6-accept-activity"><span class="secno">7.6 </span>Accept アクティビティ</h3>
         <p>これを <strong>inbox</strong> に受信した場合の副作用は、受信した <code>object</code> の型によって決定され、(例えば <code>Offer</code> のような) この文書に記述していない型を受け入れることも可能である。</p>
 
         <p><strong>inbox</strong> に受信した <code>Accept</code> の <code>object</code> が、以前受信者によって送られた <code>Follow</code> アクティビティの場合、 サーバは 受信者の <a href="#following">Following Collection</a> に <code>actor</code> を追加するべきである(SHOULD)。</p>
       </section>
       
       <section id="reject-activity-inbox">
-        <h3 id="x7-7-reject-activity"><span class="secno">7.7 </span>Reject Activity</h3>
+        <h3 id="x7-7-reject-activity"><span class="secno">7.7 </span>Reject アクティビティ</h3>
         <p>これを <strong>inbox</strong> に受信することによる副作用は、 受信した <code>object</code> の型によって決定され、 この文書に記述されていない型 (例えば <code>Offer</code>)を 拒否することもできる。</p>
 
         <p><strong>inbox</strong> に受信した <code>Reject</code> の <code>object</code> が、以前受信者によって送られた <code>Follow</code> アクティビティの場合、 これは受け取り側が <code>Follow</code> リクエストを承認しなかったことを 意味する。サーバは受信者の <a href="#following">Following Collection</a> に <code>actor</code> を追加してはならない(MUST)。</p>
       </section>
 
       <section id="add-activity-inbox">
-        <h3 id="x7-8-add-activity"><span class="secno">7.8 </span>Add Activity</h3>
+        <h3 id="x7-8-add-activity"><span class="secno">7.8 </span>Add アクティビティ</h3>
         <p><code>Add</code> アクティビティを <strong>inbox</strong> に受け取ったとき、 次のような場合を除いて、サーバは <code>target</code> 属性で指定された コレクションに <code>object</code> を追加するべきである (SHOULD):</p>
         <ul>
           <li><code>target</code> を受信サーバが所有しておらず、従って更新できない場合。</li>
@@ -1270,23 +1270,23 @@ github.com style (c) Vasily Polovnyov <vast@whiteants.net>
         </ul>
       </section>
       <section id="remove-activity-inbox">
-        <h3 id="x7-9-remove-activity"><span class="secno">7.9 </span>Remove Activity</h3>
+        <h3 id="x7-9-remove-activity"><span class="secno">7.9 </span>Remove アクティビティ</h3>
         <p><code>Remove</code> アクティビティを <strong>inbox</strong> に受け取ったとき、 次のような場合を除いて、サーバは <code>target</code> 属性で指定された コレクションから <code>object</code> を除去するべきである (SHOULD):</p><ul>
           <li><code>target</code> を受信サーバが所有しておらず、従って更新できない場合。</li>
           <li>受信者の裁量による何らかの理由により、 <code>object</code> を <code>target</code> コレクションから 削除することを認められていない場合。</li>
         </ul>
       </section>
       <section id="like-activity-inbox">
-        <h3 id="x7-10-like-activity"><span class="secno">7.10 </span>Like Activity</h3>
+        <h3 id="x7-10-like-activity"><span class="secno">7.10 </span>Like アクティビティ</h3>
         <p>これを <strong>inbox</strong> に受信したときの副作用として、 サーバは、<a href="#likes"><code>likes</code></a> コレクションがある場合は、 このコレクションに受信したアクティビティを追加することで このオブジェクトのいいねのカウントを増やすべきである (SHOULD)。</p>
       </section>
       <section id="announce-activity-inbox">
-        <h3 id="x7-11-announce-activity-sharing"><span class="secno">7.11 </span>Announce Activity (共有)</h3>
+        <h3 id="x7-11-announce-activity-sharing"><span class="secno">7.11 </span>Announce アクティビティ (共有)</h3>
         <p><code>Announce</code> アクティビティを <strong>inbox</strong> に 受け取ったとき、サーバは、<a href="#shares"><code>shares</code></a> コレクションがある場合は、このコレクションに受信したアクティビティを 追加することで、 このオブジェクトの共有のカウントを増やすべきである (SHOULD)。</p>
         <div class="note"><div role="heading" class="note-title marker" id="h-note-12" aria-level="4"><span>Note</span></div><div class=""><code>Announce</code> アクティビティは事実上他のソーシャルネットワークでの "sharing", "reposting", "boosting" として知られているものである。</div></div>
       </section>
       <section id="undo-activity-inbox">
-        <h3 id="x7-12-undo-activity"><span class="secno">7.12 </span>Undo Activity</h3>
+        <h3 id="x7-12-undo-activity"><span class="secno">7.12 </span>Undo アクティビティ</h3>
         <p><code>Undo</code> アクティビティは、以前のアクティビティの副作用を 取り消すために使われる。ActivityStreams 文書の <a href="https://www.w3.org/TR/activitystreams-vocabulary/#inverse"> Inverse Activities and "Undo"</a> を参照のこと。<code>Undo</code> アクティビティのスコープと制限は <a href="#undo-activity-outbox"> クライアントサーバ間での Undo アクティビティ</a> と同様であるが、 連合コンテキストに適用される。</p>
       </section>
     </section>

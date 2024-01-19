@@ -150,6 +150,70 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;/g1&gt;Acknowledgements</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>&lt;/g1&gt;謝辞</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;/g1&gt;Actors</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>&lt;/g1&gt;アクター</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;/g1&gt;Client to Server Interactions</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>&lt;/g1&gt;クライアントからサーバへの通信</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;/g1&gt;Collections</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>&lt;/g1&gt;コレクション</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;/g1&gt;Internationalization</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>&lt;/g1&gt;国際化</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;/g1&gt;References</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>&lt;/g1&gt;参考文献</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;/g1&gt;Security Considerations</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>&lt;/g1&gt;セキュリティ上の考慮事項</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;/g1&gt;Server to Server Interactions</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>&lt;/g1&gt;サーバからサーバへの通信</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;g11&gt;W3C&lt;/g11&gt; &lt;g12&gt;liability&lt;/g12&gt;, &lt;g13&gt;trademark&lt;/g13&gt; and &lt;g14&gt;permissive document license&lt;/g14&gt; rules apply.</seg>
       </tuv>
       <tuv lang="ja" changeid="shira" changedate="20240111T203043Z" creationid="shira" creationdate="20240111T203043Z">
@@ -262,6 +326,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;g1&gt;4.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>&lt;g1&gt;4.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;g1&gt;4. &lt;/g1&gt;Actors</seg>
       </tuv>
       <tuv lang="ja" changeid="shira" changedate="20240111T202046Z" creationid="shira" creationdate="20240111T202046Z">
@@ -274,6 +346,14 @@
       </tuv>
       <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
         <seg>&lt;g1&gt;4.1 &lt;/g1&gt;&lt;g2&gt;Actor&lt;/g2&gt; オブジェクト</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;g1&gt;5.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>&lt;g1&gt;5.</seg>
       </tuv>
     </tu>
     <tu>
@@ -350,6 +430,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;g1&gt;6.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>&lt;g1&gt;6.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;g1&gt;6. &lt;/g1&gt;Client to Server Interactions</seg>
       </tuv>
       <tuv lang="ja" changeid="shira" changedate="20240111T202154Z" creationid="shira" creationdate="20240111T202154Z">
@@ -368,8 +456,8 @@
       <tuv lang="en">
         <seg>&lt;g1&gt;6.10 &lt;/g1&gt;Undo Activity</seg>
       </tuv>
-      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
-        <seg>&lt;g1&gt;6.10 &lt;/g1&gt;Undo Activity</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240116T181618Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>&lt;g1&gt;6.10 &lt;/g1&gt;Undo アクティビティ</seg>
       </tuv>
     </tu>
     <tu>
@@ -392,24 +480,24 @@
       <tuv lang="en">
         <seg>&lt;g1&gt;6.2 &lt;/g1&gt;Create Activity</seg>
       </tuv>
-      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
-        <seg>&lt;g1&gt;6.2 &lt;/g1&gt;Create Activity</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240116T181348Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>&lt;g1&gt;6.2 &lt;/g1&gt;Create アクティビティ</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="en">
         <seg>&lt;g1&gt;6.2.1 &lt;/g1&gt;Object creation without a Create Activity</seg>
       </tuv>
-      <tuv lang="ja" changeid="shira" changedate="20240103T204637Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
-        <seg>&lt;g1&gt;6.2.1 &lt;/g1&gt;Create Activityなしでのオブジェクト作成</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240116T181407Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>&lt;g1&gt;6.2.1 &lt;/g1&gt;Create アクティビティなしでのオブジェクト作成</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="en">
         <seg>&lt;g1&gt;6.3 &lt;/g1&gt;Update Activity</seg>
       </tuv>
-      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
-        <seg>&lt;g1&gt;6.3 &lt;/g1&gt;Update Activity</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240116T181424Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>&lt;g1&gt;6.3 &lt;/g1&gt;Update アクティビティ</seg>
       </tuv>
     </tu>
     <tu>
@@ -424,48 +512,56 @@
       <tuv lang="en">
         <seg>&lt;g1&gt;6.4 &lt;/g1&gt;Delete Activity</seg>
       </tuv>
-      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
-        <seg>&lt;g1&gt;6.4 &lt;/g1&gt;Delete Activity</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240116T181438Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>&lt;g1&gt;6.4 &lt;/g1&gt;Delete アクティビティ</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="en">
         <seg>&lt;g1&gt;6.5 &lt;/g1&gt;Follow Activity</seg>
       </tuv>
-      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
-        <seg>&lt;g1&gt;6.5 &lt;/g1&gt;Follow Activity</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240116T181449Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>&lt;g1&gt;6.5 &lt;/g1&gt;Follow アクティビティ</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="en">
         <seg>&lt;g1&gt;6.6 &lt;/g1&gt;Add Activity</seg>
       </tuv>
-      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
-        <seg>&lt;g1&gt;6.6 &lt;/g1&gt;Add Activity</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240116T181459Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>&lt;g1&gt;6.6 &lt;/g1&gt;Add アクティビティ</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="en">
         <seg>&lt;g1&gt;6.7 &lt;/g1&gt;Remove Activity</seg>
       </tuv>
-      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
-        <seg>&lt;g1&gt;6.7 &lt;/g1&gt;Remove Activity</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240116T181546Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>&lt;g1&gt;6.7 &lt;/g1&gt;Remove アクティビティ</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="en">
         <seg>&lt;g1&gt;6.8 &lt;/g1&gt;Like Activity</seg>
       </tuv>
-      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
-        <seg>&lt;g1&gt;6.8 &lt;/g1&gt;Like Activity</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240116T181557Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>&lt;g1&gt;6.8 &lt;/g1&gt;Like アクティビティ</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="en">
         <seg>&lt;g1&gt;6.9 &lt;/g1&gt;Block Activity</seg>
       </tuv>
+      <tuv lang="ja" changeid="shira" changedate="20240116T181608Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>&lt;g1&gt;6.9 &lt;/g1&gt;Block アクティビティ</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;g1&gt;7.</seg>
+      </tuv>
       <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
-        <seg>&lt;g1&gt;6.9 &lt;/g1&gt;Block Activity</seg>
+        <seg>&lt;g1&gt;7.</seg>
       </tuv>
     </tu>
     <tu>
@@ -512,88 +608,88 @@
       <tuv lang="en">
         <seg>&lt;g1&gt;7.10 &lt;/g1&gt;Like Activity</seg>
       </tuv>
-      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
-        <seg>&lt;g1&gt;7.10 &lt;/g1&gt;Like Activity</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240116T181918Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>&lt;g1&gt;7.10 &lt;/g1&gt;Like アクティビティ</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="en">
         <seg>&lt;g1&gt;7.11 &lt;/g1&gt;Announce Activity (sharing)</seg>
       </tuv>
-      <tuv lang="ja" changeid="shira" changedate="20240104T115457Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
-        <seg>&lt;g1&gt;7.11 &lt;/g1&gt;Announce Activity (共有)</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240116T181927Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>&lt;g1&gt;7.11 &lt;/g1&gt;Announce アクティビティ (共有)</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="en">
         <seg>&lt;g1&gt;7.12 &lt;/g1&gt;Undo Activity</seg>
       </tuv>
-      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
-        <seg>&lt;g1&gt;7.12 &lt;/g1&gt;Undo Activity</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240116T181937Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>&lt;g1&gt;7.12 &lt;/g1&gt;Undo アクティビティ</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="en">
         <seg>&lt;g1&gt;7.2 &lt;/g1&gt;Create Activity</seg>
       </tuv>
-      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
-        <seg>&lt;g1&gt;7.2 &lt;/g1&gt;Create Activity</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240116T181751Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>&lt;g1&gt;7.2 &lt;/g1&gt;Create アクティビティ</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="en">
         <seg>&lt;g1&gt;7.3 &lt;/g1&gt;Update Activity</seg>
       </tuv>
-      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
-        <seg>&lt;g1&gt;7.3 &lt;/g1&gt;Update Activity</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240116T181759Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>&lt;g1&gt;7.3 &lt;/g1&gt;Update アクティビティ</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="en">
         <seg>&lt;g1&gt;7.4 &lt;/g1&gt;Delete Activity</seg>
       </tuv>
-      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
-        <seg>&lt;g1&gt;7.4 &lt;/g1&gt;Delete Activity</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240116T181810Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>&lt;g1&gt;7.4 &lt;/g1&gt;Delete アクティビティ</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="en">
         <seg>&lt;g1&gt;7.5 &lt;/g1&gt;Follow Activity</seg>
       </tuv>
-      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
-        <seg>&lt;g1&gt;7.5 &lt;/g1&gt;Follow Activity</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240116T181818Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>&lt;g1&gt;7.5 &lt;/g1&gt;Follow アクティビティ</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="en">
         <seg>&lt;g1&gt;7.6 &lt;/g1&gt;Accept Activity</seg>
       </tuv>
-      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
-        <seg>&lt;g1&gt;7.6 &lt;/g1&gt;Accept Activity</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240116T181831Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>&lt;g1&gt;7.6 &lt;/g1&gt;Accept アクティビティ</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="en">
         <seg>&lt;g1&gt;7.7 &lt;/g1&gt;Reject Activity</seg>
       </tuv>
-      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
-        <seg>&lt;g1&gt;7.7 &lt;/g1&gt;Reject Activity</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240116T181839Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>&lt;g1&gt;7.7 &lt;/g1&gt;Reject アクティビティ</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="en">
         <seg>&lt;g1&gt;7.8 &lt;/g1&gt;Add Activity</seg>
       </tuv>
-      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
-        <seg>&lt;g1&gt;7.8 &lt;/g1&gt;Add Activity</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240116T181853Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>&lt;g1&gt;7.8 &lt;/g1&gt;Add アクティビティ</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="en">
         <seg>&lt;g1&gt;7.9 &lt;/g1&gt;Remove Activity</seg>
       </tuv>
-      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
-        <seg>&lt;g1&gt;7.9 &lt;/g1&gt;Remove Activity</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240116T181903Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>&lt;g1&gt;7.9 &lt;/g1&gt;Remove アクティビティ</seg>
       </tuv>
     </tu>
     <tu>
@@ -912,88 +1008,88 @@
       <tuv lang="en">
         <seg>&lt;g1&gt;&lt;g2&gt;7.10 &lt;/g2&gt;Like Activity&lt;/g1&gt;</seg>
       </tuv>
-      <tuv lang="ja" changeid="shira" changedate="20240111T203653Z" creationid="shira" creationdate="20240111T203438Z">
-        <seg>&lt;g1&gt;&lt;g2&gt;7.10 &lt;/g2&gt;Like Activity&lt;/g1&gt;</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240116T181123Z" creationid="shira" creationdate="20240111T203438Z">
+        <seg>&lt;g1&gt;&lt;g2&gt;7.10 &lt;/g2&gt;Like アクティビティ&lt;/g1&gt;</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="en">
         <seg>&lt;g1&gt;&lt;g2&gt;7.11 &lt;/g2&gt;Announce Activity (sharing)&lt;/g1&gt;</seg>
       </tuv>
-      <tuv lang="ja" changeid="shira" changedate="20240112T101139Z" creationid="shira" creationdate="20240111T203438Z">
-        <seg>&lt;g1&gt;&lt;g2&gt;7.11 &lt;/g2&gt;Announce Activity (共有)&lt;/g1&gt;</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240116T181130Z" creationid="shira" creationdate="20240111T203438Z">
+        <seg>&lt;g1&gt;&lt;g2&gt;7.11 &lt;/g2&gt;Announce アクティビティ (共有)&lt;/g1&gt;</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="en">
         <seg>&lt;g1&gt;&lt;g2&gt;7.12 &lt;/g2&gt;Undo Activity&lt;/g1&gt;</seg>
       </tuv>
-      <tuv lang="ja" changeid="shira" changedate="20240112T101148Z" creationid="shira" creationdate="20240111T203439Z">
-        <seg>&lt;g1&gt;&lt;g2&gt;7.12 &lt;/g2&gt;Undo Activity&lt;/g1&gt;</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240116T181137Z" creationid="shira" creationdate="20240111T203439Z">
+        <seg>&lt;g1&gt;&lt;g2&gt;7.12 &lt;/g2&gt;Undo アクティビティ&lt;/g1&gt;</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="en">
         <seg>&lt;g1&gt;&lt;g2&gt;7.2 &lt;/g2&gt;Create Activity&lt;/g1&gt;</seg>
       </tuv>
-      <tuv lang="ja" changeid="shira" changedate="20240111T203722Z" creationid="shira" creationdate="20240111T203437Z">
-        <seg>&lt;g1&gt;&lt;g2&gt;7.2 &lt;/g2&gt;Create Activity&lt;/g1&gt;</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240116T180952Z" creationid="shira" creationdate="20240111T203437Z">
+        <seg>&lt;g1&gt;&lt;g2&gt;7.2 &lt;/g2&gt;Create アクティビティ&lt;/g1&gt;</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="en">
         <seg>&lt;g1&gt;&lt;g2&gt;7.3 &lt;/g2&gt;Update Activity&lt;/g1&gt;</seg>
       </tuv>
-      <tuv lang="ja" changeid="shira" changedate="20240111T203726Z" creationid="shira" creationdate="20240111T203437Z">
-        <seg>&lt;g1&gt;&lt;g2&gt;7.3 &lt;/g2&gt;Update Activity&lt;/g1&gt;</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240116T181004Z" creationid="shira" creationdate="20240111T203437Z">
+        <seg>&lt;g1&gt;&lt;g2&gt;7.3 &lt;/g2&gt;Update アクティビティ&lt;/g1&gt;</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="en">
         <seg>&lt;g1&gt;&lt;g2&gt;7.4 &lt;/g2&gt;Delete Activity&lt;/g1&gt;</seg>
       </tuv>
-      <tuv lang="ja" changeid="shira" changedate="20240111T203758Z" creationid="shira" creationdate="20240111T203437Z">
-        <seg>&lt;g1&gt;&lt;g2&gt;7.4 &lt;/g2&gt;Delete Activity&lt;/g1&gt;</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240116T181017Z" creationid="shira" creationdate="20240111T203437Z">
+        <seg>&lt;g1&gt;&lt;g2&gt;7.4 &lt;/g2&gt;Delete アクティビティ&lt;/g1&gt;</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="en">
         <seg>&lt;g1&gt;&lt;g2&gt;7.5 &lt;/g2&gt;Follow Activity&lt;/g1&gt;</seg>
       </tuv>
-      <tuv lang="ja" changeid="shira" changedate="20240111T203730Z" creationid="shira" creationdate="20240111T203437Z">
-        <seg>&lt;g1&gt;&lt;g2&gt;7.5 &lt;/g2&gt;Follow Activity&lt;/g1&gt;</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240116T181027Z" creationid="shira" creationdate="20240111T203437Z">
+        <seg>&lt;g1&gt;&lt;g2&gt;7.5 &lt;/g2&gt;Follow アクティビティ&lt;/g1&gt;</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="en">
         <seg>&lt;g1&gt;&lt;g2&gt;7.6 &lt;/g2&gt;Accept Activity&lt;/g1&gt;</seg>
       </tuv>
-      <tuv lang="ja" changeid="shira" changedate="20240111T203731Z" creationid="shira" creationdate="20240111T203437Z">
-        <seg>&lt;g1&gt;&lt;g2&gt;7.6 &lt;/g2&gt;Accept Activity&lt;/g1&gt;</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240116T181040Z" creationid="shira" creationdate="20240111T203437Z">
+        <seg>&lt;g1&gt;&lt;g2&gt;7.6 &lt;/g2&gt;Accept アクティビティ&lt;/g1&gt;</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="en">
         <seg>&lt;g1&gt;&lt;g2&gt;7.7 &lt;/g2&gt;Reject Activity&lt;/g1&gt;</seg>
       </tuv>
-      <tuv lang="ja" changeid="shira" changedate="20240111T203734Z" creationid="shira" creationdate="20240111T203438Z">
-        <seg>&lt;g1&gt;&lt;g2&gt;7.7 &lt;/g2&gt;Reject Activity&lt;/g1&gt;</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240116T181051Z" creationid="shira" creationdate="20240111T203438Z">
+        <seg>&lt;g1&gt;&lt;g2&gt;7.7 &lt;/g2&gt;Reject アクティビティ&lt;/g1&gt;</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="en">
         <seg>&lt;g1&gt;&lt;g2&gt;7.8 &lt;/g2&gt;Add Activity&lt;/g1&gt;</seg>
       </tuv>
-      <tuv lang="ja" changeid="shira" changedate="20240111T203708Z" creationid="shira" creationdate="20240111T203438Z">
-        <seg>&lt;g1&gt;&lt;g2&gt;7.8 &lt;/g2&gt;Add Activity&lt;/g1&gt;</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240116T181102Z" creationid="shira" creationdate="20240111T203438Z">
+        <seg>&lt;g1&gt;&lt;g2&gt;7.8 &lt;/g2&gt;Add アクティビティ&lt;/g1&gt;</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="en">
         <seg>&lt;g1&gt;&lt;g2&gt;7.9 &lt;/g2&gt;Remove Activity&lt;/g1&gt;</seg>
       </tuv>
-      <tuv lang="ja" changeid="shira" changedate="20240111T203655Z" creationid="shira" creationdate="20240111T203438Z">
-        <seg>&lt;g1&gt;&lt;g2&gt;7.9 &lt;/g2&gt;Remove Activity&lt;/g1&gt;</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240116T181113Z" creationid="shira" creationdate="20240111T203438Z">
+        <seg>&lt;g1&gt;&lt;g2&gt;7.9 &lt;/g2&gt;Remove アクティビティ&lt;/g1&gt;</seg>
       </tuv>
     </tu>
     <tu>
@@ -1254,6 +1350,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;g1&gt;A.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>&lt;g1&gt;A.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;g1&gt;A. &lt;/g1&gt;Internationalization</seg>
       </tuv>
       <tuv lang="ja" changeid="shira" changedate="20240111T202707Z" creationid="shira" creationdate="20240111T202707Z">
@@ -1290,6 +1394,14 @@
       </tuv>
       <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
         <seg>&lt;g1&gt;&lt;g2&gt;outbox&lt;/g2&gt;:&lt;/g1&gt; 他へメッセージを送る場所</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;g1&gt;B.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>&lt;g1&gt;B.</seg>
       </tuv>
     </tu>
     <tu>
@@ -1390,6 +1502,14 @@
     </tu>
     <tu>
       <tuv lang="en">
+        <seg>&lt;g1&gt;C.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>&lt;g1&gt;C.</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
         <seg>&lt;g1&gt;C. &lt;/g1&gt;Acknowledgements</seg>
       </tuv>
       <tuv lang="ja" changeid="shira" changedate="20240111T202805Z" creationid="shira" creationdate="20240111T202805Z">
@@ -1426,6 +1546,14 @@
       </tuv>
       <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
         <seg>&lt;g1&gt;Create&lt;/g1&gt; ベースのアクティビティは &lt;g2&gt;Delete&lt;/g2&gt; を、 &lt;g3&gt;Add&lt;/g3&gt; アクティビティは &lt;g4&gt;Remove&lt;/g4&gt; を使うべきである。</seg>
+      </tuv>
+    </tu>
+    <tu>
+      <tuv lang="en">
+        <seg>&lt;g1&gt;D.</seg>
+      </tuv>
+      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>&lt;g1&gt;D.</seg>
       </tuv>
     </tu>
     <tu>
