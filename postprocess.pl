@@ -10,6 +10,7 @@ my $f = 0;
 while(<$fr>){
     s@&apos;@'@g;
     s@<link rel="canonical" href="https://www.w3.org/TR/activitypub/">@<link rel="canonical" href="https://argrath.github.io/activitypub/">@;
+    s@<style type="text/css">@<style>@;
     print $fw $_;
 }
 
