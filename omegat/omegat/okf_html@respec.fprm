@@ -271,5 +271,9 @@ elements:
   dl:
     ruleTypes: [EXCLUDE]
     conditions: [class, EQUALS, "bibliography"]
+  h2:
+    ruleTypes: [EXCLUDE]
+    conditions: [id, EQUALS, "w3c-recommendation-23-january-2018"]
+
 quoteModeDefined: true
 quoteMode: 0
