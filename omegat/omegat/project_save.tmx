@@ -72,8 +72,8 @@
       <tuv lang="en">
         <seg>(Note that this does not suggest that the client should "unpack" collections of actors being addressed as individual recipients).</seg>
       </tuv>
-      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
-        <seg>(これは、クライアントがアドレス指定されたactorのコレクションを個々の宛先として 「展開」することを提案しているのではないことに注意すること。)</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240120T090703Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>(これは、クライアントがアドレス指定されたアクターのコレクションを個々の宛先として 「展開」することを提案しているのではないことに注意すること。)</seg>
       </tuv>
     </tu>
     <tu>
@@ -600,8 +600,8 @@
       <tuv lang="en">
         <seg>&lt;g1&gt;7.1.3 &lt;/g1&gt;Shared Inbox Delivery</seg>
       </tuv>
-      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
-        <seg>&lt;g1&gt;7.1.3 &lt;/g1&gt;共有 Inbox への配送</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240120T092844Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>&lt;g1&gt;7.1.3 &lt;/g1&gt;共有 inbox への配送</seg>
       </tuv>
     </tu>
     <tu>
@@ -864,8 +864,8 @@
       <tuv lang="en">
         <seg>&lt;g1&gt;&lt;g2&gt;6.10 &lt;/g2&gt;Undo Activity&lt;/g1&gt;</seg>
       </tuv>
-      <tuv lang="ja" changeid="shira" changedate="20240112T100242Z" creationid="shira" creationdate="20240111T203435Z">
-        <seg>&lt;g1&gt;&lt;g2&gt;6.10 &lt;/g2&gt;Undo Activity&lt;/g1&gt;</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240119T140503Z" creationid="shira" creationdate="20240111T203435Z">
+        <seg>&lt;g1&gt;&lt;g2&gt;6.10 &lt;/g2&gt;Undo アクティビティ&lt;/g1&gt;</seg>
       </tuv>
     </tu>
     <tu>
@@ -888,24 +888,24 @@
       <tuv lang="en">
         <seg>&lt;g1&gt;&lt;g2&gt;6.2 &lt;/g2&gt;Create Activity&lt;/g1&gt;</seg>
       </tuv>
-      <tuv lang="ja" changeid="shira" changedate="20240112T100128Z" creationid="shira" creationdate="20240111T203433Z">
-        <seg>&lt;g1&gt;&lt;g2&gt;6.2 &lt;/g2&gt;Create Activity&lt;/g1&gt;</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240119T140429Z" creationid="shira" creationdate="20240111T203433Z">
+        <seg>&lt;g1&gt;&lt;g2&gt;6.2 &lt;/g2&gt;Create アクティビティ&lt;/g1&gt;</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="en">
         <seg>&lt;g1&gt;&lt;g2&gt;6.2.1 &lt;/g2&gt;Object creation without a Create Activity&lt;/g1&gt;</seg>
       </tuv>
-      <tuv lang="ja" changeid="shira" changedate="20240112T100139Z" creationid="shira" creationdate="20240111T203433Z">
-        <seg>&lt;g1&gt;&lt;g2&gt;6.2.1 &lt;/g2&gt;Create Activityなしでのオブジェクト作成&lt;/g1&gt;</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240119T140432Z" creationid="shira" creationdate="20240111T203433Z">
+        <seg>&lt;g1&gt;&lt;g2&gt;6.2.1 &lt;/g2&gt;Create アクティビティなしでのオブジェクト作成&lt;/g1&gt;</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="en">
         <seg>&lt;g1&gt;&lt;g2&gt;6.3 &lt;/g2&gt;Update Activity&lt;/g1&gt;</seg>
       </tuv>
-      <tuv lang="ja" changeid="shira" changedate="20240112T100150Z" creationid="shira" creationdate="20240111T203433Z">
-        <seg>&lt;g1&gt;&lt;g2&gt;6.3 &lt;/g2&gt;Update Activity&lt;/g1&gt;</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240119T140434Z" creationid="shira" creationdate="20240111T203433Z">
+        <seg>&lt;g1&gt;&lt;g2&gt;6.3 &lt;/g2&gt;Update アクティビティ&lt;/g1&gt;</seg>
       </tuv>
     </tu>
     <tu>
@@ -920,48 +920,48 @@
       <tuv lang="en">
         <seg>&lt;g1&gt;&lt;g2&gt;6.4 &lt;/g2&gt;Delete Activity&lt;/g1&gt;</seg>
       </tuv>
-      <tuv lang="ja" changeid="shira" changedate="20240112T100228Z" creationid="shira" creationdate="20240111T203434Z">
-        <seg>&lt;g1&gt;&lt;g2&gt;6.4 &lt;/g2&gt;Delete Activity&lt;/g1&gt;</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240119T140437Z" creationid="shira" creationdate="20240111T203434Z">
+        <seg>&lt;g1&gt;&lt;g2&gt;6.4 &lt;/g2&gt;Delete アクティビティ&lt;/g1&gt;</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="en">
         <seg>&lt;g1&gt;&lt;g2&gt;6.5 &lt;/g2&gt;Follow Activity&lt;/g1&gt;</seg>
       </tuv>
-      <tuv lang="ja" changeid="shira" changedate="20240112T100231Z" creationid="shira" creationdate="20240111T203434Z">
-        <seg>&lt;g1&gt;&lt;g2&gt;6.5 &lt;/g2&gt;Follow Activity&lt;/g1&gt;</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240119T140439Z" creationid="shira" creationdate="20240111T203434Z">
+        <seg>&lt;g1&gt;&lt;g2&gt;6.5 &lt;/g2&gt;Follow アクティビティ&lt;/g1&gt;</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="en">
         <seg>&lt;g1&gt;&lt;g2&gt;6.6 &lt;/g2&gt;Add Activity&lt;/g1&gt;</seg>
       </tuv>
-      <tuv lang="ja" changeid="shira" changedate="20240112T100233Z" creationid="shira" creationdate="20240111T203434Z">
-        <seg>&lt;g1&gt;&lt;g2&gt;6.6 &lt;/g2&gt;Add Activity&lt;/g1&gt;</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240119T140442Z" creationid="shira" creationdate="20240111T203434Z">
+        <seg>&lt;g1&gt;&lt;g2&gt;6.6 &lt;/g2&gt;Add アクティビティ&lt;/g1&gt;</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="en">
         <seg>&lt;g1&gt;&lt;g2&gt;6.7 &lt;/g2&gt;Remove Activity&lt;/g1&gt;</seg>
       </tuv>
-      <tuv lang="ja" changeid="shira" changedate="20240112T100236Z" creationid="shira" creationdate="20240111T203434Z">
-        <seg>&lt;g1&gt;&lt;g2&gt;6.7 &lt;/g2&gt;Remove Activity&lt;/g1&gt;</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240119T140444Z" creationid="shira" creationdate="20240111T203434Z">
+        <seg>&lt;g1&gt;&lt;g2&gt;6.7 &lt;/g2&gt;Remove アクティビティ&lt;/g1&gt;</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="en">
         <seg>&lt;g1&gt;&lt;g2&gt;6.8 &lt;/g2&gt;Like Activity&lt;/g1&gt;</seg>
       </tuv>
-      <tuv lang="ja" changeid="shira" changedate="20240112T100238Z" creationid="shira" creationdate="20240111T203435Z">
-        <seg>&lt;g1&gt;&lt;g2&gt;6.8 &lt;/g2&gt;Like Activity&lt;/g1&gt;</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240119T140446Z" creationid="shira" creationdate="20240111T203435Z">
+        <seg>&lt;g1&gt;&lt;g2&gt;6.8 &lt;/g2&gt;Like アクティビティ&lt;/g1&gt;</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="en">
         <seg>&lt;g1&gt;&lt;g2&gt;6.9 &lt;/g2&gt;Block Activity&lt;/g1&gt;</seg>
       </tuv>
-      <tuv lang="ja" changeid="shira" changedate="20240112T100240Z" creationid="shira" creationdate="20240111T203435Z">
-        <seg>&lt;g1&gt;&lt;g2&gt;6.9 &lt;/g2&gt;Block Activity&lt;/g1&gt;</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240119T140449Z" creationid="shira" creationdate="20240111T203435Z">
+        <seg>&lt;g1&gt;&lt;g2&gt;6.9 &lt;/g2&gt;Block アクティビティ&lt;/g1&gt;</seg>
       </tuv>
     </tu>
     <tu>
@@ -1160,8 +1160,8 @@
       <tuv lang="en">
         <seg>&lt;g1&gt;&lt;g2&gt;B.3 &lt;/g2&gt;Accessing localhost URIs&lt;/g1&gt;</seg>
       </tuv>
-      <tuv lang="ja" changeid="shira" changedate="20240112T101255Z" creationid="shira" creationdate="20240111T203440Z">
-        <seg>&lt;g1&gt;&lt;g2&gt;B.3 &lt;/g2&gt;ocalhost URIへのアクセス&lt;/g1&gt;</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240119T140527Z" creationid="shira" creationdate="20240111T203440Z">
+        <seg>&lt;g1&gt;&lt;g2&gt;B.3 &lt;/g2&gt;localhost URIへのアクセス&lt;/g1&gt;</seg>
       </tuv>
     </tu>
     <tu>
@@ -1480,8 +1480,8 @@
       <tuv lang="en">
         <seg>&lt;g1&gt;B.7 &lt;/g1&gt;Federation denial-of-service</seg>
       </tuv>
-      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
-        <seg>&lt;g1&gt;B.7 &lt;/g1&gt;連合サービス拒否</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240119T142711Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>&lt;g1&gt;B.7 &lt;/g1&gt;連合サービス不能攻撃</seg>
       </tuv>
     </tu>
     <tu>
@@ -1600,40 +1600,40 @@
       <tuv lang="en">
         <seg>&lt;g1&gt;Example 10&lt;/g1&gt;</seg>
       </tuv>
-      <tuv lang="ja" changeid="shira" changedate="20240111T202141Z" creationid="shira" creationdate="20240111T202141Z">
-        <seg>&lt;g1&gt;Example 10&lt;/g1&gt;</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240120T085531Z" creationid="shira" creationdate="20240111T202141Z">
+        <seg>&lt;g1&gt;例10&lt;/g1&gt;</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="en">
         <seg>&lt;g1&gt;Example 11&lt;/g1&gt;&lt;g2&gt;: Submitting an Activity to the Outbox&lt;/g2&gt;</seg>
       </tuv>
-      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
-        <seg>&lt;g1&gt;Example 11&lt;/g1&gt;&lt;g2&gt;: Submitting an Activity to the Outbox&lt;/g2&gt;</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240120T090424Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>&lt;g1&gt;例11&lt;/g1&gt;&lt;g2&gt;: outboxへのActivityの投稿&lt;/g2&gt;</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="en">
         <seg>&lt;g1&gt;Example 12&lt;/g1&gt;&lt;g2&gt;: Outbox response to submitted Activity&lt;/g2&gt;</seg>
       </tuv>
-      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
-        <seg>&lt;g1&gt;Example 12&lt;/g1&gt;&lt;g2&gt;: Outbox response to submitted Activity&lt;/g2&gt;</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240120T090522Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>&lt;g1&gt;Example 12&lt;/g1&gt;&lt;g2&gt;: 投稿されたActivityへのOutboxのレスポンス response to submitted Activity&lt;/g2&gt;</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="en">
         <seg>&lt;g1&gt;Example 13&lt;/g1&gt;&lt;g2&gt;: An Article&lt;/g2&gt;</seg>
       </tuv>
-      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
-        <seg>&lt;g1&gt;Example 13&lt;/g1&gt;&lt;g2&gt;: An Article&lt;/g2&gt;</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240120T090724Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>&lt;g1&gt;例13&lt;/g1&gt;&lt;g2&gt;: 記事&lt;/g2&gt;</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="en">
         <seg>&lt;g1&gt;Example 14&lt;/g1&gt;&lt;g2&gt;: A Like of the Article&lt;/g2&gt;</seg>
       </tuv>
-      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
-        <seg>&lt;g1&gt;Example 14&lt;/g1&gt;&lt;g2&gt;: A Like of the Article&lt;/g2&gt;</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240120T090739Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>&lt;g1&gt;例14&lt;/g1&gt;&lt;g2&gt;: 記事への「いいね」&lt;/g2&gt;</seg>
       </tuv>
     </tu>
     <tu>
@@ -1648,80 +1648,80 @@
       <tuv lang="en">
         <seg>&lt;g1&gt;Example 16&lt;/g1&gt;&lt;g2&gt;: Create Activity wrapper generated by the server&lt;/g2&gt;</seg>
       </tuv>
-      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
-        <seg>&lt;g1&gt;Example 16&lt;/g1&gt;&lt;g2&gt;: Create Activity wrapper generated by the server&lt;/g2&gt;</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240120T090926Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>&lt;g1&gt;例16&lt;/g1&gt;&lt;g2&gt;: サーバによって生成されたCreateアクティビティのラッパ&lt;/g2&gt;</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="en">
         <seg>&lt;g1&gt;Example 17&lt;/g1&gt;</seg>
       </tuv>
-      <tuv lang="ja" changeid="shira" changedate="20240111T202314Z" creationid="shira" creationdate="20240111T202314Z">
-        <seg>&lt;g1&gt;Example 17&lt;/g1&gt;</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240120T091011Z" creationid="shira" creationdate="20240111T202314Z">
+        <seg>&lt;g1&gt;例17&lt;/g1&gt;</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="en">
         <seg>&lt;g1&gt;Example 1&lt;/g1&gt;</seg>
       </tuv>
-      <tuv lang="ja" changeid="shira" changedate="20240111T203255Z" creationid="shira" creationdate="20240111T203255Z">
-        <seg>&lt;g1&gt;Example 1&lt;/g1&gt;</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240120T082901Z" creationid="shira" creationdate="20240111T203255Z">
+        <seg>&lt;g1&gt;例1&lt;/g1&gt;</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="en">
         <seg>&lt;g1&gt;Example 2&lt;/g1&gt;</seg>
       </tuv>
-      <tuv lang="ja" changeid="shira" changedate="20240111T203257Z" creationid="shira" creationdate="20240111T203257Z">
-        <seg>&lt;g1&gt;Example 2&lt;/g1&gt;</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240120T082919Z" creationid="shira" creationdate="20240111T203257Z">
+        <seg>&lt;g1&gt;例2&lt;/g1&gt;</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="en">
         <seg>&lt;g1&gt;Example 3&lt;/g1&gt;</seg>
       </tuv>
-      <tuv lang="ja" changeid="shira" changedate="20240111T203259Z" creationid="shira" creationdate="20240111T203259Z">
-        <seg>&lt;g1&gt;Example 3&lt;/g1&gt;</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240120T082930Z" creationid="shira" creationdate="20240111T203259Z">
+        <seg>&lt;g1&gt;例3&lt;/g1&gt;</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="en">
         <seg>&lt;g1&gt;Example 4&lt;/g1&gt;</seg>
       </tuv>
-      <tuv lang="ja" changeid="shira" changedate="20240111T203300Z" creationid="shira" creationdate="20240111T203300Z">
-        <seg>&lt;g1&gt;Example 4&lt;/g1&gt;</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240120T082940Z" creationid="shira" creationdate="20240111T203300Z">
+        <seg>&lt;g1&gt;例4&lt;/g1&gt;</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="en">
         <seg>&lt;g1&gt;Example 5&lt;/g1&gt;</seg>
       </tuv>
-      <tuv lang="ja" changeid="shira" changedate="20240111T203332Z" creationid="shira" creationdate="20240111T203332Z">
-        <seg>&lt;g1&gt;Example 5&lt;/g1&gt;</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240120T082946Z" creationid="shira" creationdate="20240111T203332Z">
+        <seg>&lt;g1&gt;例5&lt;/g1&gt;</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="en">
         <seg>&lt;g1&gt;Example 6&lt;/g1&gt;</seg>
       </tuv>
-      <tuv lang="ja" changeid="shira" changedate="20240111T203334Z" creationid="shira" creationdate="20240111T203334Z">
-        <seg>&lt;g1&gt;Example 6&lt;/g1&gt;</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240120T082957Z" creationid="shira" creationdate="20240111T203334Z">
+        <seg>&lt;g1&gt;例6&lt;/g1&gt;</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="en">
         <seg>&lt;g1&gt;Example 7&lt;/g1&gt;</seg>
       </tuv>
-      <tuv lang="ja" changeid="shira" changedate="20240111T203550Z" creationid="shira" creationdate="20240111T202027Z">
-        <seg>&lt;g1&gt;Example 7&lt;/g1&gt;</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240120T083011Z" creationid="shira" creationdate="20240111T202027Z">
+        <seg>&lt;g1&gt;例7&lt;/g1&gt;</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="en">
         <seg>&lt;g1&gt;Example 8&lt;/g1&gt;</seg>
       </tuv>
-      <tuv lang="ja" changeid="shira" changedate="20240111T203540Z" creationid="shira" creationdate="20240111T202029Z">
-        <seg>&lt;g1&gt;Example 8&lt;/g1&gt;</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240120T083025Z" creationid="shira" creationdate="20240111T202029Z">
+        <seg>&lt;g1&gt;例8&lt;/g1&gt;</seg>
       </tuv>
     </tu>
     <tu>
@@ -1752,48 +1752,48 @@
       <tuv lang="en">
         <seg>&lt;g1&gt;Note&lt;/g1&gt;</seg>
       </tuv>
-      <tuv lang="ja" changeid="shira" changedate="20240111T202115Z" creationid="shira" creationdate="20240111T202115Z">
-        <seg>&lt;g1&gt;Note&lt;/g1&gt;</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240120T083042Z" creationid="shira" creationdate="20240111T202115Z">
+        <seg>&lt;g1&gt;注&lt;/g1&gt;</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="en">
         <seg>&lt;g1&gt;Note&lt;/g1&gt;&lt;g2&gt;: Default for notification targeting&lt;/g2&gt;</seg>
       </tuv>
-      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
-        <seg>&lt;g1&gt;Note&lt;/g1&gt;&lt;g2&gt;: Default for notification targeting&lt;/g2&gt;</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240120T083153Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>&lt;g1&gt;注&lt;/g1&gt;&lt;g2&gt;:通知の対象のデフォルト&lt;/g2&gt;</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="en">
         <seg>&lt;g1&gt;Note&lt;/g1&gt;&lt;g2&gt;: Forwarding to avoid the ghost replies problem&lt;/g2&gt;</seg>
       </tuv>
-      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
-        <seg>&lt;g1&gt;Note&lt;/g1&gt;&lt;g2&gt;: Forwarding to avoid the ghost replies problem&lt;/g2&gt;</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240120T092808Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>&lt;g1&gt;注&lt;/g1&gt;&lt;g2&gt;: ゴーストリプライ問題を避けるための転送&lt;/g2&gt;</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="en">
         <seg>&lt;g1&gt;Note&lt;/g1&gt;&lt;g2&gt;: Relationship to Linked Data Notifications&lt;/g2&gt;</seg>
       </tuv>
-      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
-        <seg>&lt;g1&gt;Note&lt;/g1&gt;&lt;g2&gt;: Relationship to Linked Data Notifications&lt;/g2&gt;</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240120T092732Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>&lt;g1&gt;注&lt;/g1&gt;&lt;g2&gt;: Linked Data Notificationsとの関係&lt;/g2&gt;</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="en">
         <seg>&lt;g1&gt;Note&lt;/g1&gt;&lt;g2&gt;: Silent and private activities&lt;/g2&gt;</seg>
       </tuv>
-      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
-        <seg>&lt;g1&gt;Note&lt;/g1&gt;&lt;g2&gt;: Silent and private activities&lt;/g2&gt;</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240120T092651Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>&lt;g1&gt;注&lt;/g1&gt;&lt;g2&gt;: 暗黙でプライベートなアクティビティ&lt;/g2&gt;</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="en">
         <seg>&lt;g1&gt;Note&lt;/g1&gt;&lt;g2&gt;: What to do when clients can't meaningfully handle a mediaType?&lt;/g2&gt;</seg>
       </tuv>
-      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
-        <seg>&lt;g1&gt;Note&lt;/g1&gt;&lt;g2&gt;: What to do when clients can't meaningfully handle a mediaType?&lt;/g2&gt;</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240120T082833Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>&lt;g1&gt;注&lt;/g1&gt;&lt;g2&gt;:クライアントがメディア型を意味のある形で扱えない場合は?&lt;/g2&gt;</seg>
       </tuv>
     </tu>
     <tu>
@@ -1888,8 +1888,8 @@
       <tuv lang="en">
         <seg>&lt;g1&gt;liked:&lt;/g1&gt; Specifically a property of actors.</seg>
       </tuv>
-      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
-        <seg>&lt;g1&gt;liked:&lt;/g1&gt; 明確に actor の属性。</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240120T090259Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>&lt;g1&gt;liked:&lt;/g1&gt; 明確にアクターの属性。</seg>
       </tuv>
     </tu>
     <tu>
@@ -1968,32 +1968,32 @@
       <tuv lang="en">
         <seg>A json object which maps additional (typically server/domain-wide) endpoints which may be useful either for this actor or someone referencing this actor.</seg>
       </tuv>
-      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
-        <seg>この actor またはこの actor を参照する誰かにとって有用かもしれない (典型的にはサーバ/ドメイン単位の) 追加のエンドポイントをマッピングした json オブジェクト。</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240119T140857Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>このアクターまたはこのアクターを参照する誰かにとって有用かもしれない (典型的にはサーバ/ドメイン単位の) 追加のエンドポイントをマッピングした json オブジェクト。</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="en">
         <seg>A link to an [&lt;g1&gt;&lt;g2&gt;ActivityStreams&lt;/g2&gt;&lt;/g1&gt;] collection of objects this actor has liked; see &lt;g3&gt;&lt;g4&gt;5.5&lt;/g4&gt; &lt;g5&gt;Liked Collection&lt;/g5&gt;&lt;/g3&gt;.</seg>
       </tuv>
-      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
-        <seg>この actor が好んでいるオブジェクトを示す [&lt;g1&gt;&lt;g2&gt;ActivityStreams&lt;/g2&gt;&lt;/g1&gt;] コレクションへのリンク; &lt;g3&gt;&lt;g4&gt;5.5&lt;/g4&gt; &lt;g5&gt;Liked Collection&lt;/g5&gt;&lt;/g3&gt; 参照。</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240119T140823Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>このアクターが好んでいるオブジェクトを示す [&lt;g1&gt;&lt;g2&gt;ActivityStreams&lt;/g2&gt;&lt;/g1&gt;] コレクションへのリンク; &lt;g3&gt;&lt;g4&gt;5.5&lt;/g4&gt; &lt;g5&gt;Liked Collection&lt;/g5&gt;&lt;/g3&gt; 参照。</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="en">
         <seg>A link to an [&lt;g1&gt;&lt;g2&gt;ActivityStreams&lt;/g2&gt;&lt;/g1&gt;] collection of the actors that follow this actor; see &lt;g3&gt;&lt;g4&gt;5.3&lt;/g4&gt; &lt;g5&gt;Followers Collection&lt;/g5&gt;&lt;/g3&gt;.</seg>
       </tuv>
-      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
-        <seg>この actor をフォローしている actor を示す [&lt;g1&gt;&lt;g2&gt;ActivityStreams&lt;/g2&gt;&lt;/g1&gt;] コレクションへのリンク; &lt;g3&gt;&lt;g4&gt;5.3&lt;/g4&gt; &lt;g5&gt;Followers Collection&lt;/g5&gt;&lt;/g3&gt; 参照。</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240119T205330Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>このアクターをフォローしているアクターを示す [&lt;g1&gt;&lt;g2&gt;ActivityStreams&lt;/g2&gt;&lt;/g1&gt;] コレクションへのリンク; &lt;g3&gt;&lt;g4&gt;5.3&lt;/g4&gt; &lt;g5&gt;Followers Collection&lt;/g5&gt;&lt;/g3&gt; 参照。</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="en">
         <seg>A link to an [&lt;g1&gt;&lt;g2&gt;ActivityStreams&lt;/g2&gt;&lt;/g1&gt;] collection of the actors that this actor is following; see &lt;g3&gt;&lt;g4&gt;5.4&lt;/g4&gt; &lt;g5&gt;Following Collection&lt;/g5&gt;&lt;/g3&gt;</seg>
       </tuv>
-      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
-        <seg>この actor がフォローしている actor を示す [&lt;g1&gt;&lt;g2&gt;ActivityStreams&lt;/g2&gt;&lt;/g1&gt;] コレクションへのリンク; &lt;g3&gt;&lt;g4&gt;5.4&lt;/g4&gt; &lt;g5&gt;Following Collection&lt;/g5&gt;&lt;/g3&gt; 参照。</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240119T205317Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>このアクターがフォローしているアクターを示す [&lt;g1&gt;&lt;g2&gt;ActivityStreams&lt;/g2&gt;&lt;/g1&gt;] コレクションへのリンク; &lt;g3&gt;&lt;g4&gt;5.4&lt;/g4&gt; &lt;g5&gt;Following Collection&lt;/g5&gt;&lt;/g3&gt; 参照。</seg>
       </tuv>
     </tu>
     <tu>
@@ -2008,8 +2008,8 @@
       <tuv lang="en">
         <seg>A link to the actor's "profile web page", if not equal to the value of &lt;g1&gt;id&lt;/g1&gt;.</seg>
       </tuv>
-      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
-        <seg>actor の「プロフィール web ページ」へのリンク (これが &lt;g1&gt;id&lt;/g1&gt; の値と同じではない場合)。</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240119T141040Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>アクターの「プロフィール web ページ」へのリンク (これが &lt;g1&gt;id&lt;/g1&gt; の値と同じではない場合)。</seg>
       </tuv>
     </tu>
     <tu>
@@ -2056,8 +2056,8 @@
       <tuv lang="en">
         <seg>A reference to an [&lt;g1&gt;&lt;g2&gt;ActivityStreams&lt;/g2&gt;&lt;/g1&gt;] &lt;g3&gt; &lt;g4&gt;OrderedCollection&lt;/g4&gt;&lt;/g3&gt; comprised of all the messages received by the actor; see &lt;g5&gt;&lt;g6&gt;5.2&lt;/g6&gt; &lt;g7&gt;Inbox&lt;/g7&gt;&lt;/g5&gt;.</seg>
       </tuv>
-      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
-        <seg>この actor が受け取った全てのメッセージから成る [&lt;g1&gt;&lt;g2&gt;ActivityStreams&lt;/g2&gt;&lt;/g1&gt;] &lt;g3&gt; &lt;g4&gt;OrderedCollection&lt;/g4&gt;&lt;/g3&gt; への参照; &lt;g5&gt;&lt;g6&gt;5.2&lt;/g6&gt; &lt;g7&gt;Inbox&lt;/g7&gt;&lt;/g5&gt; を参照のこと。</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240119T140746Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>このアクターが受け取った全てのメッセージから成る [&lt;g1&gt;&lt;g2&gt;ActivityStreams&lt;/g2&gt;&lt;/g1&gt;] &lt;g3&gt; &lt;g4&gt;OrderedCollection&lt;/g4&gt;&lt;/g3&gt; への参照; &lt;g5&gt;&lt;g6&gt;5.2&lt;/g6&gt; &lt;g7&gt;Inbox&lt;/g7&gt;&lt;/g5&gt; を参照のこと。</seg>
       </tuv>
     </tu>
     <tu>
@@ -2072,8 +2072,8 @@
       <tuv lang="en">
         <seg>A short username which may be used to refer to the actor, with no uniqueness guarantees.</seg>
       </tuv>
-      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
-        <seg>actor を参照するために使われる短いユーザー名; ユニーク性は保証されない。</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240119T140835Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>アクターを参照するために使われる短いユーザー名; ユニーク性は保証されない。</seg>
       </tuv>
     </tu>
     <tu>
@@ -2112,8 +2112,8 @@
       <tuv lang="en">
         <seg>Activities addressed to this special URI shall be accessible to all users, without authentication.</seg>
       </tuv>
-      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
-        <seg>この特殊な URI を宛先に指定された activity は全てのユーザーから 認証なしにアクセスできる。</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240120T085540Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>この特殊な URI を宛先に指定された Activity は全てのユーザーから 認証なしにアクセスできる。</seg>
       </tuv>
     </tu>
     <tu>
@@ -2432,16 +2432,16 @@
       <tuv lang="en">
         <seg>An [&lt;g1&gt;&lt;g2&gt;ActivityStreams&lt;/g2&gt;&lt;/g1&gt;] &lt;g3&gt; &lt;g4&gt;OrderedCollection&lt;/g4&gt;&lt;/g3&gt; comprised of all the messages produced by the actor; see &lt;g5&gt;&lt;g6&gt;5.1&lt;/g6&gt; &lt;g7&gt;Outbox&lt;/g7&gt;&lt;/g5&gt;.</seg>
       </tuv>
-      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
-        <seg>この actor によって作成された全てのメッセージから成る [&lt;g1&gt;&lt;g2&gt;ActivityStreams&lt;/g2&gt;&lt;/g1&gt;] &lt;g3&gt; &lt;g4&gt;OrderedCollection&lt;/g4&gt;&lt;/g3&gt;; &lt;g5&gt;&lt;g6&gt;5.1&lt;/g6&gt; &lt;g7&gt;Outbox&lt;/g7&gt;&lt;/g5&gt; を参照のこと。</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240119T140754Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>このアクターによって作成された全てのメッセージから成る [&lt;g1&gt;&lt;g2&gt;ActivityStreams&lt;/g2&gt;&lt;/g1&gt;] &lt;g3&gt; &lt;g4&gt;OrderedCollection&lt;/g4&gt;&lt;/g3&gt;; &lt;g5&gt;&lt;g6&gt;5.1&lt;/g6&gt; &lt;g7&gt;Outbox&lt;/g7&gt;&lt;/g5&gt; を参照のこと。</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="en">
         <seg>An activity is delivered to its targets (which are &lt;g1&gt;actors&lt;/g1&gt;) by first looking up the targets' inboxes and then posting the activity to those inboxes.</seg>
       </tuv>
-      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
-        <seg>アクティビティは、まずターゲット(これは&lt;g1&gt;actor&lt;/g1&gt;)の inboxを探して、それからそのinboxにアクティビティを投稿することで配送される。</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240120T092505Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>アクティビティは、まずターゲット(これは&lt;g1&gt;アクター&lt;/g1&gt;)の inboxを探して、それからそのinboxにアクティビティを投稿することで配送される。</seg>
       </tuv>
     </tu>
     <tu>
@@ -2624,8 +2624,8 @@
       <tuv lang="en">
         <seg>Client to server interaction takes place through clients posting Activities to an actor's &lt;g1&gt;outbox&lt;/g1&gt;.</seg>
       </tuv>
-      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
-        <seg>クライアントからサーバへの通信は、クライアントが actor の &lt;g1&gt;outbox&lt;/g1&gt; に Activitity 投稿することで行われる。</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240120T090334Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>クライアントからサーバへの通信は、クライアントがアクターの &lt;g1&gt;outbox&lt;/g1&gt; に Activitity 投稿することで行われる。</seg>
       </tuv>
     </tu>
     <tu>
@@ -2720,8 +2720,8 @@
       <tuv lang="en">
         <seg>Duplication can occur if an activity is addressed both to an actor's followers, and a specific actor who also follows the recipient actor, and the server has failed to de-duplicate the recipients list.</seg>
       </tuv>
-      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
-        <seg>重複は、あるアクティビティがある actor のフォロワーと、受信 actor を フォローしている特定の actor の両方にアドレス指定され、 サーバが受信リストの重複解消に失敗したときに起こる。</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240120T084035Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>重複は、あるアクティビティがあるアクターのフォロワーと、受信アクターを フォローしている特定のアクターの両方にアドレス指定され、 サーバが受信リストの重複解消に失敗したときに起こる。</seg>
       </tuv>
     </tu>
     <tu>
@@ -2744,8 +2744,8 @@
       <tuv lang="en">
         <seg>Endpoint URI so this actor's clients may access remote ActivityStreams objects which require authentication to access.</seg>
       </tuv>
-      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
-        <seg>actor のクライアントが、 アクセスするのに認証が必要なリモート ActivityStreams にアクセスするのに 使われる エンドポイント URI。</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240119T140921Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>アクターのクライアントが、 アクセスするのに認証が必要なリモート ActivityStreams にアクセスするのに 使われる エンドポイント URI。</seg>
       </tuv>
     </tu>
     <tu>
@@ -2768,8 +2768,8 @@
       <tuv lang="en">
         <seg>Every &lt;g1&gt;actor&lt;/g1&gt; SHOULD have a &lt;g2&gt;followers&lt;/g2&gt; collection.</seg>
       </tuv>
-      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
-        <seg>各 &lt;g1&gt;actor&lt;/g1&gt; は &lt;g2&gt;followers&lt;/g2&gt; コレクションを 持つべきである(SHOULD)。</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240120T084811Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>各 &lt;g1&gt;アクター&lt;/g1&gt; は &lt;g2&gt;followers&lt;/g2&gt; コレクションを 持つべきである(SHOULD)。</seg>
       </tuv>
     </tu>
     <tu>
@@ -2784,16 +2784,16 @@
       <tuv lang="en">
         <seg>Every actor MAY have a &lt;g1&gt;liked&lt;/g1&gt; collection.</seg>
       </tuv>
-      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
-        <seg>各 actor は &lt;g1&gt;liked&lt;/g1&gt; コレクションを持っても良い(MAY)。</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240120T084830Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>各アクターは &lt;g1&gt;liked&lt;/g1&gt; コレクションを持っても良い(MAY)。</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="en">
         <seg>Every actor SHOULD have a &lt;g1&gt;following&lt;/g1&gt; collection.</seg>
       </tuv>
-      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
-        <seg>各 actor は &lt;g1&gt;following&lt;/g1&gt; コレクションを持つべきである(SHOULD)。</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240120T083223Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>各アクターは &lt;g1&gt;following&lt;/g1&gt; コレクションを持つべきである(SHOULD)。</seg>
       </tuv>
     </tu>
     <tu>
@@ -2848,8 +2848,8 @@
       <tuv lang="en">
         <seg>First, these recipients are determined through following the appropriate links between objects until you reach an actor, and then the Activity is inserted into the actor's &lt;g1&gt;inbox&lt;/g1&gt; (&lt;g2&gt;delivery&lt;/g2&gt;).</seg>
       </tuv>
-      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
-        <seg>まず、これらの宛先は、actor に到達するまでオブジェクト間の適切なリンクを 辿ることで決定され、 それからこの Activity は actor の &lt;g1&gt;inbox&lt;/g1&gt; に挿入される (&lt;g2&gt;delivery&lt;/g2&gt;)。</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240120T092156Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>まず、これらの宛先は、アクターに到達するまでオブジェクト間の適切なリンクを 辿ることで決定され、 それからこの Activity はアクターの &lt;g1&gt;inbox&lt;/g1&gt; に挿入される (&lt;g2&gt;配送&lt;/g2&gt;)。</seg>
       </tuv>
     </tu>
     <tu>
@@ -2952,8 +2952,8 @@
       <tuv lang="en">
         <seg>For instance, if attempting to deliver to an actor for perhaps six months while the follower remains unreachable, it is reasonable that the delivering server remove the subscriber from the &lt;g2&gt;followers&lt;/g2&gt; list.</seg>
       </tuv>
-      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
-        <seg>例として、ある actor への配送の試みが例えば 6 ヶ月間フォロワーに 到達不能であり続けた場合、配送サーバがその購読者を &lt;g2&gt;followers&lt;/g2&gt; から 削除するのは合理的である。</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240120T093357Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>例として、あるアクターへの配送の試みが例えば 6 ヶ月間フォロワーに 到達不能であり続けた場合、配送サーバがその購読者を &lt;g2&gt;followers&lt;/g2&gt; から 削除するのは合理的である。</seg>
       </tuv>
     </tu>
     <tu>
@@ -2976,8 +2976,8 @@
       <tuv lang="en">
         <seg>For servers hosting many actors, delivery to all followers can result in an overwhelming number of messages sent.</seg>
       </tuv>
-      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
-        <seg>多くの actor をホスティングしているサーバでは、 全てのフォロワーへの配送は大量のメッセージを送信することになることがある。</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240120T092854Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>多くのアクターをホスティングしているサーバでは、 全てのフォロワーへの配送は大量のメッセージを送信することになることがある。</seg>
       </tuv>
     </tu>
     <tu>
@@ -3056,16 +3056,16 @@
       <tuv lang="en">
         <seg>However, actors MAY have a &lt;g1&gt;&lt;g2&gt;sharedInbox&lt;/g2&gt;&lt;/g1&gt; endpoint which is available for efficient shared delivery of public posts (as well as posts to followers-only); see &lt;g3&gt;&lt;g4&gt;7.1.3&lt;/g4&gt; &lt;g5&gt;Shared Inbox Delivery&lt;/g5&gt;&lt;/g3&gt;.</seg>
       </tuv>
-      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
-        <seg>しかし、 actor はパブリックな投稿の効率的な共有配送のために利用可能である &lt;g1&gt;&lt;g2&gt;sharedInbox&lt;/g2&gt;&lt;/g1&gt; エンドポイントを 持ってもよい(MAY); &lt;g3&gt;&lt;g4&gt;7.1.3&lt;/g4&gt; &lt;g5&gt;Shared Inbox Delivery&lt;/g5&gt;&lt;/g3&gt; を参照のこと。</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240120T085611Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>しかし、アクターはパブリックな投稿の効率的な共有配送のために利用可能である &lt;g1&gt;&lt;g2&gt;sharedInbox&lt;/g2&gt;&lt;/g1&gt; エンドポイントを 持ってもよい(MAY); &lt;g3&gt;&lt;g4&gt;7.1.3&lt;/g4&gt; &lt;g5&gt;Shared Inbox Delivery&lt;/g5&gt;&lt;/g3&gt; を参照のこと。</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="en">
         <seg>However, for client to server communication, a server receiving an object posted to the outbox with no specified &lt;g1&gt;id&lt;/g1&gt; SHOULD allocate an object ID in the actor's namespace and attach it to the posted object.</seg>
       </tuv>
-      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
-        <seg>しかし、クライアントからサーバへの通信では、&lt;g1&gt;id&lt;/g1&gt; の指定なしに outbox に投稿されたオブジェクトを受信したサーバは、 その actor の名前空間の ID を割り当て、投稿されたオブジェクトに それを添付するべきである(SHOULD)。</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240119T204835Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>しかし、クライアントからサーバへの通信では、&lt;g1&gt;id&lt;/g1&gt; の指定なしに outbox に投稿されたオブジェクトを受信したサーバは、 そのアクターの名前空間の ID を割り当て、投稿されたオブジェクトに それを添付するべきである(SHOULD)。</seg>
       </tuv>
     </tu>
     <tu>
@@ -3136,8 +3136,8 @@
       <tuv lang="en">
         <seg>If Linked Data Signatures and HTTP Signatures are being used for authentication and authorization, this endpoint specifies a URI at which a client key may be signed by the actor's key for a time window to act on behalf of the actor in interacting with foreign servers.</seg>
       </tuv>
-      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
-        <seg>Linked Data Signatures と HTTP Signatures が認証と認可として使われている場合、 このエンドポイントは 外部サーバと通信する際に actor に代わって動作するタイミングのための、 actor のキーによって署名されるクライアントキーの URI を指定する。</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240119T140959Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>Linked Data Signatures と HTTP Signatures が認証と認可として使われている場合、 このエンドポイントは 外部サーバと通信する際にアクターに代わって動作するタイミングのための、 actor のキーによって署名されるクライアントキーの URI を指定する。</seg>
       </tuv>
     </tu>
     <tu>
@@ -3208,8 +3208,8 @@
       <tuv lang="en">
         <seg>If the &lt;g1&gt;object&lt;/g1&gt; of an &lt;g2&gt;Accept&lt;/g2&gt; received to an &lt;g3&gt;inbox&lt;/g3&gt; is a &lt;g4&gt;Follow&lt;/g4&gt; activity previously sent by the receiver, the server SHOULD add the &lt;g5&gt;actor&lt;/g5&gt; to the receiver's &lt;g6&gt;Following Collection&lt;/g6&gt;.</seg>
       </tuv>
-      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
-        <seg>&lt;g3&gt;inbox&lt;/g3&gt; に受信した &lt;g2&gt;Accept&lt;/g2&gt; の &lt;g1&gt;object&lt;/g1&gt; が、以前受信者によって送られた &lt;g4&gt;Follow&lt;/g4&gt; アクティビティの場合、 サーバは 受信者の &lt;g6&gt;Following Collection&lt;/g6&gt; に &lt;g5&gt;actor&lt;/g5&gt; を追加するべきである(SHOULD)。</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240120T093456Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>&lt;g3&gt;inbox&lt;/g3&gt; に受信した &lt;g2&gt;Accept&lt;/g2&gt; の &lt;g1&gt;object&lt;/g1&gt; が、以前受信者によって送られた &lt;g4&gt;Follow&lt;/g4&gt; アクティビティの場合、 サーバは 受信者の &lt;g6&gt;Following コレクションn&lt;/g6&gt; に &lt;g5&gt;actor&lt;/g5&gt; を追加するべきである(SHOULD)。</seg>
       </tuv>
     </tu>
     <tu>
@@ -3296,8 +3296,8 @@
       <tuv lang="en">
         <seg>Implementations MUST NOT deliver to the "public" special collection; it is not capable of receiving actual activities.</seg>
       </tuv>
-      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
-        <seg>実装者は「パブリック」特殊コレクションへ配送してはならない(MUST NOT); これは実際の activity を受信する能力を持たない。</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240120T085558Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>実装者は「パブリック」特殊コレクションへ配送してはならない(MUST NOT); これは実際のアクティビティを受信する能力を持たない。</seg>
       </tuv>
     </tu>
     <tu>
@@ -3312,8 +3312,8 @@
       <tuv lang="en">
         <seg>Implementations should be aware that there is no guarantee that actors on the network will remain reachable and should implement accordingly.</seg>
       </tuv>
-      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
-        <seg>実装は、ネットワーク上の actor が到達可能であり続ける保証がないことに注意し、 それに応じて実装するべきである。</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240120T093348Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>実装は、ネットワーク上のアクターが到達可能であり続ける保証がないことに注意し、 それに応じて実装するべきである。</seg>
       </tuv>
     </tu>
     <tu>
@@ -3368,8 +3368,8 @@
       <tuv lang="en">
         <seg>In addition to [&lt;g1&gt;&lt;g2&gt;ActivityStreams&lt;/g2&gt;&lt;/g1&gt;] collections and objects, Activities may additionally be addressed to the special "public" collection, with the identifier &lt;g3&gt;https://www.w3.org/ns/activitystreams#Public&lt;/g3&gt;.</seg>
       </tuv>
-      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
-        <seg>[&lt;g1&gt;&lt;g2&gt;ActivityStreams&lt;/g2&gt;&lt;/g1&gt;] コレクションとオブジェクトに加えて、 activity は追加で特殊な「パブリック」コレクションを宛先に指定できる; これは識別子 &lt;g3&gt;https://www.w3.org/ns/activitystreams#Public&lt;/g3&gt; である。</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240120T084907Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>[&lt;g1&gt;&lt;g2&gt;ActivityStreams&lt;/g2&gt;&lt;/g1&gt;] コレクションとオブジェクトに加えて、 Activity は追加で特殊な「パブリック」コレクションを宛先に指定できる; これは識別子 &lt;g3&gt;https://www.w3.org/ns/activitystreams#Public&lt;/g3&gt; である。</seg>
       </tuv>
     </tu>
     <tu>
@@ -3472,16 +3472,16 @@
       <tuv lang="en">
         <seg>In the case of a &lt;g5&gt;Reject&lt;/g5&gt;, the server MUST NOT add the actor to the object actor's &lt;g6&gt;Followers Collection&lt;/g6&gt;.</seg>
       </tuv>
-      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
-        <seg>&lt;g5&gt;Reject&lt;/g5&gt; の場合、object の actor の &lt;g6&gt;Followers Collection&lt;/g6&gt; に actor を 追加してはならない(MUST NOT)。</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240120T093335Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>&lt;g5&gt;Reject&lt;/g5&gt; の場合、object の actor の &lt;g6&gt;Followers コレクション&lt;/g6&gt; に actor を 追加してはならない(MUST NOT)。</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="en">
         <seg>In the case of receiving an &lt;g1&gt;Accept&lt;/g1&gt; referencing this &lt;g2&gt;Follow&lt;/g2&gt; as the object, the server SHOULD add the &lt;g3&gt;actor&lt;/g3&gt; to the object actor's &lt;g4&gt;Followers Collection&lt;/g4&gt;.</seg>
       </tuv>
-      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
-        <seg>この &lt;g1&gt;Follow&lt;/g1&gt; を object として参照している &lt;g2&gt;Accept&lt;/g2&gt; を 受信する場合、サーバは object の actor の &lt;g4&gt;Followers Collection&lt;/g4&gt; に &lt;g3&gt;actor&lt;/g3&gt; を追加するべきである(SHOULD)。</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240120T120142Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>この &lt;g1&gt;Follow&lt;/g1&gt; を object として参照している &lt;g2&gt;Accept&lt;/g2&gt; を 受信する場合、サーバは object の actor の &lt;g4&gt;Followers コレクション&lt;/g4&gt; に &lt;g3&gt;アクター&lt;/g3&gt; を追加するべきである(SHOULD)。</seg>
       </tuv>
     </tu>
     <tu>
@@ -3920,8 +3920,8 @@
       <tuv lang="en">
         <seg>Receiving a &lt;g1&gt;Create&lt;/g1&gt; activity in an &lt;g2&gt;inbox&lt;/g2&gt; has surprisingly few side effects; the activity should appear in the actor's &lt;g3&gt;inbox&lt;/g3&gt; and it is likely that the server will want to locally store a representation of this activity and its accompanying object.</seg>
       </tuv>
-      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
-        <seg>&lt;g1&gt;inbox&lt;/g1&gt; に &lt;g2&gt;Create&lt;/g2&gt; アクティビティを受信したときには、 意外にもほとんど副作用はない; このアクティビティは actor の &lt;g3&gt;inbox&lt;/g3&gt; に現れるべきで、 サーバはおそらくこのアクティビティとそれに添付されているオブジェクトの表現を ローカルに保管したいはずである。</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240120T093037Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>&lt;g1&gt;inbox&lt;/g1&gt; に &lt;g2&gt;Create&lt;/g2&gt; アクティビティを受信したときには、 意外にもほとんど副作用はない; このアクティビティはアクターの &lt;g3&gt;inbox&lt;/g3&gt; に現れるべきで、 サーバはおそらくこのアクティビティとそれに添付されているオブジェクトの表現を ローカルに保管したいはずである。</seg>
       </tuv>
     </tu>
     <tu>
@@ -3960,8 +3960,8 @@
       <tuv lang="en">
         <seg>See also &lt;g1&gt;&lt;g2&gt;3.&lt;/g2&gt; &lt;g3&gt;Objects&lt;/g3&gt;&lt;/g1&gt; and &lt;g4&gt;&lt;g5&gt;B.1&lt;/g5&gt; &lt;g6&gt;Authentication and Authorization&lt;/g6&gt;&lt;/g4&gt;.</seg>
       </tuv>
-      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
-        <seg>&lt;g1&gt;&lt;g2&gt;3.&lt;/g2&gt; &lt;g3&gt;Objects&lt;/g3&gt;&lt;/g1&gt; と &lt;g4&gt;&lt;g5&gt;B.1&lt;/g5&gt; &lt;g6&gt;Authentication and Authorization&lt;/g6&gt;&lt;/g4&gt; も参照のこと。</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240119T142917Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>&lt;g1&gt;&lt;g2&gt;3.&lt;/g2&gt; &lt;g3&gt;オブジェクト&lt;/g3&gt;&lt;/g1&gt; と &lt;g4&gt;&lt;g5&gt;B.1&lt;/g5&gt; &lt;g6&gt;認証と認可&lt;/g6&gt;&lt;/g4&gt; も参照のこと。</seg>
       </tuv>
     </tu>
     <tu>
@@ -4048,8 +4048,8 @@
       <tuv lang="en">
         <seg>Servers MAY require authorization as specified in &lt;g1&gt;&lt;g2&gt;B.1&lt;/g2&gt; &lt;g3&gt;Authentication and Authorization&lt;/g3&gt;&lt;/g1&gt;, and may additionally implement their own authorization rules.</seg>
       </tuv>
-      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
-        <seg>サーバは &lt;g1&gt;&lt;g2&gt;B.1&lt;/g2&gt; &lt;g3&gt;Authentication and Authorization&lt;/g3&gt;&lt;/g1&gt; で指定された認証を要求したり、 独自の認証規則を実装したりしても良い(MAY)。</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240119T204958Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>サーバは &lt;g1&gt;&lt;g2&gt;B.1&lt;/g2&gt; &lt;g3&gt;認証と認可&lt;/g3&gt;&lt;/g1&gt; で指定された認証を要求したり、 独自の認証規則を実装したりしても良い(MAY)。</seg>
       </tuv>
     </tu>
     <tu>
@@ -4072,8 +4072,8 @@
       <tuv lang="en">
         <seg>Servers MUST also exclude actors from the list which are the same as the &lt;g1&gt;actor&lt;/g1&gt; of the Activity being notified about.</seg>
       </tuv>
-      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
-        <seg>サーバはまた、通知される Activity の &lt;g1&gt;actor&lt;/g1&gt; と同じ actor を リストから除去しなければならない(MUST)。</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240120T092624Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>サーバはまた、通知される Activity の &lt;g1&gt;アクター&lt;/g1&gt; と同じアクターをリストから除去しなければならない(MUST)。</seg>
       </tuv>
     </tu>
     <tu>
@@ -4144,24 +4144,24 @@
       <tuv lang="en">
         <seg>Servers communicate with other servers and propagate information across the social graph by posting activities to actors' &lt;g1&gt;inbox&lt;/g1&gt; endpoints.</seg>
       </tuv>
-      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
-        <seg>サーバは、activity を actor の &lt;g1&gt;inbox&lt;/g1&gt; エンドポイントに ポストすることで、他のサーバと通信し、情報をソーシャルグラフ上に伝搬させる。</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240120T092032Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>サーバは、アクティビティをアクターの &lt;g1&gt;inbox&lt;/g1&gt; エンドポイントに ポストすることで、他のサーバと通信し、情報をソーシャルグラフ上に伝搬させる。</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="en">
         <seg>Servers performing delivery to the &lt;g1&gt;inbox&lt;/g1&gt; or &lt;g2&gt;sharedInbox&lt;/g2&gt; properties of actors on other servers MUST provide the &lt;g3&gt;object&lt;/g3&gt; property in the activity: &lt;g4&gt;Create&lt;/g4&gt;, &lt;g5&gt;Update&lt;/g5&gt;, &lt;g6&gt;Delete&lt;/g6&gt;, &lt;g7&gt;Follow&lt;/g7&gt;, &lt;g8&gt;Add&lt;/g8&gt;, &lt;g9&gt;Remove&lt;/g9&gt;, &lt;g10&gt;Like&lt;/g10&gt;, &lt;g11&gt;Block&lt;/g11&gt;, &lt;g12&gt;Undo&lt;/g12&gt;.</seg>
       </tuv>
-      <tuv lang="ja" changeid="shira" changedate="20240111T202417Z" creationid="shira" creationdate="20240111T202417Z">
-        <seg>他のサーバ上の actor の &lt;g1&gt;inbox&lt;/g1&gt; や &lt;g2&gt;publicInbox&lt;/g2&gt; 属性への配送を実行するサーバは、 次のアクティビティ内に &lt;g3&gt;object&lt;/g3&gt; 属性を提供しなければならない(MUST): &lt;g4&gt;Create&lt;/g4&gt;, &lt;g5&gt;Update&lt;/g5&gt;, &lt;g6&gt;Delete&lt;/g6&gt;, &lt;g7&gt;Follow&lt;/g7&gt;, &lt;g8&gt;Add&lt;/g8&gt;, &lt;g9&gt;Remove&lt;/g9&gt;, &lt;g10&gt;Like&lt;/g10&gt;, &lt;g11&gt;Block&lt;/g11&gt;, &lt;g12&gt;Undo&lt;/g12&gt;。</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240120T092351Z" creationid="shira" creationdate="20240111T202417Z">
+        <seg>他のサーバ上のアクターの &lt;g1&gt;inbox&lt;/g1&gt; や &lt;g2&gt;publicInbox&lt;/g2&gt; 属性への配送を実行するサーバは、 次のアクティビティ内に &lt;g3&gt;object&lt;/g3&gt; 属性を提供しなければならない(MUST): &lt;g4&gt;Create&lt;/g4&gt;, &lt;g5&gt;Update&lt;/g5&gt;, &lt;g6&gt;Delete&lt;/g6&gt;, &lt;g7&gt;Follow&lt;/g7&gt;, &lt;g8&gt;Add&lt;/g8&gt;, &lt;g9&gt;Remove&lt;/g9&gt;, &lt;g10&gt;Like&lt;/g10&gt;, &lt;g11&gt;Block&lt;/g11&gt;, &lt;g12&gt;Undo&lt;/g12&gt;。</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="en">
         <seg>Servers should be careful to verify that new content is really posted by the actor that claims to be posting it, and that the actor has permission to update the resources it claims to.</seg>
       </tuv>
-      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
-        <seg>新しいコンテンツが、それを投稿したと主張している actor から本当に 投稿されていることと、その actor がそのリソースを更新する権限を 持っていることを、 サーバは慎重に検証するべきである。</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240119T142836Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>新しいコンテンツが、それを投稿したと主張しているアクターから本当に 投稿されていることと、そのアクターがそのリソースを更新する権限を 持っていることを、 サーバは慎重に検証するべきである。</seg>
       </tuv>
     </tu>
     <tu>
@@ -4192,8 +4192,8 @@
       <tuv lang="en">
         <seg>Servers should ratelimit API client submissions.</seg>
       </tuv>
-      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
-        <seg>サーバは API クライアント提案を通信制限するべきである。</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240119T142609Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>サーバは API クライアント送信をレート制限するべきである。</seg>
       </tuv>
     </tu>
     <tu>
@@ -4376,8 +4376,8 @@
       <tuv lang="en">
         <seg>That is, actors shouldn't have their own activities delivered to themselves.</seg>
       </tuv>
-      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
-        <seg>つまり、ユーザーは自分の activity を自分に配送することはできない。</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240120T092632Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>つまり、ユーザーは自分のアクティビティを自分に配送することはできない。</seg>
       </tuv>
     </tu>
     <tu>
@@ -4416,24 +4416,24 @@
       <tuv lang="en">
         <seg>The &lt;g1&gt;Follow&lt;/g1&gt; activity is used to subscribe to the activities of another actor.</seg>
       </tuv>
-      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
-        <seg>&lt;g1&gt;Follow&lt;/g1&gt; アクティビティは、他の actor のアクティビティを 購読するために使われる。</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240120T091018Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>&lt;g1&gt;Follow&lt;/g1&gt; アクティビティは、他のアクターのアクティビティを 購読するために使われる。</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="en">
         <seg>The &lt;g1&gt;Followers Collection&lt;/g1&gt; and/or the &lt;g2&gt;Public Collection&lt;/g2&gt; are good choices for the default addressing of new Activities.</seg>
       </tuv>
-      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
-        <seg>&lt;g1&gt;Followers Collection&lt;/g1&gt; と &lt;g2&gt;Public Collection&lt;/g2&gt; は、 新しい Activity のデフォルトの宛先として良い選択肢である。</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240120T090616Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>&lt;g1&gt;Followers コレクション&lt;/g1&gt; と &lt;g2&gt;Public コレクション&lt;/g2&gt; は、 新しい Activity のデフォルトの宛先として良い選択肢である。</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="en">
         <seg>The &lt;g1&gt;Like&lt;/g1&gt; activity indicates the &lt;g2&gt;actor&lt;/g2&gt; likes the &lt;g3&gt;object&lt;/g3&gt;.</seg>
       </tuv>
-      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
-        <seg>&lt;g1&gt;Like&lt;/g1&gt; アクティビティは &lt;g2&gt;actor&lt;/g2&gt; が &lt;g3&gt;object&lt;/g3&gt; を好んでいることを示す。</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240120T091058Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>&lt;g1&gt;Like&lt;/g1&gt; アクティビティは &lt;g2&gt;アクター&lt;/g2&gt; が &lt;g3&gt;object&lt;/g3&gt; を好んでいることを示す。</seg>
       </tuv>
     </tu>
     <tu>
@@ -4480,8 +4480,8 @@
       <tuv lang="en">
         <seg>The &lt;g1&gt;inbox&lt;/g1&gt; is determined by first &lt;g2&gt; retrieving the target actor's JSON-LD representation&lt;/g2&gt; and then looking up the &lt;g3&gt;inbox&lt;/g3&gt; property.</seg>
       </tuv>
-      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
-        <seg>&lt;g1&gt;inbox&lt;/g1&gt; はまず &lt;g2&gt;ターゲットactorのJSON-LD表現を取得&lt;/g2&gt;し、 それから &lt;g3&gt;inbox&lt;/g3&gt; 属性を探すことで決定される。</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240120T092537Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>&lt;g1&gt;inbox&lt;/g1&gt; はまず &lt;g2&gt;ターゲットアクターのJSON-LD表現を取得&lt;/g2&gt;し、 それから &lt;g3&gt;inbox&lt;/g3&gt; 属性を探すことで決定される。</seg>
       </tuv>
     </tu>
     <tu>
@@ -4648,8 +4648,8 @@
       <tuv lang="en">
         <seg>The follow activity generally is a request to see the objects an actor creates.</seg>
       </tuv>
-      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
-        <seg>follow アクティビティは一般的には、ある actor が作成したオブジェクトを 見るための要求である。</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240120T083200Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>follow アクティビティは一般的には、あるアクターが作成したオブジェクトを 見るための要求である。</seg>
       </tuv>
     </tu>
     <tu>
@@ -4664,24 +4664,24 @@
       <tuv lang="en">
         <seg>The inbox is discovered through the &lt;g1&gt;inbox&lt;/g1&gt; property of an &lt;g2&gt;actor's&lt;/g2&gt; profile.</seg>
       </tuv>
-      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
-        <seg>inbox は &lt;g2&gt;actor&lt;/g2&gt; のプロファイルの &lt;g1&gt;inbox&lt;/g1&gt; プロパティを使って発見される。</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240120T083449Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>inbox は &lt;g2&gt;アクター&lt;/g2&gt; のプロファイルの &lt;g1&gt;inbox&lt;/g1&gt; プロパティを使って発見される。</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="en">
         <seg>The inbox stream contains all activities received by the actor.</seg>
       </tuv>
-      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
-        <seg>inbox ストリームは actor が受信した全てのアクティビティを含む。</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240120T083459Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>inbox ストリームはアクターが受信した全てのアクティビティを含む。</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="en">
         <seg>The inboxes of actors on federated servers accepts HTTP POST requests, with behaviour described in &lt;g1&gt;Delivery&lt;/g1&gt;.</seg>
       </tuv>
-      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
-        <seg>連合サーバ上の actor の inbox は HTTP POST リクエストを受け付ける; その振る舞いは &lt;g1&gt;Delivery&lt;/g1&gt; に記述されている。</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240120T084102Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>連合サーバ上のアクターの inbox は HTTP POST リクエストを受け付ける; その振る舞いは &lt;g1&gt;配送&lt;/g1&gt; に記述されている。</seg>
       </tuv>
     </tu>
     <tu>
@@ -4720,8 +4720,8 @@
       <tuv lang="en">
         <seg>The outbox is discovered through the &lt;g1&gt;outbox&lt;/g1&gt; property of an &lt;g2&gt;actor's&lt;/g2&gt; profile.</seg>
       </tuv>
-      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
-        <seg>outbox は &lt;g2&gt;actor&lt;/g2&gt; のプロファイルの &lt;g1&gt;outbox&lt;/g1&gt; プロパティを使って発見される。</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240120T083348Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>outbox は &lt;g2&gt;アクター&lt;/g2&gt; のプロファイルの &lt;g1&gt;outbox&lt;/g1&gt; プロパティを使って発見される。</seg>
       </tuv>
     </tu>
     <tu>
@@ -4736,8 +4736,8 @@
       <tuv lang="en">
         <seg>The preferred "nickname" or "display name" of the actor.</seg>
       </tuv>
-      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
-        <seg>actor の、望ましい「ニックネーム」や「表示名」。</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240119T141047Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>アクターの、望ましい「ニックネーム」や「表示名」。</seg>
       </tuv>
     </tu>
     <tu>
@@ -4784,8 +4784,8 @@
       <tuv lang="en">
         <seg>The server MUST NOT add the &lt;g6&gt;actor&lt;/g6&gt; to the receiver's &lt;g7&gt;Following Collection&lt;/g7&gt;.</seg>
       </tuv>
-      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
-        <seg>サーバは受信者の &lt;g7&gt;Following Collection&lt;/g7&gt; に &lt;g6&gt;actor&lt;/g6&gt; を追加してはならない(MUST)。</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240120T093514Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>サーバは受信者の &lt;g7&gt;Following コレクション&lt;/g7&gt; に &lt;g6&gt;actor&lt;/g6&gt; を追加してはならない(MUST)。</seg>
       </tuv>
     </tu>
     <tu>
@@ -4880,8 +4880,8 @@
       <tuv lang="en">
         <seg>The side effect of receiving this in an &lt;g1&gt;inbox&lt;/g1&gt; is that the server SHOULD generate either an &lt;g2&gt;Accept&lt;/g2&gt; or &lt;g3&gt;Reject&lt;/g3&gt; activity with the Follow as the &lt;g4&gt;object&lt;/g4&gt; and deliver it to the &lt;g5&gt;actor&lt;/g5&gt; of the Follow.</seg>
       </tuv>
-      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
-        <seg>これを &lt;g1&gt;inbox&lt;/g1&gt; に受信したときの副作用として、 サーバは、この Follow を &lt;g2&gt;object&lt;/g2&gt; に設定した &lt;g3&gt;Accept&lt;/g3&gt; または &lt;g4&gt;Reject&lt;/g4&gt; アクティビティを生成し、 Follow した &lt;g5&gt;actor&lt;/g5&gt; に配送するべきである(SHOULD)。</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240120T093228Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>これを &lt;g1&gt;inbox&lt;/g1&gt; に受信したときの副作用として、 サーバは、この Follow を &lt;g2&gt;object&lt;/g2&gt; に設定した &lt;g3&gt;Accept&lt;/g3&gt; または &lt;g4&gt;Reject&lt;/g4&gt; アクティビティを生成し、 Follow した &lt;g5&gt;アクター&lt;/g5&gt; に配送するべきである(SHOULD)。</seg>
       </tuv>
     </tu>
     <tu>
@@ -4912,16 +4912,16 @@
       <tuv lang="en">
         <seg>The side effect of receiving this is that (assuming the &lt;g1&gt;object&lt;/g1&gt; is owned by the sending actor / server) the server receiving the delete activity SHOULD remove its representation of the &lt;g2&gt;object&lt;/g2&gt; with the same &lt;g3&gt;id&lt;/g3&gt;, and MAY replace that representation with a &lt;g4&gt;Tombstone&lt;/g4&gt; object.</seg>
       </tuv>
-      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
-        <seg>&lt;g1&gt;object&lt;/g1&gt; が送信した actor / server が所有していると仮定して) これを受信したときの副作用として、 delete アクティビティを受信したサーバは 同じ &lt;g2&gt;id&lt;/g2&gt; を持つ &lt;g3&gt;object&lt;/g3&gt; の表現を削除するべき(SHOULD)で、 表現を &lt;g4&gt;Tombstone&lt;/g4&gt; オブジェクトに置き換えても良い(MAY)。</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240120T093206Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>(&lt;g1&gt;object&lt;/g1&gt; は送信したアクター/サーバが所有していると仮定して) これを受信したときの副作用として、 Delete アクティビティを受信したサーバは 同じ &lt;g2&gt;id&lt;/g2&gt; を持つ &lt;g3&gt;object&lt;/g3&gt; の表現を削除するべき(SHOULD)で、 表現を &lt;g4&gt;Tombstone&lt;/g4&gt; オブジェクトに置き換えても良い(MAY)。</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="en">
         <seg>The side effect of this is that the &lt;g2&gt;object&lt;/g2&gt; MUST be modified to reflect the new structure as defined in the update activity, assuming the actor has permission to update this object.</seg>
       </tuv>
-      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
-        <seg>これの副作用として、actor がこのオブジェクトを更新する権限を持っている場合、 &lt;g2&gt;object&lt;/g2&gt; は Update アクティビティで定義されている新しい構造を 反映した形で修正されなければならない(MUST)。</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240120T090939Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>これの副作用として、アクターがこのオブジェクトを更新する権限を持っている場合、 &lt;g2&gt;object&lt;/g2&gt; は Update アクティビティで定義されている新しい構造を 反映した形で修正されなければならない(MUST)。</seg>
       </tuv>
     </tu>
     <tu>
@@ -5232,24 +5232,24 @@
       <tuv lang="en">
         <seg>This is a list of every object from all of the actor's &lt;g2&gt;Like&lt;/g2&gt; activities, added as a &lt;g3&gt;side effect&lt;/g3&gt;.</seg>
       </tuv>
-      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
-        <seg>これは &lt;g3&gt;副作用&lt;/g3&gt; として追加された、 この actor の全ての &lt;g2&gt;Like&lt;/g2&gt; のオブジェクトの一覧である。</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240120T084839Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>これは &lt;g3&gt;副作用&lt;/g3&gt; として追加された、 このアクターの全ての &lt;g2&gt;Like&lt;/g2&gt; のオブジェクトの一覧である。</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="en">
         <seg>This is a list of everybody that the actor has followed, added as a &lt;g2&gt;side effect&lt;/g2&gt;.</seg>
       </tuv>
-      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
-        <seg>これは &lt;g2&gt;副作用&lt;/g2&gt; として追加された、 この actor がフォローした相手の一覧である。</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240120T083230Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>これは &lt;g2&gt;副作用&lt;/g2&gt; として追加された、 このアクターがフォローした相手の一覧である。</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="en">
         <seg>This is a list of everyone who has sent a &lt;g3&gt;Follow&lt;/g3&gt; activity for the actor, added as a &lt;g4&gt;side effect&lt;/g4&gt;.</seg>
       </tuv>
-      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
-        <seg>これはこの actor に &lt;g3&gt;Follow&lt;/g3&gt; アクティビティを送信したときに &lt;g4&gt;副作用&lt;/g4&gt; として追加された送信者の一覧である。</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240120T083257Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>これはこのアクターに &lt;g3&gt;Follow&lt;/g3&gt; アクティビティを送信したときに &lt;g4&gt;副作用&lt;/g4&gt; として追加された送信者の一覧である。</seg>
       </tuv>
     </tu>
     <tu>
@@ -5280,24 +5280,24 @@
       <tuv lang="en">
         <seg>This is where one would find a list of all the actors that are following the actor.</seg>
       </tuv>
-      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
-        <seg>これは誰かがある actor をフォローしている全てのユーザーの一覧を 見つける場所である。</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240120T083304Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>これは誰かがあるアクターをフォローしている全てのユーザーの一覧を 見つける場所である。</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="en">
         <seg>This makes the Followers collection an appropriate default target for &lt;g1&gt;delivery&lt;/g1&gt; of notifications.</seg>
       </tuv>
-      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
-        <seg>これにより、Followers コレクションは通知の &lt;g1&gt;配送&lt;/g1&gt; の 適切なデフォルトターゲットになる。</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240120T083211Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>これにより、Followers コレクションは通知の &lt;g1&gt;配送&lt;/g1&gt; の 適切なデフォルトの対象になる。</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="en">
         <seg>This mapping may be nested inside the actor document as the value or may be a link to a JSON-LD document with these properties.</seg>
       </tuv>
-      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
-        <seg>このマッピングは actor 文書の中で値としてネストしても良いし、 これらの属性を持つ JSON-LD 文書へのリンクでも良い。</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240119T140914Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>このマッピングはアクター文書の中で値としてネストしても良いし、 これらの属性を持つ JSON-LD 文書へのリンクでも良い。</seg>
       </tuv>
     </tu>
     <tu>
@@ -5392,16 +5392,16 @@
       <tuv lang="en">
         <seg>Timeframes and behavior for dealing with unreachable actors are left to the discretion of the delivering server.</seg>
       </tuv>
-      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
-        <seg>到達不能な actor を扱うための期間と振る舞いは配送サーバの 裁量に委ねられている。</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240120T093433Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>到達不能なアクターを扱うための期間と振る舞いは配送サーバの 裁量に委ねられている。</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="en">
         <seg>To do this, clients MUST discover the URL of the actor's outbox from their &lt;g2&gt;profile&lt;/g2&gt; and then MUST make an HTTP &lt;g3&gt;POST&lt;/g3&gt; request to this URL with the Content-Type of &lt;g4&gt;application/ld+json; profile="https://www.w3.org/ns/activitystreams"&lt;/g4&gt;.</seg>
       </tuv>
-      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
-        <seg>これを行うために、クライアントは actor の &lt;g2&gt;profile&lt;/g2&gt; からその outbox の URL を 発見しなければならず(MUST)、 それから、Content-Type に &lt;g3&gt;application/ld+json; profile="https://www.w3.org/ns/activitystreams"&lt;/g3&gt; を指定した &lt;g4&gt;POST&lt;/g4&gt; リクエストをこの URL に行わなければならない(MUST)。</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240120T090350Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>これを行うために、クライアントはアクターの &lt;g2&gt;profile&lt;/g2&gt; からその outbox の URL を 発見しなければならず(MUST)、 それから、Content-Type に &lt;g3&gt;application/ld+json; profile="https://www.w3.org/ns/activitystreams"&lt;/g3&gt; を指定した &lt;g4&gt;POST&lt;/g4&gt; リクエストをこの URL に行わなければならない(MUST)。</seg>
       </tuv>
     </tu>
     <tu>
@@ -5664,8 +5664,8 @@
       <tuv lang="en">
         <seg>When an object is being delivered to the originating actor's followers, a server MAY reduce the number of receiving actors delivered to by identifying all followers which share the same &lt;g1&gt;sharedInbox&lt;/g1&gt; who would otherwise be individual recipients and instead deliver objects to said &lt;g2&gt;sharedInbox&lt;/g2&gt;.</seg>
       </tuv>
-      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
-        <seg>配送元actorのfollowersにオブジェクトが配送されるとき、 サーバは、同じ &lt;g1&gt;sharedInbox&lt;/g1&gt; を持つ全ての フォロワーを識別して、 代わりにオブジェクトを &lt;g2&gt;sharedInbox&lt;/g2&gt; という名前に配送することで 配送する受信アクターの数を減らしても良い(MAY)。</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240120T092908Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>配送元アクターのfollowersにオブジェクトが配送されるとき、 サーバは、同じ &lt;g1&gt;sharedInbox&lt;/g1&gt; を持つ全ての フォロワーを識別して、 代わりにオブジェクトを &lt;g2&gt;sharedInbox&lt;/g2&gt; という名前に配送することで 配送する受信アクターの数を減らしても良い(MAY)。</seg>
       </tuv>
     </tu>
     <tu>
@@ -5680,8 +5680,8 @@
       <tuv lang="en">
         <seg>When objects are received in the &lt;g1&gt;outbox&lt;/g1&gt; (for servers which support both &lt;g2&gt;Client to Server interactions&lt;/g2&gt; and &lt;g3&gt;Server to Server Interactions&lt;/g3&gt;), the server MUST target and deliver to:</seg>
       </tuv>
-      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
-        <seg>オブジェクトを &lt;g1&gt;outbox&lt;/g1&gt; に受信したとき( &lt;g2&gt;クライアントからサーバへの通信&lt;/g2&gt; と &lt;g3&gt;サーバからサーバへの通信&lt;/g3&gt; の両方に対応しているサーバの場合)、サーバは 以下にターゲットして配送しなければならい(MUST):</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240119T142326Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>オブジェクトを &lt;g1&gt;outbox&lt;/g1&gt; に受信したとき( &lt;g2&gt;クライアントからサーバへの通信&lt;/g2&gt; と &lt;g3&gt;サーバからサーバへの通信&lt;/g3&gt; の両方に対応しているサーバの場合)、サーバは 以下にターゲットして配送しなければならない(MUST):</seg>
       </tuv>
     </tu>
     <tu>
@@ -5864,40 +5864,40 @@
       <tuv lang="en">
         <seg>an Activity being created in an actor's &lt;g1&gt;outbox&lt;/g1&gt; or &lt;g2&gt;inbox&lt;/g2&gt; which references another object.</seg>
       </tuv>
-      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
-        <seg>actor の &lt;g1&gt;outbox&lt;/g1&gt; や &lt;g2&gt;inbox&lt;/g2&gt; に、 他のオブジェクトを参照する Activity が作成された。</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240120T092320Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>アクターの &lt;g1&gt;outbox&lt;/g1&gt; や &lt;g2&gt;inbox&lt;/g2&gt; に、 他のオブジェクトを参照する Activity が作成された。</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="en">
         <seg>an Activity being created in an actor's &lt;g1&gt;outbox&lt;/g1&gt; with directly addressed recipients.</seg>
       </tuv>
-      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
-        <seg>actor の &lt;g1&gt;outbox&lt;/g1&gt; に、 直接アドレス指定された宛先で Activity が作成された。</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240120T092303Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>アクターの &lt;g1&gt;outbox&lt;/g1&gt; に、 直接アドレス指定された宛先で Activity が作成された。</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="en">
         <seg>an Activity being created in an actor's &lt;g1&gt;outbox&lt;/g1&gt; with their &lt;g2&gt;Followers Collection&lt;/g2&gt; as the recipient.</seg>
       </tuv>
-      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
-        <seg>actor の &lt;g1&gt;outbox&lt;/g1&gt; に、宛先として &lt;g2&gt;Followers Collection&lt;/g2&gt; を指定して Activity が作成された。</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240120T092254Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>アクターの &lt;g1&gt;outbox&lt;/g1&gt; に、宛先として &lt;g2&gt;Followers コレクション&lt;/g2&gt; を指定して Activity が作成された。</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="en">
         <seg>an Activity being created in an actors's &lt;g1&gt;outbox&lt;/g1&gt; with user-curated collections as recipients.</seg>
       </tuv>
-      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
-        <seg>actor の &lt;g1&gt;outbox&lt;/g1&gt; に、 ユーザーが選んだコレクションを宛先として Activity が作成された。</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240120T092313Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>アクターの &lt;g1&gt;outbox&lt;/g1&gt; に、 ユーザーが選んだコレクションを宛先として Activity が作成された。</seg>
       </tuv>
     </tu>
     <tu>
       <tuv lang="en">
         <seg>conduct any side effects related to the Activity (for example, notification that an actor has liked an object is used to update the object's like count);</seg>
       </tuv>
-      <tuv lang="ja" changeid="OmegaT Aligner" changedate="20240103T123411Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
-        <seg>そのアクティビティに関連する副作用を実施する (例えば、ある actor があるオブジェクトに「いいね」をした通知は、 そのオブジェクトの「いいね」カウントを更新するのに使われる);</seg>
+      <tuv lang="ja" changeid="shira" changedate="20240120T092216Z" creationid="OmegaT Aligner" creationdate="20240103T123411Z">
+        <seg>そのアクティビティに関連する副作用を実施する (例えば、あるアクターがあるオブジェクトに「いいね」をした通知は、 そのオブジェクトの「いいね」カウントを更新するのに使われる);</seg>
       </tuv>
     </tu>
     <tu>
